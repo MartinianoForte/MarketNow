@@ -3,7 +3,6 @@
 <head>
 <style>
 body {margin:0;} 
-
 ul {
     list-style-type: none;
     margin: 0;
@@ -12,66 +11,88 @@ ul {
     background-color: #4caf50;
     position: sticky;
     top: 0;
-    width: 100%;
-    
+    width: 100%;  
 }
-
-
 #header__titulo {
         font-size: 40px;
-        padding: 30px 300px;
+        padding: 30px 10px;
         font-family: Arial;
         color: white;
         text-align: center;
         position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
         margin: auto;
-}
-
-.Subtitulo{
-        font-size: 40px;
-        padding: 30px 400px;
-        font-family: Arial;
-        color: black;
-        text-align: center;
-        position: absolute;
-        
-        margin: 0;
-}
-.seisContenedores{
-    width: 80%;
-    margin: auto;
-    display: flex;
-}
+        width: 20%
+    }
 .tresContenedor{
         width: 80%;
         margin: auto;
         display: flex;
+    }
+.DosContenedores{
+    margin: auto;
+    width: 80%;
+    display: flex;
 }
-
+.seisContenedores{
+}
 .contenedor{
         display: inline-block;
         margin: 1em;
-        width: 20%;
+        width:1820px;
         text-align: center;
         flex: 1 1 auto;
-}
-
+    }
+.contenedor_Ab{
+        display: inline-block;
+        margin: 10px;
+        width: 33%;
+        flex: 1 auto;
+    }
 .iconos{
         font-size: none;
         width: 30%;
         color:#4caf50 ;
         text-align:center;
         height: 60px;
+    }
+.iconos_Ab{
+        font-size: larger;
+        color: #4caf50;
+        padding:3px;
+        position: absolute;
+        transform: translateX(-4em);
+    }
+.texto_Ab {
+    text-align: left;
+    width: 80%;
+    margin-top: 0;
+    text-align: justify;
 }
-
 .titulos{
         display: inline-block;
-         font-size:40px;
+        font-size:40px;
         font-family: Arial;
         color:#4caf50 ;
         text-align: center;
         margin: none;
+    }
+.Subtitulo{
+        font-size: 40px;
+        padding: 0px 400px;
+        font-family: Arial;
+        color: black;
+        text-align: center;
+    }
+#texto{
+  display: inline-block;
+  vertical-align: top;
+  text-align: justify;
 }
+
 li {
     float: left;
 }
@@ -80,47 +101,41 @@ li a {
         color: white;
         text-align: center;
         padding: 44px 32px;
-        text-decoration: none;
-    
-
+        text-decoration: none;  
 }
-
 li a:hover:not(.active) {
     background-color: #cddc39 ;
-
 }
 </style>
 </head>
 <body>
-
 <header>
 <ul><!-- Botones de la barra -->
     <li><a href="#">Ayuda</a></li>
     <li><a href="#">Nosotros</a></li>
-    <li><p id="header__titulo">MarketNow</p></body></li>
+    <li><h1 id="header__titulo">MarketNow</h1></body></li>
     <li Style ="float:right"><a href="#">Registrarse</a></li>
     <li style="float:right"><a href="#">Iniciar Sesion</a></li></ul>
-<img src= "C:\Users\Pablo\Desktop\MarketNow\Imagen.png" 
-width="100%">
 </header>
-
+<img src= "C:\Users\Pablo\Desktop\Anlista\Imagen.png" 
+width="100%">
 <script src="https://unpkg.com/feather-icons"></script>
 <div class="tresContenedor">
     <div class="contenedor">
         <i class="iconos"  data-feather="dollar-sign"></i><br>
-        <p class="titulos">Gestioná</p>
+        <h2 class="titulos">Gestioná</h2>
         <p style="text-align: justify";>Medieante este sistema usted prodra, poseer una admisnistracion y gestion correcto de su dinero. Tanto bla bla bla bla bla bla bla bla bla bla bal bla bla bla</p>
     </div>
 
     <div class="contenedor">
         <i class="iconos" data-feather="settings"></i><br>
-        <p class="titulos">Automatiza</p>
+        <h2 class="titulos">Automatiza</h2>
         <p style="text-align: justify";>Medieante este sistema usted prodra, poseer una admisnistracion y gestion correcto de su dinero. Tanto bla bla bla bla bla bla bla bla bla bla bal bla bla bla</p>
     </div>
 
     <div class="contenedor">
         <i class="iconos" data-feather="trending-up"></i><br>
-        <p class="titulos">Eficiencia</p>
+        <h2 class="titulos">Eficiencia</h2>
         <p style="text-align: justify";>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
         quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -129,23 +144,31 @@ width="100%">
         proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     </div>
 </div>
-<script>feather.replace()</script>
-
-<li><p list-style-type=" none" class="Subtitulo">Descubre sus Ventajas</p></li>
-
-<script src="https://unpkg.com/feather-icons"></script>
+<h1 class="Subtitulo">Descubre sus Ventajas</h1>
 <div class="seisContenedores">
-    <div class="contenedor">
-        <i class="iconos"  data-feather="calendar"></i><br>
-        <p class="titulos">hola</p>
-        <p style="text-align: justify";>holax2</p>
-    </div>
-</div>
+    <div class="DosContenedores">
+            <div class="contenedor_Ab">
+            
+            <i data-feather="trending-up" width="50" class="iconos_Ab" height="50"></i><h2 class="texto_Ab" style="text-align: left;">Registros</h2><h3 class="texto_Ab" style="text-align: left;">Contáctanos a través de la vía correspondiente en caso de tener alguna duda, inconveniente o sugerencia jajajajaajjjajajajajaajajaajaj.</h3>
+            </div>
+        <div class="contenedor_Ab">
+            <i data-feather="package" width="50" class="iconos_Ab" height="50"></i><h2 class="texto_Ab" style="text-align: left;">Gestor de Stock</h2><h3 class="texto_Ab" style="text-align: left;">Contáctanos a través de la vía correspondiente en caso de tener alguna duda, inconveniente o sugerencia jejejeejejejeje.</h3>
+        </div></div>
+    <div class="DosContenedores">
+            <div class="contenedor_Ab">
+            <i data-feather="calendar" width="50" class="iconos_Ab"height="50"></i><h2 class="texto_Ab" style="text-align: left;">Reporte diario</h2><h3 class="texto_Ab" style="text-align: left"style="transform: translate(0px, 200px)">Contáctanos a través de la vía correspondiente en caso de tener alguna duda, inconveniente o sugerencia jejejeejejejeje.</h3>
+            </div>
+            <div class="contenedor_Ab">
+            <i data-feather="clipboard" width="50" class="iconos_Ab"height="50"></i><h2 class="texto_Ab" style="text-align: left;">Administracion de Puntos</h2><h3 class="texto_Ab" style="text-align: left"style="transform: translate(0px, 200px)">Contáctanos a través de la vía correspondiente en caso de tener alguna duda, inconveniente o sugerencia jejejeejejejeje.</h3> 
+        </div></div>
+    <div class="DosContenedores">
+            <div class="contenedor_Ab">
+            <i data-feather="percent" width="50" class="iconos_Ab"height="50"></i><h2 class="texto_Ab" style="text-align: left;">Evolucion del Mercado</h2><h3 class="texto_Ab" style="text-align: left"style="transform: translate(0px, 200px)">Contáctanos a través de la vía correspondiente en caso de tener alguna duda, inconveniente o sugerencia jejejeejejejeje.</h3>
+            </div>
+            <div class="contenedor_Ab">
+            <i data-feather="lock" width="50" class="iconos_Ab"height="50"></i><h2 class="texto_Ab" style="text-align: left;">Seguridad</h2><h3 class="texto_Ab" style="text-align: left"style="transform: translate(0px, 200px)">Contáctanos a través de la vía correspondiente en caso de tener alguna duda, inconveniente o sugerencia jejejeejejejeje.</h3> 
+        </div></div>
 <script>feather.replace()</script>
-
-
-
-
-
+</div>
 </body>
 </html>
