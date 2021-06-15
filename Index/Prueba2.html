@@ -1,83 +1,95 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<style>
-body {margin:0;} 
-
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #4caf50;
-    position: sticky;
-    top: 0;
-    width: 100%;  
-}
-
-</style>
 <link rel="stylesheet" href="font.css">
 </head>
 <body>
 <header>
-<ul><!-- Botones de la barra -->
-    <li><a href="#">Ayuda</a></li>
-    <li><a href="#">Nosotros</a></li>
-    <li><h1 id="header__titulo">MarketNow</h1></body></li>
-    <li Style ="float:right"><a href="#">Registrarse</a></li>
-    <li style="float:right"><a href="#">Iniciar Sesion</a></li></ul>
+<div class="header__contenedor">
+    <ul><!-- Botones de la barra -->
+        <li><a href="#">Ayuda</a></li>
+        <li><a href="#">Nosotros</a></li>
+        <li><h1 id="header__titulo">MarketNow</h1></body></li>
+        <li Style ="float:right"><a href="#">Registrarse</a></li>
+        <li style="float:right"><a href="#">Iniciar Sesion</a></li>
+    </ul>
+</div>
 </header>
-<img src= "C:\Users\Pablo\Desktop\index\Imagen.png" 
-width="100%">
+<img src= "Imagen.png" class="imagen_Palta" width="100%">
 <script src="https://unpkg.com/feather-icons"></script>
-<div class="tresContenedor">
-    <div class="contenedor">
-        <i class="iconos"  data-feather="dollar-sign"></i><br>
-        <h2 class="titulos">Gestioná</h2>
-        <p style="text-align: justify";>Medieante este sistema usted prodra, poseer una admisnistracion y gestion correcto de su dinero. Tanto bla bla bla bla bla bla bla bla bla bla bal bla bla bla</p>
-    </div>
-
-    <div class="contenedor">
-        <i class="iconos" data-feather="settings"></i><br>
-        <h2 class="titulos">Automatiza</h2>
-        <p style="text-align: justify";>Medieante este sistema usted prodra, poseer una admisnistracion y gestion correcto de su dinero. Tanto bla bla bla bla bla bla bla bla bla bla bal bla bla bla</p>
-    </div>
-
-    <div class="contenedor">
-        <i class="iconos" data-feather="trending-up"></i><br>
-        <h2 class="titulos">Eficiencia</h2>
-        <p style="text-align: justify";>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<div class="contenedor_principal">
+<div class="fondo_blanco">
+    <div class="tresContenedor">
+        <div class="contenedor">
+            <i class="iconos"  data-feather="dollar-sign"></i><br>
+            <span class="titulos">Gestioná</span>
+            <p class="texto_Ar">Medieante este sistema usted prodra, poseer una admisnistracion y gestion correcto de su dinero.</p>
+        </div>
+        <div class="contenedor">
+            <i class="iconos" data-feather="settings"></i><br>
+            <span class="titulos">Automatiza</span>
+            <p class="texto_Ar">Medieante este sistema usted prodra, poseer una admisnistracion y gestion correcto de su dinero.</p>
+        </div>
+        <div class="contenedor">
+            <i class="iconos" data-feather="trending-up"></i><br>
+            <span class="titulos">Eficiencia</span>
+            <p class="texto_Ar">Mediante este sistema usted podra aumentar considerablemante la eficiencia a su negocio</p>
+        </div>
     </div>
 </div>
-<h1 class="Subtitulo">Descubre sus Ventajas</h1>
-<div class="seisContenedores">
-    <div class="DosContenedores">
+<div class="fondo_gris">
+    <h2 class="subtitulo">Descubre sus ventajas</h2>
+    <div class="seisContenedores">
+        <div class="DosContenedores">
             <div class="contenedor_Ab">
-            
-            <i data-feather="trending-up" width="50" class="iconos_Ab" height="50"></i><h2 class="texto_Ab" style="text-align: left;">Registros</h2><h3 class="texto_Ab" style="text-align: left;">Contáctanos a través de la vía correspondiente en caso de tener alguna duda, inconveniente o sugerencia jajajajaajjjajajajajaajajaajaj.</h3>
-            </div>
-        <div class="contenedor_Ab">
-            <i data-feather="package" width="50" class="iconos_Ab" height="50"></i><h2 class="texto_Ab" style="text-align: left;">Gestor de Stock</h2><h3 class="texto_Ab" style="text-align: left;">Contáctanos a través de la vía correspondiente en caso de tener alguna duda, inconveniente o sugerencia jejejeejejejeje.</h3>
-        </div></div>
-    <div class="DosContenedores">
-            <div class="contenedor_Ab">
-            <i data-feather="calendar" width="50" class="iconos_Ab"height="50"></i><h2 class="texto_Ab" style="text-align: left;">Reporte diario</h2><h3 class="texto_Ab" style="text-align: left"style="transform: translate(0px, 200px)">Contáctanos a través de la vía correspondiente en caso de tener alguna duda, inconveniente o sugerencia jejejeejejejeje.</h3>
+                <i data-feather="trending-up" width="50" class="iconos_Ab" height="50"></i>
+                <h2 class="texto_Ab" style="text-align: left;">Registros</h2>
+                <p class="texto_Ab" style="text-align: left;">Contáctanos a través de la vía correspondiente en caso de tener alguna duda, inconveniente o sugerencia</p>
             </div>
             <div class="contenedor_Ab">
-            <i data-feather="clipboard" width="50" class="iconos_Ab"height="50"></i><h2 class="texto_Ab" style="text-align: left;">Administracion de Puntos</h2><h3 class="texto_Ab" style="text-align: left"style="transform: translate(0px, 200px)">Contáctanos a través de la vía correspondiente en caso de tener alguna duda, inconveniente o sugerencia jejejeejejejeje.</h3> 
-        </div></div>
-    <div class="DosContenedores">
+                <i data-feather="package" width="50" class="iconos_Ab" height="50"></i>
+                <h2 class="texto_Ab" style="text-align: left;">Gestor de Stock</h2>
+                <p class="texto_Ab" style="text-align: left;">Contáctanos a través de la vía correspondiente en caso de tener alguna duda, inconveniente o sugerencia</p>
+            </div>
+            </div>
+        <div class="DosContenedores">
             <div class="contenedor_Ab">
-            <i data-feather="percent" width="50" class="iconos_Ab"height="50"></i><h2 class="texto_Ab" style="text-align: left;">Evolucion del Mercado</h2><h3 class="texto_Ab" style="text-align: left"style="transform: translate(0px, 200px)">Contáctanos a través de la vía correspondiente en caso de tener alguna duda, inconveniente o sugerencia jejejeejejejeje.</h3>
+                <i data-feather="calendar" width="50" class="iconos_Ab"height="50"></i>
+                <h2 class="texto_Ab" style="text-align: left;">Reporte diario</h2>
+                <p class="texto_Ab" style="text-align: left"style="transform: translate(0px, 200px)">Contáctanos a través de la vía correspondiente en caso de tener alguna duda, inconveniente o sugerencia</p>
             </div>
             <div class="contenedor_Ab">
-            <i data-feather="lock" width="50" class="iconos_Ab"height="50"></i><h2 class="texto_Ab" style="text-align: left;">Seguridad</h2><h3 class="texto_Ab" style="text-align: left"style="transform: translate(0px, 200px)">Contáctanos a través de la vía correspondiente en caso de tener alguna duda, inconveniente o sugerencia jejejeejejejeje.</h3> 
-        </div></div>
+                <i data-feather="clipboard" width="50" class="iconos_Ab"height="50"></i>
+                <h2 class="texto_Ab" style="text-align: left;">Administracion de Puntos</h2>
+                <p class="texto_Ab" style="text-align: left"style="transform: translate(0px, 200px)">Contáctanos a través de la vía correspondiente en caso de tener alguna duda, inconveniente o sugerencia</p> 
+            </div>
+        </div>
+        <div class="DosContenedores">
+            <div class="contenedor_Ab">
+                <i data-feather="percent" width="50" class="iconos_Ab"height="50"></i>
+                <h2 class="texto_Ab" style="text-align: left;">Evolucion del Mercado</h2>
+                <p class="texto_Ab" style="text-align: left"style="transform: translate(0px, 200px)">Contáctanos a través de la vía correspondiente en caso de tener alguna duda, inconveniente o sugerencia</p>
+            </div>
+            <div class="contenedor_Ab">
+                <i data-feather="lock" width="50" class="iconos_Ab"height="50"></i>
+                <h2 class="texto_Ab" style="text-align: left;">Seguridad</h2>
+                <p class="texto_Ab" style="text-align: left"style="transform: translate(0px, 200px)">Contáctanos a través de la vía correspondiente en caso de tener alguna duda, inconveniente o sugerencia</p> 
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+<div class="footer">
+    <div class="footer__contenedor.Ar">
+        <!-- <p Style ="float:right"><a href="#" class="boton">^</a></p> -->
+    </div>
+    <div class="footer__contenedor-Ab">
+        <span class="footer__texto">© 2021 MarketNow. Derechos reservados</span>
+        <a href="#"><i data-feather="home" class="footer__icono centrar"></i></a>
+        <span class="footer__texto derecha">Calle Palta 123</span>
+    </div>
+</div>
+</footer>
 <script>feather.replace()</script>
 </symbol>
 <div class="social-bar">
