@@ -2,6 +2,7 @@
 <html lang="es">
 <head>
     <script src="https://kit.fontawesome.com/ee5c196280.js" crossorigin="anonymous"></script>
+
 <style>
 body {margin:0;} 
 
@@ -17,9 +18,10 @@ ul {
 }
 
 </style>
-<link rel="stylesheet" href="font.css">
+
+<link rel="stylesheet" href="login.css">
 </head>
-<cuerpo>
+<body>
 <header>
 <ul><!-- Botones de la barra -->
     <li><a href="#">Ayuda</a></li>
@@ -29,14 +31,14 @@ ul {
     <li style="float:right"><a href="Iniciar-sesion.html">Iniciar Sesion</a></li></ul>
 </header>
 
-    <form class="formulario">
+<form class="formulario">
         <h1 class="registrate">Registrate</h1>
         <div clas="contenedor-registro">
 
         <div class="input-contenedor-registro">
             <i class="fas fa-user icono"></i>
-            <input type="text" placeholder="Nombre Completo">
-
+            <input type="text" placeholder="Nombre">
+            
         </div>
 
          <div class="input-contenedor-registro">
@@ -50,12 +52,30 @@ ul {
             <input type="password" placeholder="Contraseña">
             
         </div>
-        <input type="submit" value="Registrate" class="button">
+
+        <div class="input-contenedor-registro">
+            <i class="fas fa-key icono"></i>
+            <input type="text" placeholder="Repetir contraseña">
+            
+        </div>
+
+        <div class="input-contenedor-registro">
+            <i class="fas fa-user-tag icono"></i>
+            <input type="text" placeholder="Usuario, Cliente o Proveedor">  
+        </div>
+
+        <div class="input-contenedor-registro">
+            <i class="fas fa-phone-alt icono"></i>
+            <input type="text" placeholder="Telefono">
+            
+        </div>
+        <input type="submit" value="Registrarse" class="button">
         <div class="texto-p">
         <p>Al registrarte, aceptas nuestras condiciones de uno y politica de privacidad</p>
-        <p>¿Ya tienes cuenta?<a class="link" href="Iniciar-sesion.html">Iniciar Sesion</a></p>
+        <p>¿Ya tienes una cuenta?<a class="link" href="Iniciar-sesion.html">Iniciar sesión</a></p>
     </div>
 </div>
     </div>
     </form>
-</cuerpo>
+
+
