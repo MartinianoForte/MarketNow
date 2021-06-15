@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<link rel="stylesheet" href="font.css">
+</head>
+<body>
+<header>
+<div class="header__contenedor">
+    <ul><!-- Botones de la barra -->
+        <li><a href="#">Ayuda</a></li>
+        <li><a href="#">Nosotros</a></li>
+        <li><h1 id="header__titulo">MarketNow</h1></body></li>
+        <li Style ="float:right"><a href="registrarse.html">Registrarse</a></li>
+        <li style="float:right"><a href="Iniciar-sesion.html">Iniciar Sesion</a></li></ul>
+    </ul>
+</div>
+</header>
+<img src= "C:\Users\Agustin\Desktop\MarketNow\palta-logo.png" class="imagen_Palta" width="100%">
+<script src="https://unpkg.com/feather-icons"></script>
+<div class="contenedor_principal">
+<div class="fondo_blanco">
+    <div class="tresContenedor">
+        <div class="contenedor">
+            <i class="iconos"  data-feather="dollar-sign"></i><br>
+            <span class="titulos">Gestioná</span>
+            <p class="texto_Ar">Medieante este sistema usted prodra, poseer una admisnistracion y gestion correcto de su dinero.</p>
+        </div>
+        <div class="contenedor">
+            <i class="iconos" data-feather="settings"></i><br>
+            <span class="titulos">Automatiza</span>
+            <p class="texto_Ar">Medieante este sistema usted prodra, poseer una admisnistracion y gestion correcto de su dinero.</p>
+        </div>
+        <div class="contenedor">
+            <i class="iconos" data-feather="trending-up"></i><br>
+            <span class="titulos">Eficiencia</span>
+            <p class="texto_Ar">Mediante este sistema usted podra aumentar considerablemante la eficiencia a su negocio</p>
+        </div>
+    </div>
+</div>
+<div class="fondo_gris">
+    <h2 class="subtitulo">Descubre sus ventajas</h2>
+    <div class="seisContenedores">
+        <div class="DosContenedores">
+            <div class="contenedor_Ab">
+                <i data-feather="trending-up" width="50" class="iconos_Ab" height="50"></i>
+                <h2 class="texto_Ab" style="text-align: left;">Registros</h2>
+                <p class="texto_Ab" style="text-align: left;">Contáctanos a través de la vía correspondiente en caso de tener alguna duda, inconveniente o sugerencia</p>
+            </div>
+            <div class="contenedor_Ab">
+                <i data-feather="package" width="50" class="iconos_Ab" height="50"></i>
+                <h2 class="texto_Ab" style="text-align: left;">Gestor de Stock</h2>
+                <p class="texto_Ab" style="text-align: left;">Contáctanos a través de la vía correspondiente en caso de tener alguna duda, inconveniente o sugerencia</p>
+            </div>
+            </div>
+        <div class="DosContenedores">
+            <div class="contenedor_Ab">
+                <i data-feather="calendar" width="50" class="iconos_Ab"height="50"></i>
+                <h2 class="texto_Ab" style="text-align: left;">Reporte diario</h2>
+                <p class="texto_Ab" style="text-align: left"style="transform: translate(0px, 200px)">Contáctanos a través de la vía correspondiente en caso de tener alguna duda, inconveniente o sugerencia</p>
+            </div>
+            <div class="contenedor_Ab">
+                <i data-feather="clipboard" width="50" class="iconos_Ab"height="50"></i>
+                <h2 class="texto_Ab" style="text-align: left;">Administracion de Puntos</h2>
+                <p class="texto_Ab" style="text-align: left"style="transform: translate(0px, 200px)">Contáctanos a través de la vía correspondiente en caso de tener alguna duda, inconveniente o sugerencia</p> 
+            </div>
+        </div>
+        <div class="DosContenedores">
+            <div class="contenedor_Ab">
+                <i data-feather="percent" width="50" class="iconos_Ab"height="50"></i>
+                <h2 class="texto_Ab" style="text-align: left;">Evolucion del Mercado</h2>
+                <p class="texto_Ab" style="text-align: left"style="transform: translate(0px, 200px)">Contáctanos a través de la vía correspondiente en caso de tener alguna duda, inconveniente o sugerencia</p>
+            </div>
+            <div class="contenedor_Ab">
+                <i data-feather="lock" width="50" class="iconos_Ab"height="50"></i>
+                <h2 class="texto_Ab" style="text-align: left;">Seguridad</h2>
+                <p class="texto_Ab" style="text-align: left"style="transform: translate(0px, 200px)">Contáctanos a través de la vía correspondiente en caso de tener alguna duda, inconveniente o sugerencia</p> 
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+<div class="footer">
+    <div class="footer__contenedor.Ar">
+        <!-- <p Style ="float:right"><a href="#" class="boton">^</a></p> -->
+    </div>
+    <div class="footer__contenedor-Ab">
+        <span class="footer__texto">© 2021 MarketNow. Derechos reservados</span>
+        <a href="#"><i data-feather="home" class="footer__icono centrar"></i></a>
+        <span class="footer__texto derecha">Calle Palta 123</span>
+    </div>
+</div>
+</footer>
+<script>feather.replace()</script>
+</symbol>
+<div class="social-bar">
+    <a href="https://www.instragram.com" class="icon icon-instagram" target="_blank" >@MarketNow</a><!--Acá iria el Intagram de la MarketNow-->
+    <a href="https://www.facebook.com" class="icon icon-facebook" target="_blank">@MarketNow</a><!--Acá iria el Facebook de la MarketNow-->
+    <a href="https://www.gmail.com" class="icon icon-mail4" target="_blank">@MarketNow</a><!--Acá iria el mail de la MarketNow-->
+    <a class="icon icon-whatsapp" target="_blank">-0000000000</a><!--Acá iria el telefono de la MarketNow-->
+
+</div>
+</body>
+</html>
