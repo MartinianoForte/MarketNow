@@ -19,7 +19,7 @@ ul {
 
 </style>
 
-<link rel="stylesheet" href="login.css">
+<link rel="stylesheet" href="registro.css">
 </head>
 <body>
 <header>
@@ -88,20 +88,20 @@ ul {
             
         </div>
 
-         <div class="input-contenedor-registro">
-            <i class="fas fa-apple-alt icono"></i>
-            <input type="text" placeholder="Subir logo">
-            
-        </div>
-        <div class="input-contenedor-registro">
-            <i class="fas fa-folder-open icono"></i>
-            <input type="file" placeholder="Subir logo">  
+         <div class="input-contenedor-registro logo__contenedor">
+            <i class="fas fa-apple-alt icono" style="margin-top:17px;"></i>
+            <label>Subir logo</label>
+                <div id="contenedor_imagen">
+                    <input type="file" name="imagen" class="imagen" onchange="validarImagen(this);" required multiple>
+                    <a id="texto_imagen">Elegir Imagen </a>
+                </div>
+                <div id="cuadroImagen"></div>
         </div>
 
         <input type="submit" value="Registrarse" class="button">
         <div class="texto-p">
-        <p>Al registrarte, aceptas nuestras condiciones de uno y politica de privacidad</p>
-        <p>¿Ya tienes una cuenta?<a class="link" href="Iniciar-sesion.html">Iniciar sesión</a></p>
+        <p style="color:#666;">Al registrarte, aceptas nuestras condiciones de uno y politica de privacidad</p>
+        <p>¿Ya tienes una cuenta? <a class="link" href="Iniciar-sesion.html">Iniciar sesión</a></p>
     </div>
 </div>
     </div>
