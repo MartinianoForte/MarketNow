@@ -68,6 +68,7 @@ body{
     border: 1px solid #666;
     margin-top:  150px;
     padding:  20px;
+    margin-bottom: 100px;
 }
 .registrate{
     text-align:  center;
@@ -75,10 +76,18 @@ body{
     font-size: 40px;
 }
 
+.input{
+    font-size: 20px;
+    width: 87%;
+    padding: 10px;
+    border: none;
+    color: #666;
+}
+
 input[type="text"],
 input[type="password"]{
     font-size:20px;
-    width: 62%;
+    width: 82%;
     padding: 10px;
     border: none;
 }
@@ -133,6 +142,7 @@ input[type="password"]{
         width: 500px;
         margin-top: 40px;
         border-radius: 2%;
+        margin-bottom: 50px;
     }
 }
 

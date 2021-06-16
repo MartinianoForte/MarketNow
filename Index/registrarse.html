@@ -24,7 +24,7 @@ ul {
 <body>
 <header>
 <ul><!-- Botones de la barra -->
-    <li><a href="#">Ayuda</a></li>
+    <li><a href="#">Inicio</a></li>
     <li><a href="#">Nosotros</a></li>
     <li><h1 id="header__titulo">MarketNow</h1></body></li>
     <li Style ="float:right"><a href="#">Registrarse</a></li>
@@ -61,7 +61,13 @@ ul {
 
         <div class="input-contenedor-registro">
             <i class="fas fa-user-tag icono"></i>
-            <input type="text" placeholder="Usuario, Cliente o Proveedor">  
+            <select class="input" name="tipo" id="ropa">
+            <option value="remera">Rol</option>
+            <option value="pantalon">Usuario</option>
+            <option value="zapatillas">Comerciante</option>
+            <option value="buzo">Proveedor</option></select>
+        </div>
+            <!-- <input type="text" placeholder="Usuario, Cliente o Proveedor">   -->
         </div>
 
         <div class="input-contenedor-registro">
@@ -100,7 +106,7 @@ ul {
 
         <input type="submit" value="Registrarse" class="button">
         <div class="texto-p">
-        <p style="color:#666;">Al registrarte, aceptas nuestras condiciones de uno y politica de privacidad</p>
+        <p style="color:#666;">Al registrarte, aceptas nuestras condiciones de uso y politica de privacidad</p>
         <p>¿Ya tienes una cuenta? <a class="link" href="Iniciar-sesion.html">Iniciar sesión</a></p>
     </div>
 </div>
