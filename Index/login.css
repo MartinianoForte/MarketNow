@@ -45,7 +45,7 @@ li a {
 }
 
 li a:hover:not(.active) {
-    background-color: #cddc39;
+    background-color: #f9a825;
 }
 
 /*-------------------login-----------------------*/
@@ -92,7 +92,7 @@ input[type="password"]{
 
 .texto-p{
     text-align: center;
-    color:  green;
+    color:  #4caf50;
     font-size: 20px;
 }
 .input-contenedor-registro{
@@ -111,14 +111,14 @@ input[type="password"]{
     width: 100%;
     color: white;
     font-size: 20px;
-    background: green;
+    background: #4caf50;
     padding: 15px 20px;
     border-radius: 5px;
     cursor: pointer;
 }
 
 .button:hover{
-    background: #cddc39;
+    background: #f9a825;
 }
 
 .texto-p{
@@ -126,11 +126,11 @@ input[type="password"]{
 }
 .link{
     text-decoration: none;
-    color:  green;
+    color:  #4caf50;
     font-weight: 600;
 }
 .link:hover{
-    color: #cddc39;
+    color: #f9a825;
 }
 
 @media(min-width: 768px)

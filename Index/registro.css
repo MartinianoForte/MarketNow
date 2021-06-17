@@ -113,7 +113,7 @@ input[type="password"]{
     width: 100%;
     color: white;
     font-size: 20px;
-    background: green;
+    background: #f9a825;
     padding: 15px 20px;
     border-radius: 5px;
     cursor: pointer;
@@ -176,7 +176,7 @@ label{
     padding-left: 0px;
     padding-right: 0px;
     width: 50%;
-    background: #4caf50;
+    background: #ffa743;
     color: white;
     border-radius: 5px;
     cursor: pointer;
