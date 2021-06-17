@@ -45,7 +45,7 @@ li a {
 }
 
 li a:hover:not(.active) {
-    background-color: #f9a825;
+    background-color: #b5a067;
 }
 
 /*-------------------login-----------------------*/
@@ -118,11 +118,12 @@ input[type="password"]{
 }
 
 .button:hover{
-    background: #f9a825;
+    background: #b5a067;
 }
 
 .texto-p{
     text-align: center;
+    /* color: #666666; */
 }
 .link{
     text-decoration: none;
@@ -130,7 +131,7 @@ input[type="password"]{
     font-weight: 600;
 }
 .link:hover{
-    color: #f9a825;
+    color: #b5a067;
 }
 
 @media(min-width: 768px)

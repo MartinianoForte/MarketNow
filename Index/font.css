@@ -103,14 +103,14 @@ body {
 /*---------------Cosas---------------------*/
 .boton{
     color: #fff;
-    background: #f9a825;
+    background: #b5a067;
     position: relative;
     display: inline-block;
     min-width: 20px;
     padding: 17px 33px 15px;
     font-size: 18px;
     line-height: 1.34;
-    border: 2px solid #f9a825;
+    border: 2px solid #b5a067;
     font-family: teko,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,sans-serif;
     font-weight: 500;
     letter-spacing: .075em;
@@ -201,17 +201,16 @@ li a {
 }
 
 li a:hover:not(.active) {
-    background-color: #cddc39;
+    background-color: #b5a067;
 }
 
 /*-------------------- Cuerpo ------------------*/
 
 .imagen_Palta {
     background-size: cover;
-    width: 100%;
+    width: 90%;
     height: 41vw;
     object-fit: cover;
-    border-top: 1px solid #2e7d32;
 }
 
 .contenedor_principal {}
@@ -226,6 +225,14 @@ li a:hover:not(.active) {
 .fondo_gris {
     background: #f7f7f7;
 }
+
+.fondo__logo{
+  background-image: linear-gradient(-45deg, #4caf50 50%, #e4bc6c 50%);
+  height: 41vw;
+  text-align: center;
+  border-top: 1px solid #2e7d32;
+}
+
 .seisContenedores {
     margin-left: 16%;
     padding-bottom: 20px;
@@ -251,14 +258,14 @@ li a:hover:not(.active) {
 .iconos {
     font-size: none;
     width: 30%;
-    color: #4caf50;
+    color: #b5a067;
     text-align: center;
     height: 60px;
 }
 
 .iconos_Ab {
     font-size: larger;
-    color: #4caf50;
+    color: #b5a067;
     padding: 3px;
     position: absolute;
     transform: translateX(-4em);
@@ -282,7 +289,7 @@ li a:hover:not(.active) {
     letter-spacing: -1px;
 }
 
-.titulos {     
+.titulos {
     padding-top: 5px;
     margin: none;
 }
@@ -298,7 +305,10 @@ li a:hover:not(.active) {
 /*------------------Medio---------------------*/
 .medio { height: 200px; }
 
-.medio__boton { margin-left: 50%; }
+.medio__boton {
+  position: absolute;
+  right: 15%;
+ }
 
 .medio__texto {
     color: #fff;
