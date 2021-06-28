@@ -1,0 +1,65 @@
+body{
+	background: #f7f7f7;
+}
+
+label{
+	color: #666;
+	font-size: 20px;
+	font-family: sans-serif;
+}
+
+.input{
+    font-size: 20px;
+    width: 87%;
+    padding: 10px;
+    border: 1px solid #333;
+    border-radius: 10px;
+    color: #666;
+    margin: 5px;
+}
+
+.contenedor__cupones{
+	width: 80%;
+	border: 1px solid #333;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.tarjeta{
+	width: 200px;
+	display: flex;
+	flex-direction: column;
+	margin: 5px;
+}
+
+.admin__contenido{
+	padding: 20px;
+}
+
+.tarjeta__arriba{
+	background: var(--green);
+	border: 1px solid #333;
+	border-top-left-radius: 10px; 
+	border-top-right-radius: 10px; 
+	text-align: center;
+	padding: 5px;
+}
+
+.tarjeta__titulo{
+	color: #333;
+}
+
+.tarjeta__contenido{
+	background: #fff;
+	border: 1px solid #333;
+	border-bottom-left-radius: 10px; 
+	border-bottom-right-radius: 10px;
+	border-top: 0; 
+	padding: 10px;
+}
+
+.cupon__info{
+	padding-top: 10px;
+	display: flex;
+	justify-content: space-between;
+}
