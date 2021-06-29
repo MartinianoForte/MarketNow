@@ -20,15 +20,42 @@
 	margin-left: 600px;
 }
 
-.tabla{
 
-	padding: 27px;
-    font-family: "Open Sans", sans-serif;
-    font-size: 16px;
-    color: #999999;
+body{
+	background-color: white;
+	font-family:  sans-serif;
 }
 
-.tabla-principal{
-	color: var(--green);
+#main-conteiner{
+	margin:  150px auto;
+	width:  600px;
+}
+
+.table{
+	background: white;
+	text-align: left;
+	border-collapse: collapse;
+	width:  100%;
+}
+
+th,td{
 	
+	padding: 20px;
+
 }
+
+thead{
+	background-color: #4caf50;
+	border-bottom: solid 5px #4caf50;
+	color: white;
+}
+/**#ddd**/
+tr:nth-child(even){
+	background-color:#ddd ;
+}
+/** animacion horrible dela tabla**/
+/**tr:hover td{
+	background-color: #369681;
+	color: white;
+}**/
+
