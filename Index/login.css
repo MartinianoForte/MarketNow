@@ -20,14 +20,14 @@ body{
     padding: 15px;
 }
 .formulario{
-    background: #fff;
-    border: 1px solid #666;
+    background: var(--color-background);
+    border: 1px solid var(--color-texto-lg);
     margin-top:  250px;
     padding:  20px;
 }
 .registrate{
     text-align:  center;
-    color:#4caf50;
+    color: var(--color-principal);
     font-size: 40px;
 }
 
@@ -41,33 +41,33 @@ input[type="password"]{
 
 .texto-p{
     text-align: center;
-    color:  #4caf50;
+    color:  var(--color-principal);
     font-size: 20px;
 }
 .input-contenedor-registro{
     margin-bottom: 15px;
-    border: 1px solid #aaa;
+    border: 1px solid var(--color-icono-lg);
 }
 
 .icono{
     min-width: 50px;
     text-align: center;
-    color: #999;
+    color: var(--color-icono-lg);
 }
 
 .button{
     border: none;
     width: 100%;
-    color: white;
+    color: var(--color-fondo);
     font-size: 20px;
-    background: #4caf50;
+    background: var(--color-principal);
     padding: 15px 20px;
     border-radius: 5px;
     cursor: pointer;
 }
 
 .button:hover{
-    background: #e4bc6c;
+    background: var(--color-secundario-lg);
 }
 
 .texto-p{
@@ -76,11 +76,11 @@ input[type="password"]{
 }
 .link{
     text-decoration: none;
-    color:  #4caf50;
+    color: var(--color-principal);
     font-weight: 600;
 }
 .link:hover{
-    color: #e4bc6c;
+    color: var(--color-secundario-lg);
 }
 
 @media(min-width: 768px)

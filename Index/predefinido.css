@@ -3,6 +3,13 @@ body{
     margin: 0;
 }
 
+.texto{
+    color: #666;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: sans-serif;
+}
+
 .button_verde{
     border: none;
     width: 100%;
@@ -12,10 +19,12 @@ body{
     padding: 15px 20px;
     border-radius: 5px;
     cursor: pointer;
+    margin: 5px auto;
 }
 
 .button_verde:hover{
     background: #e4bc6c;
+    transition: all 0.2s ease-out;
 }
 
 .button_sec {
@@ -29,20 +38,44 @@ body{
     cursor: pointer;
 }
 
-.button_sec {
+.button_sec:hover{
     background: #333333;
     color: #4caf50;
     border-color: #333333;
-    transition: all 0.4s ease-out;
+    transition: all 0.2s ease-out;
+}
+
+.input{
+    font-size: 20px;
+    width: 87%;
+    padding: 10px;
+    border: 1px solid #999;
+    border-radius: 10px;
+    color: #666;
+}
+
+.sombra:hover{
+    box-shadow: 0 7px 16px 0 rgb(0 0 0 / 20%), 0 1px 3px 0 rgb(0 0 0 / 10%);
+    transition: all 0.2s ease-out;
 }
 
 :root {
     --green: #4caf50;
     --orange: #f9a825;
     --dark: #333333;
-    --doradoDR: #b5a067;
-    --doradoLG: #e4bc6c;
+    --doradoDr: #b5a067;
+    --doradoLg: #e4bc6c;
     --grey: #666666;
+    --fondoLg: #fafafa;
+/*----------------colores------------------*/
+    --color-principal: #4caf50;
+    --color-secundario-lg: #e4bc6c;
+    --color-secundario-dr: #b5a067;
+    --color-texto-lg: #666;
+    --color-fondo: #fff;
+    --color-fondo-lg: #fafafa;
+    --color-fondo-dark: #333333;
+    --color-icono-lg: #999; /*iconos y bordes suaves*/
 }
 
 /*----------------Header-------------------*/
@@ -95,6 +128,77 @@ body{
 
 .header__link:hover:not(.active) {
     background-color: #e4bc6c;
+}
+
+.header__usuario{
+    border-right: 1px solid #222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header__out{
+    padding: 18.5px 32px;
+    color: #222;
+    height: 31px;
+}
+
+.header__dr{
+    display: block;
+    color: #000;
+    font-family: "Open Sans", sans-serif;
+    font-size: 23px;
+    text-align: center;
+    padding: 22px 32px;
+    text-decoration: none;
+}
+
+/*-----------MenuLateral-------------*/
+
+.menu{
+    top: 72px;
+    left: 0;
+    position: fixed;
+    border-right: 1px solid #999;
+    width: 15em;
+    height: 100%;
+}
+
+.menu__inicio{
+    text-align: center; 
+    border-bottom: 1px solid #999; 
+    padding: 5px;
+}
+
+.menu__contenido{
+
+}
+
+/*----------Tarjeta--------------*/
+
+.tarjeta{
+    display: flex;
+    flex-direction: column;
+}
+
+.tarjeta__header{
+    background: var(--green);
+    border: 1px solid #333;
+    border-top-left-radius: 10px; 
+    border-top-right-radius: 10px; 
+    text-align: center;
+    padding: 5px;
+}
+
+.tarjeta__titulo{ color: #000; }
+
+.tarjeta__contenido{
+    background: #fff;
+    border: 1px solid #333;
+    border-bottom-left-radius: 10px; 
+    border-bottom-right-radius: 10px;
+    border-top: 0; 
+    padding: 10px;
 }
 
 /*-----------Footer--------------*/

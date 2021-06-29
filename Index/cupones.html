@@ -1,35 +1,42 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<script src="https://unpkg.com/feather-icons"></script>
 	<link rel="stylesheet" href="predefinido.css">
 	<link rel="stylesheet" href="cupones.css">
 	<meta charset="utf-8">
 	<title>Cupones</title>
 </head>
 <body>
-	<div class="tarjeta">
-		<div class="tarjeta__arriba">
-			<label class="tarjeta__titulo">administrar cupones</label>
+	<ul class="header__lista"><!-- Botones de la barra -->
+    <li class="header__item" style="width: 15em;">
+    	<div class="header__usuario">
+    		<i data-feather="user" style="color: #222;" width="35" height="35"></i>
+    		<a class="header__dr" style="padding-left: 15px;" href="index.html">Usuario</a>
+    	</div>
+    </li>
+    <li class="header__item"><span class="header__dr">Administrar Cupones</span></li>
+    <li class="header__item" style="float:right"><a href="Iniciar-sesion.html"><i data-feather="log-out" style="" width="35" height="35" class="header__out"></i></a></li>
+</ul>
+	<div class="menu">
+		<div class="menu__inicio">
+		<a href="index.html" class="texto">Inicio</a>
 		</div>
-		<dir class="tarjeta__contenido admin__contenido" style="margin: 0">
-			<form>
-			<button class="button_verde">Nuevo cupon</button>
-			<input type="text" name="" class="input" placeholder="nombre">
-			<input type="date" name="" class="input" placeholder="fecha">
-			<input type="number" name="" class="input" placeholder="descuento">
-			<input type="text" name="" class="input" placeholder="tipo de descueto">
-			<input type="text" name="" class="input" placeholder="categoria">
-			<input type="number" name="" class="input" placeholder="palta points">
-			<button class="button_verde">Modificar</button>
-			<button class="button_verde">Eliminar</button>
-			</form>
-		</dir>
+		<div class="menu__contenido">
+			<a href="index.html" class="texto">Reporte diario</a>
+			<a href="index.html" class="texto">Balance</a>
+			<a href="index.html" class="texto">Inventario</a>
+			<a href="index.html" class="texto">Productos Pendientes</a>
+			<a href="index.html" class="texto">Mercado de distribucion</a>
+			<a href="index.html" class="texto">Cupones</a>
+			<a href="index.html" class="texto">Entregas</a>
+		</div>
 	</div>
-		
-	</div>
+<div class="granContenedor">
+	<div></div>
 	<div class="contenedor__cupones">
-		<div class="tarjeta">
-			<div class="tarjeta__arriba">
+		<div class="tarjeta sombra">
+			<div class="tarjeta__header">
 				<label class="tarjeta__titulo"><b>Cupon1</b></label>
 			</div>
 			<div class="tarjeta__contenido">
@@ -40,20 +47,62 @@
 				</div>
 			</div>
 		</div>
-			<div class="tarjeta">
-				<div class="tarjeta__arriba">
-					<label class="tarjeta__titulo"><b>Cupon2</b></label>
+		<div class="tarjeta sombra">
+			<div class="tarjeta__header">
+				<label class="tarjeta__titulo"><b>Cupon2</b></label>
+			</div>
+			<div class="tarjeta__contenido">
+				<label>25% de descuento en paltas albinas</label>
+				<div class="cupon__info">
+					<label>5000</label>
+					<label>28/6</label>
 				</div>
-				<div class="tarjeta__contenido">
-					<label>25% de descuento en paltas albinas</label>
-					<div class="cupon__info">
-						<label>5000</label>
-						<label>28/6</label>
-					</div>
-				</div>
-			</div>	
+			</div>
 		</div>
+		<div class="tarjeta sombra">
+			<div class="tarjeta__header">
+				<label class="tarjeta__titulo"><b>Cupon3</b></label>
+			</div>
+			<div class="tarjeta__contenido">
+				<label>25% de descuento en paltas albinas</label>
+				<div class="cupon__info">
+					<label>5000</label>
+					<label>28/6</label>
+				</div>
+			</div>
+		</div>		
 	</div>
-
+	<div class="tarjeta admin">
+		<div class="tarjeta__header">
+			<label class="tarjeta__titulo">Administrar Cupones</label>
+		</div>
+		<dir class="tarjeta__contenido admin__contenido" style="margin: 0">
+			<form>
+			<button class="button_verde">Nuevo cupon</button>
+			<div class="admin__botones">
+			<input type="text" name="" class="input" placeholder="Nombre">
+			<input type="date" name="" class="input" placeholder="fecha">
+			<select class="input" style="width: 95%;" name="">
+            <option value="0">Tipo de Oferta</option>
+            <option value="1">2x1</option>
+            <option value="2">3x2</option>
+            <option value="3">Descuento</option>
+        	<option value="4">Otro</option></select>
+			<input type="number" name="" class="input" placeholder="Descuento">
+			<input type="text" name="" class="input" placeholder="Categoria">
+			<input type="number" name="" class="input" placeholder="Palta Points">
+			</div>
+			<div class="vacio"></div>
+			<button class="button_verde">Modificar</button>
+			<button class="button_verde">Eliminar</button>
+			</form>
+		</dir>
+	</div>
+</div>
+<script>
+    feather.replace()
+</script>
 </body>
 </html>
+
+

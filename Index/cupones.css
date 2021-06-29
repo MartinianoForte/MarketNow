@@ -1,65 +1,75 @@
-body{
+body {
 	background: #f7f7f7;
+	overflow: hidden;
 }
 
-label{
+label {
 	color: #666;
 	font-size: 20px;
 	font-family: sans-serif;
 }
 
-.input{
-    font-size: 20px;
-    width: 87%;
-    padding: 10px;
-    border: 1px solid #333;
-    border-radius: 10px;
-    color: #666;
-    margin: 5px;
+.granContenedor {
+	display: grid;
+	grid-template-columns: 15em 1fr 20em;
 }
 
-.contenedor__cupones{
-	width: 80%;
-	border: 1px solid #333;
-	display: flex;
-	flex-wrap: wrap;
+.input {
+	margin: 5px auto;
 }
 
-.tarjeta{
-	width: 200px;
+.contenedor__cupones {
+	padding: 10px;
+	width: 100%;
+	overflow: scroll;
+	display: grid;
+	grid-gap: 1em;
+	grid-auto-rows: 8rem;
+	grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
+}
+
+.admin {
+	width: 100%;
+	margin-top: 10px;
+}
+
+.admin__contenido {
+	padding: 20px;
+	height: 85vh;
+}
+
+.admin__botones {
 	display: flex;
 	flex-direction: column;
-	margin: 5px;
+	height: 40vh;
 }
 
-.admin__contenido{
-	padding: 20px;
-}
-
-.tarjeta__arriba{
-	background: var(--green);
-	border: 1px solid #333;
-	border-top-left-radius: 10px; 
-	border-top-right-radius: 10px; 
-	text-align: center;
-	padding: 5px;
-}
-
-.tarjeta__titulo{
-	color: #333;
-}
+.vacio { height: 25vh; }
 
 .tarjeta__contenido{
-	background: #fff;
-	border: 1px solid #333;
-	border-bottom-left-radius: 10px; 
-	border-bottom-right-radius: 10px;
-	border-top: 0; 
-	padding: 10px;
+	height: 100%;
 }
 
-.cupon__info{
+.cupon__info {
 	padding-top: 10px;
 	display: flex;
 	justify-content: space-between;
+}
+
+/*scroll*/
+/* Ponemos un color de fondo y redondeamos las esquinas del thumb */
+.contenedor__cupones::-webkit-scrollbar-thumb {
+	background: #ccc;
+	border-radius: 4px;
+}
+
+/* Cambiamos el fondo y agregamos una sombra cuando esté en hover */
+.contenedor__cupones::-webkit-scrollbar-thumb:hover {
+	background: #b3b3b3;
+	box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* Cambiamos el fondo cuando esté en active */
+.contenedor__cupones::-webkit-scrollbar-thumb:active {
+	background-color: #999999;
 }
