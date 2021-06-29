@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <script src="https://unpkg.com/feather-icons"></script>
+<link rel="stylesheet" href="predefinido.css">
+<link rel="stylesheet" href="vender-producto.css">
+<link rel="stylesheet" href="inventario.css">
+<meta charset="utf-8">
+</head>
+<body>
+    <ul class="header__lista"><!-- Botones de la barra -->
+    <li class="header__item" style="width: 15em;">
+        <div class="header__usuario">
+            <i data-feather="user" style="color: #222;" width="35" height="35"></i>
+            <a class="header__dr" style="padding-left: 15px;" href="index.html">Usuario</a>
+        </div>
+    </li>
+    <li class="header__item"><span class="header__dr">Administrar Cupones</span></li>
+    <li class="header__item" style="float:right"><a href="Iniciar-sesion.html"><i data-feather="log-out" style="" width="35" height="35" class="header__out"></i></a></li>
+</ul>
+
+<label>Inventario</label>
+ <a class="button_verde"wight="30px">Cargar productos </a>
+
+    
+<div id = "main-conteiner">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nombre del Articulo</th><th>Precio Venta</th><th>Precio Unitario </th><th>Cantidad </th><th>Cantidad Ideal </th>
+            </tr>
+        </thead>
+
+        <tr>
+            <td>agua</td><td>$ 30</td><td>$ 5</td><td>8</td><td>60</td>
+        </tr>
+        <tr>
+            <td>pakta</td><td>$ 30</td><td>$ 5</td><td>8</td><td>60</td>
+        </tr>
+        <tr>
+            <td>agua</td><td>$ 30</td><td>$ 5</td><td>8</td><td>60</td>
+        </tr>
+        <tr>
+            <td>agua</td><td>$ 30</td><td>$ 5</td><td>8</td><td>60</td>
+        </tr>
+    </table>
+                
+
+</body>
+</div>
+<script>
+    feather.replace()
+</script>
+</html>
