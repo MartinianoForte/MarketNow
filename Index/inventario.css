@@ -1,0 +1,50 @@
+body {
+	background: #f7f7f7;
+	overflow: hidden;
+}
+
+label {
+	color: #666;
+	font-size: 20px;
+	font-family: sans-serif;
+}
+.contenedor{
+	padding: 10px;
+	width: 100%;
+	display: grid;
+	grid-gap: 1em;
+	grid-auto-rows: 8rem;
+	grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
+}
+.label{
+	color: #666;
+	font-size: 20px;
+	font-family: sans-serif;
+}
+.table{
+	background: white;
+	text-align: left;
+	border-collapse: collapse;
+	width:  100%;
+}
+
+th,td{
+	
+	padding: 20px;
+
+}
+
+thead{
+	background-color: #4caf50;
+	border-bottom: solid 5px #4caf50;
+	color: white;
+}
+/**#ddd**/
+tr:nth-child(even){
+	background-color:#ddd ;
+}
+/** animacion horrible dela tabla**/
+/**tr:hover td{
+	background-color: #369681;
+	color: white;
+}**/
