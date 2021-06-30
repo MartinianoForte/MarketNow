@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
 <head>
     <script src="https://unpkg.com/feather-icons"></script>
-<link rel="stylesheet" href="../public/css/predefinido.css">
-<link rel="stylesheet" href="../public/css/vender-producto.css">
-<link rel="stylesheet" href="../public/css/inventario.css">
-<meta charset="utf-8">
+    <link rel="stylesheet" href="../public/css/predefinido.css">
+    <link rel="stylesheet" href="../public/css/cupones.css">
+    <meta charset="utf-8">
+    <title>Inventario</title>
 </head>
 <body>
     <ul class="header__lista"><!-- Botones de la barra -->
@@ -15,15 +15,91 @@
             <a class="header__dr" style="padding-left: 15px;" href="index.html">Usuario</a>
         </div>
     </li>
-    <li class="header__item"><span class="header__dr">Administrar Cupones</span></li>
-    <li class="header__item" style="float:right"><a href="Iniciar-sesion.html"><i data-feather="log-out" style="" width="35" height="35" class="header__out"></i></a></li>
+    <li class="header__flex">
+            <span class="header__dr">Administrar Inventario</span>
+            <div>
+                <a href="Iniciar-sesion.html">
+                    <i data-feather="log-out" style="" width="35" height="35" class="header__out"></i>
+                </a>
+            </div>
+    </li>
 </ul>
-
-<label>Inventario</label>
- <a class="button_verde"wight="30px">Cargar productos </a>
-
-    
-<div id = "main-conteiner">
+    <nav class="menu">
+        <a href="index.html">
+            <div class="menu__opcion border-bottom">
+                <i data-feather="home" class="menu__icono"></i>
+                <label class="texto menu__link">Inicio</label>
+            </div>
+        </a>
+        <div class="menu__contenido">
+            <a href="index.html">
+                <div class="menu__opcion">
+                    <i data-feather="pie-chart" class="menu__icono"></i>
+                    <label class="texto menu__link">Reporte diario</label>
+                </div>
+            </a>
+            <a href="index.html">
+                <div class="menu__opcion">
+                    <i data-feather="trending-up" class="menu__icono"></i>
+                    <label class="texto menu__link">Balance</label>
+                </div>
+            </a>
+            <a href="index.html">
+                <div class="menu__opcion">
+                    <i data-feather="clipboard" class="menu__icono"></i>
+                    <label class="texto menu__link">Inventario</label>
+                </div>
+            </a>
+            <a href="index.html">
+                <div class="menu__opcion">
+                    <i data-feather="package" class="menu__icono"></i>
+                    <label class="texto menu__link">Stock Faltante</label>
+                </div>
+            </a>
+            <a href="index.html">
+                <div class="menu__opcion">
+                    <i data-feather="shopping-bag" class="menu__icono"></i>
+                    <label class="texto menu__link">Comprar Stock</label>
+                </div>
+            </a>
+            <a href="index.html">
+                <div class="menu__opcion">
+                    <i data-feather="gift" class="menu__icono"></i>
+                    <label class="texto menu__link">Cupones</label>
+                </div>
+            </a>
+            <a href="index.html">
+                <div class="menu__opcion">
+                    <i data-feather="calendar" class="menu__icono"></i>
+                    <label class="texto menu__link">Entregas</label>
+                </div>
+            </a>
+        </div>
+        <div class="menu__pie">
+            <a href="index.html">
+                <div class="menu__opcion">
+                    <i data-feather="user" class="menu__icono"></i>
+                    <label class="texto menu__link">Perfil</label>
+                </div>
+            </a>
+            <a href="index.html">
+                <div class="menu__opcion">
+                    <i data-feather="help-circle" class="menu__icono"></i>
+                    <label class="texto menu__link">Ayuda</label>
+                </div>
+            </a>
+            <a href="index.html">
+                <div class="menu__opcion">
+                    <i data-feather="log-out" class="menu__icono"></i>
+                    <label class="texto menu__link">Salir</label>
+                </div>
+            </a>
+        </div>
+    </nav>
+<main>
+<div class="granContenedor">
+    <div class="contenedor__cupones">
+    <div id = "main-conteiner">
     <table class="table">
         <thead>
             <tr>
@@ -35,20 +111,66 @@
             <td>agua</td><td>$ 30</td><td>$ 5</td><td>8</td><td>60</td>
         </tr>
         <tr>
-            <td>pakta</td><td>$ 30</td><td>$ 5</td><td>8</td><td>60</td>
+            <td>palta</td><td>$ 30</td><td>$ 5</td><td>8</td><td>60</td>
+        </tr>
+        <tr>
+            <td>Palta Acuatica</td><td>$ 60</td><td>$ 8</td><td>90</td><td>120</td>
         </tr>
         <tr>
             <td>agua</td><td>$ 30</td><td>$ 5</td><td>8</td><td>60</td>
         </tr>
-        <tr>
+         <tr>
+            <td>Pelotas</td><td>$ 120</td><td>$ 900</td><td>5</td><td>12</td>
+        </tr>
+         <tr>
+            <td>Zapatillas</td><td>$ 1000</td><td>$ 500</td><td>3</td><td>30</td>
+        </tr>
+         <tr>
             <td>agua</td><td>$ 30</td><td>$ 5</td><td>8</td><td>60</td>
         </tr>
-    </table>
-                
-
-</body>
+         <tr>
+            <td>agua</td><td>$ 30</td><td>$ 5</td><td>8</td><td>60</td>
+        </tr>
+         <tr>
+            <td>agua</td><td>$ 30</td><td>$ 5</td><td>8</td><td>60</td>
+        </tr>
+        <tr>
+            <td>Zapatillas</td><td>$ 1000</td><td>$ 500</td><td>3</td><td>30</td>
+        </tr>
+        <tr>
+            <td>Zapatillas</td><td>$ 1000</td><td>$ 500</td><td>3</td><td>30</td>
+        </tr>
+        <tr>
+            <td>Zapatillas</td><td>$ 1000</td><td>$ 500</td><td>3</td><td>30</td>
+        </tr>
+        <tr>
+            <td>Zapatillas</td><td>$ 1000</td><td>$ 500</td><td>3</td><td>30</td>
+        </tr>
+    </table>    
+    </div>      
+    </div>
+    <div class="tarjeta admin">
+        <div class="tarjeta__header">
+            <label class="tarjeta__titulo">Buscador</label>
+        </div>
+        <dir class="tarjeta__contenido admin__contenido" style="margin: 0">
+            <form>
+            <div class="admin__botones">
+            <input type="text" name="" class="input" placeholder="Nombre">
+            <input type="number" name="" class="input" placeholder="Precio">
+            <input type="text" name="" class="input" placeholder="Categoria">
+            </div>
+            <div class="vacio"></div>
+            <button class="button_verde">Buscar</button>
+            </form>
+        </dir>
+    </div>
 </div>
+</main>
 <script>
     feather.replace()
 </script>
+</body>
+</html>
+
 </html>
