@@ -1,7 +1,6 @@
 /*-----------------Cosas----------------------*/
-body{
-    margin: 0;
-}
+body{ margin: 0; }
+main{ margin-left: 15em; }
 
 .texto{
     color: #666;
@@ -112,9 +111,7 @@ body{
     background-color: #4caf50;
 }
 
-.header__item{
-    float: left;
-}
+.header__item{ float: left; }
 
 .header__link {
     display: block;
@@ -132,15 +129,22 @@ body{
 
 .header__usuario{
     border-right: 1px solid #222;
+    height: 72px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .header__out{
-    padding: 18.5px 32px;
+    padding: 0 32px;
     color: #222;
-    height: 31px;
+}
+
+.header__flex{
+    height: 72px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .header__dr{
@@ -149,7 +153,7 @@ body{
     font-family: "Open Sans", sans-serif;
     font-size: 23px;
     text-align: center;
-    padding: 22px 32px;
+    padding: 0 32px;
     text-decoration: none;
 }
 
@@ -157,21 +161,45 @@ body{
 
 .menu{
     top: 72px;
-    left: 0;
     position: fixed;
+    left: 0;
+    height: 100%;
     border-right: 1px solid #999;
     width: 15em;
-    height: 100%;
+    background: #f7f7f7;
 }
 
-.menu__inicio{
-    text-align: center; 
-    border-bottom: 1px solid #999; 
-    padding: 5px;
-}
+.border-bottom{ border-bottom: 1px solid #999; }
 
 .menu__contenido{
+    padding: 10px 0;
+}
 
+.menu__opcion{
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+}
+
+.menu__opcion:hover{ background: #f1f1f1; }
+
+.menu__icono{
+    width: 30px;
+    height: 30px;
+    color: #555;
+    padding: 2.5px;
+}
+
+.menu__link{
+    padding-left: 7.5px;
+    cursor: pointer;
+}
+
+.menu__pie{
+    border-top: 1px solid #999;
+    position: fixed;
+    bottom: 0;
+    width: 15em;
 }
 
 /*----------Tarjeta--------------*/
@@ -227,3 +255,5 @@ body{
     display: flex;
 }
 
+/*-<a> no lleva decoracion. Punto-*/
+a{ text-decoration: none; }

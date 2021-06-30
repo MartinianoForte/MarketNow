@@ -1,7 +1,4 @@
-body {
-	background: #f7f7f7;
-	overflow: hidden;
-}
+body { background: #f7f7f7; }
 
 label {
 	color: #666;
@@ -11,32 +8,24 @@ label {
 
 .granContenedor {
 	display: grid;
-	grid-template-columns: 15em 1fr 20em;
+	grid-template-columns: 1fr 20em;
+	height: 91vh;
 }
 
-.input {
-	margin: 5px auto;
-}
+.input { margin: 5px auto; }
 
 .contenedor__cupones {
 	padding: 10px;
-	width: 100%;
-	overflow: scroll;
+	/*overflow: scroll;*/
 	display: grid;
 	grid-gap: 1em;
 	grid-auto-rows: 8rem;
 	grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
 }
 
-.admin {
-	width: 100%;
-	margin-top: 10px;
-}
+.admin { margin-top: 10px; }
 
-.admin__contenido {
-	padding: 20px;
-	height: 85vh;
-}
+.admin__contenido { padding: 20px; }
 
 .admin__botones {
 	display: flex;
@@ -44,7 +33,7 @@ label {
 	height: 40vh;
 }
 
-.vacio { height: 25vh; }
+.vacio { height: 20vh; } 
 
 .tarjeta__contenido{
 	height: 100%;
@@ -73,3 +62,4 @@ label {
 .contenedor__cupones::-webkit-scrollbar-thumb:active {
 	background-color: #999999;
 }
+
