@@ -1,31 +1,73 @@
-body {
-	background: #f7f7f7;
-	overflow: hidden;
-}
+body { background: #f7f7f7; }
 
 label {
 	color: #666;
 	font-size: 20px;
 	font-family: sans-serif;
 }
-.contenedor{
+
+.granContenedor {
+	display: grid;
+	grid-template-columns: 1fr 20em;
+	height: 91vh;
+}
+
+.input { margin: 5px auto; }
+
+.contenedor__cupones {
 	padding: 10px;
-	width: 100%;
+	/*overflow: scroll;*/
 	display: grid;
 	grid-gap: 1em;
 	grid-auto-rows: 8rem;
 	grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
 }
-.label{
-	color: #666;
-	font-size: 20px;
-	font-family: sans-serif;
+
+.admin { margin-top: 10px; }
+
+.admin__contenido { padding: 20px; }
+
+.admin__botones {
+	display: flex;
+	flex-direction: column;
+	height: 40vh;
+}
+
+.vacio { height: 20vh; } 
+
+.tarjeta__contenido{
+	height: 100%;
+}
+
+.cupon__info {
+	padding-top: 10px;
+	display: flex;
+	justify-content: space-between;
+}
+
+/*scroll*/
+/* Ponemos un color de fondo y redondeamos las esquinas del thumb */
+.contenedor__cupones::-webkit-scrollbar-thumb {
+	background: #ccc;
+	border-radius: 4px;
+}
+
+/* Cambiamos el fondo y agregamos una sombra cuando esté en hover */
+.contenedor__cupones::-webkit-scrollbar-thumb:hover {
+	background: #b3b3b3;
+	box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* Cambiamos el fondo cuando esté en active */
+.contenedor__cupones::-webkit-scrollbar-thumb:active {
+	background-color: #999999;
 }
 .table{
+	height: 100%;
 	background: white;
-	text-align: left;
+	text-align: center;
 	border-collapse: collapse;
-	width:  100%;
+	width: 100%;
 }
 
 th,td{
