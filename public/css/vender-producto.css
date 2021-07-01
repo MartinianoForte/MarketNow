@@ -1,23 +1,10 @@
-*{
-    box-sizing: border-box;
-}
 
-.form{
-	background: #fff;
-    border: 1px solid #666;
-    margin-top:  250px;
-    width: 600px;
-    padding:  20px;
-}
-
+/**input de codigo de cliente y codigo de barra**/
 .input{
-	width: 300px;
+	width: 40%;
 	float: left;
-}
-
-.codigo{
-	float: left;
-	margin-left: 600px;
+	margin: 50px;
+	margin-top: 1px;
 }
 
 
@@ -59,3 +46,55 @@ tr:nth-child(even){
 	color: white;
 }**/
 
+/** codigo de barras**/
+.barras-cliente{
+	float: left;
+	margin-right: 20px;
+	text-indent: 53px;
+	margin-top: 30px;
+}
+
+.clearfix{
+	clear: both;
+}
+
+.codigo-cliente{
+	margin-top: 48px;
+	margin-right: 20px;
+	text-indent: 517px;
+
+
+	}
+
+/** botones **/
+
+
+.terminar{
+	
+	text-align: center;
+	width: 200px;
+	margin-left:57px;
+	margin-top: 000.1px;
+	padding: 15px 10px;
+	color: white;
+	background: #4caf50;
+	display: inline-block;
+	cursor: pointer;
+	text-decoration: none;
+	border: none;
+	float: left;
+}
+
+.cancelar{
+	text-align: center;
+	width: 200px;
+	margin-left:57px;
+	margin-top: 000.1px;
+	padding: 15px 10px;
+	color: white;
+	background: #4caf50;
+	display: inline-block;
+	cursor: pointer;
+	text-decoration: none;
+	border: none;
+}
