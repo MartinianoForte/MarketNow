@@ -109,5 +109,79 @@ tr:nth-child(even){
 /** rectangulo de la derecha **/
 
 .calcu{
+}
 
+
+/** calculadora **/
+
+/**borde negro de la calculadora**/
+.calculator{
+	height: 200px;
+	width: 400px;
+	background-color: black;
+	box-shadow: 0px 0px 8px black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	color: white;
+}
+
+/** cuadrado negro de la calculadora
+.result-bar{
+	width: 100%;
+	height: 50px;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	padding: 0 1rem;
+	box-sizing: border-box;
+} **/
+
+.result-bar span{
+	font-size: 70px;
+}
+/** tamaño de los botones**/
+.controlls{
+	height: 200px;
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(4, 97.7px);
+	grid-gap:  3px;
+
+}
+
+.number,.operator{
+	font-size: 20px;
+	color: black;
+	border: none;
+
+}
+
+input:focus{
+	outline: none;
+	border-color: black;
+}
+
+input:hover{
+	filter: brightness(110%);
+}
+
+.operator{
+	background-color: white;
+}
+/** barra negra de resultado
+.operator-out{
+	width: 100%;
+	height: 60px;
+	background-color: black;
+	margin-bottom:3px;
+}**/
+
+.number{
+	background-color: white;
+}
+
+.result{
+	background-color: green;
 }
