@@ -1,12 +1,95 @@
 
+main{
+	display: flex;
+	flex-direction: column;
+	margin-top: 10px;
+}
+
+/** titulos **/
+
+.contenedor-titulos{
+	width: 90%;
+	display: flex;
+	justify-content: normal;
+
+}
+.codigo-barra{
+	margin-right: 700px;
+	
+}
+
+.codigo-cliente{
+	margin-left: 0.1px;
+	}
+
+.clearfix{
+	clear: both;
+}
+
+
 /**input de codigo de cliente y codigo de barra**/
 .input{
-	width: 40%;
+	width:500px;
 	float: left;
-	margin: 50px;
 	margin-top: 1px;
 }
 
+/** botones **/
+
+.barra{
+	width: 40%;
+	margin-top: 10px;
+	display: flex;
+	justify-content: space-around;
+}
+
+.terminar{
+	width: 200px;
+	margin-left:57px;
+	margin-top: 000.1px;
+	padding: 15px 10px;
+	color: white;
+	background: #4caf50;
+	display: inline-block;
+	cursor: pointer;
+	text-decoration: none;
+	border: none;
+	float: left;
+}
+
+.cancelar{
+	
+	width: 200px;
+	margin-left:57px;
+	margin-top: 000.1px;
+	padding: 15px 10px;
+	color: white;
+	background: #4caf50;
+	display: inline-block;
+	cursor: pointer;
+	text-decoration: none;
+	border: none;
+}
+
+.total{
+	text-indent: 10px;
+	margin-top: 50px;
+	font-size: 28px;
+}
+
+/** rectangulo de la derecha **/
+
+.contenedor{
+	display: flex;
+	background: #944;
+}
+
+.calcu{
+	border: 1px solid black;
+
+}
+
+/**------------------------tabla-------------------------**/
 
 body{
 	background-color: white;
@@ -24,6 +107,8 @@ body{
 	border-collapse: collapse;
 	width:  100%;
 }
+
+
 
 th,td{
 	
@@ -45,72 +130,6 @@ tr:nth-child(even){
 	background-color: #369681;
 	color: white;
 }**/
-
-/** codigo de barras**/
-.barras-cliente{
-	float: left;
-	margin-right: 20px;
-	text-indent: 53px;
-	margin-top: 30px;
-}
-
-.clearfix{
-	clear: both;
-}
-
-.codigo-cliente{
-	margin-top: 48px;
-	margin-right: 20px;
-	text-indent: 517px;
-
-
-	}
-
-/** botones **/
-
-
-.terminar{
-	
-	text-align: center;
-	width: 200px;
-	margin-left:57px;
-	margin-top: 000.1px;
-	padding: 15px 10px;
-	color: white;
-	background: #4caf50;
-	display: inline-block;
-	cursor: pointer;
-	text-decoration: none;
-	border: none;
-	float: left;
-}
-
-.cancelar{
-	text-align: center;
-	width: 200px;
-	margin-left:57px;
-	margin-top: 000.1px;
-	padding: 15px 10px;
-	color: white;
-	background: #4caf50;
-	display: inline-block;
-	cursor: pointer;
-	text-decoration: none;
-	border: none;
-
-}
-
-.total{
-	text-indent: 10px;
-	margin-top: 50px;
-	font-size: 28px;
-}
-
-/** rectangulo de la derecha **/
-
-.calcu{
-}
-
 
 /** calculadora **/
 
@@ -167,6 +186,8 @@ input:hover{
 	filter: brightness(110%);
 }
 
+
+
 .operator{
 	background-color: white;
 }
@@ -185,3 +206,5 @@ input:hover{
 .result{
 	background-color: green;
 }
+
+/**------------------------------**/
