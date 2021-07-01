@@ -15,7 +15,7 @@ body{
 
 #main-conteiner{
 	margin:  150px auto;
-	width:  600px;
+	width:  900px;
 }
 
 .table{
@@ -27,7 +27,7 @@ body{
 
 th,td{
 	
-	padding: 20px;
+	padding: 20px 80px 10px 40px;
 
 }
 
@@ -97,4 +97,17 @@ tr:nth-child(even){
 	cursor: pointer;
 	text-decoration: none;
 	border: none;
+
+}
+
+.total{
+	text-indent: 10px;
+	margin-top: 50px;
+	font-size: 28px;
+}
+
+/** rectangulo de la derecha **/
+
+.calcu{
+
 }
