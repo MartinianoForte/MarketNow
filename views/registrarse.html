@@ -2,6 +2,9 @@
 <html lang="es">
 <head>
     <script src="https://kit.fontawesome.com/ee5c196280.js" crossorigin="anonymous"></script>
+    <script src="../public/Registro.js"></script>
+    <meta charset="utf-8"/></meta>
+    
 <link rel="stylesheet" href="../public/css/predefinido.css">
 <link rel="stylesheet" href="../public/css/registro.css">
 </head>
@@ -20,32 +23,32 @@
 
         <div class="input-contenedor-registro">
             <i class="fas fa-user icono"></i>
-            <input type="text" placeholder="Nombre">
+            <input type="text"  placeholder="Nombre" id="nombre"method="get">
             
         </div>
 
          <div class="input-contenedor-registro">
             <i class="far fa-envelope icono"></i>
-            <input type="text" placeholder="Correo Electronico">
+            <input type="text" placeholder="Correo Electronico"id="electrico"method="get">
             
         </div>
 
          <div class="input-contenedor-registro">
             <i class="fas fa-key icono"></i>
-            <input type="password" placeholder="Contraseña">
+            <input type="password" placeholder="Contraseña"id="contra"method="get">
             
         </div>
 
         <div class="input-contenedor-registro">
             <i class="fas fa-key icono"></i>
-            <input type="text" placeholder="Repetir contraseña">
+            <input type="password" placeholder="Repetir contraseña"id="contra2"method="get">
             
         </div>
 
         <div class="input-contenedor-registro">
             <i class="fas fa-user-tag icono"></i>
             <select class="input" name="tipo">
-            <option value="0">Rol</option>
+            <option value="0">Seleccione un rol</option>
             <option value="1">Usuario</option>
             <option value="2">Comerciante</option>
             <option value="3">Proveedor</option></select>
@@ -55,39 +58,41 @@
 
         <div class="input-contenedor-registro">
             <i class="fas fa-phone-alt icono"></i>
-            <input type="text" placeholder="Telefono">
+            <input type="number" placeholder="Telefono"id="telefono"method="get">
             
         </div>
 
         <div class="input-contenedor-registro">
             <i class="fas fa-address-book icono"></i>
-            <input type="text" placeholder="DNI">
+            <input type="number" placeholder="DNI"id="dni"method="get">
             
         </div>
 
          <div class="input-contenedor-registro">
             <i class="fas fa-map-marker-alt icono"></i>
-            <input type="text" placeholder="Dirección">
+            <input type="text" placeholder="Dirección"id="direccion"method="get">
             
         </div>
 
         <div class="input-contenedor-registro">
             <i class="fas fa-shopping-cart icono"></i>
-            <input type="text" placeholder="Nombre del local">
+            <input type="text" placeholder="Nombre del local" id="nom_local"method="get">
             
         </div>
+       
 
          <div class="input-contenedor-registro logo__contenedor">
             <i class="fas fa-apple-alt icono" style="margin-top:17px;"></i>
             <label>Subir logo</label>
                 <div id="contenedor_imagen">
-                    <input type="file" name="imagen" class="imagen" onchange="validarImagen(this);" required multiple>
+                    <input type="file" name="imagen" class="imagen" onchange="validarImagen(this);" >
+                    <!--poner arriba required multiple-->
                     <a id="texto_imagen">Elegir Imagen </a>
                 </div>
                 <div id="cuadroImagen"></div>
         </div>
 
-        <input type="submit" value="Registrarse" class="button">
+        <input type="submit" onclick="sub()" value="Registrarse" class="button">
         <div class="texto-p">
         <p style="color:#666;">Al registrarte, aceptas nuestras condiciones de uso y politica de privacidad</p>
         <p>¿Ya tienes una cuenta? <a class="link" href="Iniciar-sesion.html">Iniciar sesión</a></p>
@@ -95,3 +100,4 @@
 </div>
     </div>
     </form>
+
