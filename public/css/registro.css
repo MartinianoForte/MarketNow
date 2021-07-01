@@ -7,7 +7,6 @@ body{
 *{
     box-sizing:: border-box;
 }
-
 .contenedor-registrarse{
     width:  100%;
     padding: 15px;
@@ -33,6 +32,7 @@ body{
     color: #666;
 }
 
+input[type="number"],
 input[type="text"],
 input[type="password"]{
     font-size:20px;
@@ -146,11 +146,3 @@ label{
     display:block;
     margin:auto;
 }
-
-
-
-
-
-
-
-
