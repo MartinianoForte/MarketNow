@@ -70,7 +70,7 @@ input[type="password"]{
     color: red;
 }**/
 /** check **/
-.error{
+.check{
      min-width: 50px;
     text-align: center;
     color: green;
