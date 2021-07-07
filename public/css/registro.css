@@ -31,12 +31,12 @@ body{
     border: none;
     color: #666;
 }
-
+/** tamaño del input**/
 input[type="number"],
 input[type="text"],
 input[type="password"]{
     font-size:20px;
-    width: 82%;
+    width: 75%;
     padding: 10px;
     border: none;
 }
@@ -46,15 +46,41 @@ input[type="password"]{
     color:  green;
     font-size: 20px;
 }
+/** borde en rojo error**//**
+ .input-contenedor-registro{
+    margin-bottom: 15px;
+    border: 1px solid red;
+}
+**/
+
+/**borde normal sin error**/
 .input-contenedor-registro{
     margin-bottom: 15px;
     border: 1px solid #aaa;
 }
-
 .icono{
     min-width: 50px;
     text-align: center;
     color: #999;
+}
+/** X **//**
+.error{
+     min-width: 50px;
+    text-align: center;
+    color: red;
+}**/
+/** check **/
+.error{
+     min-width: 50px;
+    text-align: center;
+    color: green;
+}
+
+
+/** texto-error**/
+.texto-error{
+    font-size: 14px;
+    margin: 1px;
 }
 
 .button{
