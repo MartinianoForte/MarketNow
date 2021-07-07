@@ -23,27 +23,30 @@
 
         <div class="input-contenedor-registro">
             <i class="fas fa-user icono"></i>
-            <input type="text"  placeholder="Nombre" id="nombre"method="get">
-            
+            <input type="text"  placeholder="Nombre" id="nombre"method="get"><!--<i class="fas fa-times error"></i>--><i class="fas fa-check check"></i>
         </div>
+        <!--<p class="texto-error">El usuario tiene que ser de 4 a 16 digitos y solo puede contener numeros, letras y guion bajo.</p>-->
 
          <div class="input-contenedor-registro">
             <i class="far fa-envelope icono"></i>
-            <input type="text" placeholder="Correo Electronico"id="electrico"method="get">
-            
+            <input type="text" placeholder="Correo Electronico"id="electrico"method="get"><!--<i class="fas fa-times error"></i>--><i class="fas fa-check check"></i>
+        
         </div>
+        <!--<p class="texto-error">El mail ingresado no existe o es incorrecto.</p>-->
 
          <div class="input-contenedor-registro">
             <i class="fas fa-key icono"></i>
-            <input type="password" placeholder="Contraseña"id="contra"method="get">
+            <input type="password" placeholder="Contraseña"id="contra"method="get"><!--<i class="fas fa-times error"></i>--><i class="fas fa-check check"></i>
             
         </div>
+        <!--<p class="texto-error">La contraseña debe poseer al menos un numero y una letra.</p>-->
 
         <div class="input-contenedor-registro">
             <i class="fas fa-key icono"></i>
-            <input type="password" placeholder="Repetir contraseña"id="contra2"method="get">
+            <input type="password" placeholder="Repetir contraseña"id="contra2"method="get"><!--<i class="fas fa-times error"></i>--><i class="fas fa-check check"></i>
             
         </div>
+        <!--<p class="texto-error">Las contraseñas no se repiten correctamente.</p>-->
 
         <div class="input-contenedor-registro">
             <i class="fas fa-user-tag icono"></i>
@@ -53,32 +56,37 @@
             <option value="2">Comerciante</option>
             <option value="3">Proveedor</option></select>
         </div>
+        <!--<p class="texto-error">Seleccione un rol.</p>-->
             <!-- <input type="text" placeholder="Usuario, Cliente o Proveedor">   -->
         </div>
 
         <div class="input-contenedor-registro">
             <i class="fas fa-phone-alt icono"></i>
-            <input type="number" placeholder="Telefono"id="telefono"method="get">
+            <input type="number" placeholder="Telefono"id="telefono"method="get"><!--<i class="fas fa-times error"></i>--><i class="fas fa-check check"></i>
             
         </div>
+        <!--<p class="texto-error">El telefono ingresado es incorrecto o inexistente.</p>-->
 
         <div class="input-contenedor-registro">
             <i class="fas fa-address-book icono"></i>
-            <input type="number" placeholder="DNI"id="dni"method="get">
+            <input type="number" placeholder="DNI"id="dni"method="get"><!--<i class="fas fa-times error"></i>--><i class="fas fa-check check"></i>
             
         </div>
+        <!--<p class="texto-error">El dni es incorrecto o inexistente.</p>-->
 
          <div class="input-contenedor-registro">
             <i class="fas fa-map-marker-alt icono"></i>
-            <input type="text" placeholder="Dirección"id="direccion"method="get">
+            <input type="text" placeholder="Dirección"id="direccion"method="get"><!--<i class="fas fa-times error"></i>--><i class="fas fa-check check"></i>
             
         </div>
+        <!--<p class="texto-error">La direccion es incorrecta o inexistente.</p>-->
 
         <div class="input-contenedor-registro">
             <i class="fas fa-shopping-cart icono"></i>
-            <input type="text" placeholder="Nombre del local" id="nom_local"method="get">
+            <input type="text" placeholder="Nombre del local" id="nom_local"method="get"><!--<i class="fas fa-times error"></i>--><i class="fas fa-check check"></i>
             
         </div>
+        <!--<p class="texto-error">Debe ingresar el nombre del local.</p>-->
        
 
          <div class="input-contenedor-registro logo__contenedor">
@@ -91,6 +99,7 @@
                 </div>
                 <div id="cuadroImagen"></div>
         </div>
+        <!--<p class="texto-error">Debe subir el logo del local.</p>-->
 
         <input type="submit" onclick="sub()" value="Registrarse" class="button">
         <div class="texto-p">
@@ -100,4 +109,5 @@
 </div>
     </div>
     </form>
+
 
