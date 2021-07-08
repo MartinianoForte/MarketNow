@@ -99,21 +99,24 @@
 <!-------------------------------input codigo de barra y cliente---------------------------------------->    
 
 <div class= "">
-<input type="text" class="input" placeholder="Codigo de barras">    
+<input type="text" class="input-codigo" placeholder="Codigo de barras">    
 
-<input type="text" class="input" placeholder="Codigo de cliente">
+<input type="text" class="input-codigo" placeholder="Codigo de cliente">
 </div>
 <!--------------------------------botones------------------------------------------------------------->
 <div class="barra">
 <button class="terminar">Terminar venta</button>
 <button class="cancelar">Cancelar venta</button>
 </div>
+
 <!--------------------------------inputs de la calculadora--------------------------------------------->
-<div class="calcu">
-    <input type="text" placeholder="Nombre del producto">
-    <input type="text" placeholder="Cantidad">
-    <label class="texto">Total: $230</label>
+<div class="flex-container-padre">
+<div class="flex-container">
+    <input class="hijos" type="text" placeholder="Nombre del producto">
+    <input class="hijos" type="text" placeholder="Cantidad">
+    <label class="total-derecha">Total: $230</label>
 </div>
+
 <!---------------------------------calculadora----------------------------------------------------------->
 <div class="calculator">
 <div class="result-bar">
@@ -137,6 +140,7 @@
   <input type="button" class="number" value="0" id="cero">
   <input type="button" class="number" value="." id="coma">  
   <input type="button" class="operator" value="+" id="plus">        
+</div>
 </div>
 </div>
 <!---------------------------------------------------------------------------------------------------------------->
