@@ -1,4 +1,7 @@
 
+*{
+	box-sizing: border-box;
+}
 main{
 	display: flex;
 	flex-direction: column;
@@ -28,10 +31,11 @@ main{
 
 
 /**input de codigo de cliente y codigo de barra**/
-.input{
-	width:500px;
-	float: left;
+.input-codigo{
+	width:550px;
 	margin-top: 1px;
+	padding: 10px;
+	font-size: 20px;
 }
 
 /** botones **/
@@ -79,14 +83,32 @@ main{
 
 /** rectangulo de la derecha **/
 
-.contenedor{
-	display: flex;
-	background: #944;
+.flex-container-padre{
+ display: flex;
+ width: 80%;
 }
 
-.calcu{
+.flex-container{
 	border: 1px solid black;
+	display: flex;
+	flex-direction: column;
+	width: ;
 
+}
+
+.hijos{
+	width: 100%;
+	margin-top: 15px;
+
+	font-size: 18px;
+}
+
+.total-derecha{
+	color:grey ;
+	font-size: 20px;
+	margin-left: 1px;
+	margin-top: 15px;
+	border: 1px solid grey;
 }
 
 /**------------------------tabla-------------------------**/
@@ -171,7 +193,7 @@ tr:nth-child(even){
 }
 
 .number,.operator{
-	font-size: 20px;
+	font-size: 15px;
 	color: black;
 	border: none;
 
