@@ -86,24 +86,22 @@
             </a>
         </div>
     </nav>
-<!-------------------------------texto----------------------------------------------------------------->
+
 <main>
-    <div class="contenedor-titulos">
-    <p class="codigo-barra">Codigo de barras</p>
-  
 
-    <p class="codigo-cliente">Codigo de cliente</p>
+<div class="codigo-padre">
+    <div class="codigo-de-barras">
+    <p class="input-barra">Codigo de barras</p>
+    <input type="text" class="input-barra" placeholder="Codigo de barras">
+    </div>    
 
-</div>
-
-<!-------------------------------input codigo de barra y cliente---------------------------------------->    
-
-<div class= "">
-<input type="text" class="input-codigo" placeholder="Codigo de barras">    
-
-<input type="text" class="input-codigo" placeholder="Codigo de cliente">
+<div class= "codigo-de-cliente">
+    <p class="input-cliente">Codigo de cliente</p>
+    <input type="text" class="input-cliente" placeholder="Codigo de cliente">
+    </div>
 </div>
 <!--------------------------------botones------------------------------------------------------------->
+<div class="flex-container-container">
 <div class="barra">
 <button class="terminar">Terminar venta</button>
 <button class="cancelar">Cancelar venta</button>
@@ -143,6 +141,7 @@
 </div>
 </div>
 </div>
+</div>
 <!---------------------------------------------------------------------------------------------------------------->
 <p class="total">Total: $2,000.000</p>
 <!-----------------------------------------------Tabla------------------------------------------------------------>
@@ -155,7 +154,7 @@
         </thead>
 
         <tr>
-            <td>agua</td><td>Palta</td><td>$ 300</td><td>200</td><td>$ 3000</td>
+            <td>agua</td><td>Palta</td><td>$ 300</td><td>200</td><td><i class="fas fa-times-circle quitar"></i></td>
         </tr>
         <tr>
             <td>luz</td><td>Papa</td><td>$695</td><td>100</td><td>$ 3000</td>
