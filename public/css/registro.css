@@ -172,3 +172,17 @@ label{
     display:block;
     margin:auto;
 }
+/*----------------Errores----------------*/
+
+/*----------------Validacion de datos----------------*/
+/*----------------Inputs----------------*/
+/*----------------Menu de roles----------------*/
+.escondido{
+ display: none;
+}
+.activo{
+    display: block;
+}
+.escondido_logo{
+display: none;
+}
