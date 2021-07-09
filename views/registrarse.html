@@ -2,8 +2,9 @@
 <html lang="es">
 <head>
     <script src="https://kit.fontawesome.com/ee5c196280.js" crossorigin="anonymous"></script>
-    <script src="../public/Registro.js"></script>
+    <script src="../public/js/Registro.js"></script>
     <meta charset="utf-8"/></meta>
+    <title>Registrarse</title>
     
 <link rel="stylesheet" href="../public/css/predefinido.css">
 <link rel="stylesheet" href="../public/css/registro.css">
@@ -21,75 +22,78 @@
         <h1 class="registrate">Registrate</h1>
         <div clas="contenedor-registro">
 
+            <!--Input nombre-->
         <div class="input-contenedor-registro">
             <i class="fas fa-user icono"></i>
             <input type="text"  placeholder="Nombre" id="nombre"method="get"><!--<i class="fas fa-times error"></i>--><i class="fas fa-check check"></i>
         </div>
         <!--<p class="texto-error">El usuario tiene que ser de 4 a 16 digitos y solo puede contener numeros, letras y guion bajo.</p>-->
 
+        <!--Input mail-->
          <div class="input-contenedor-registro">
             <i class="far fa-envelope icono"></i>
             <input type="text" placeholder="Correo Electronico"id="electrico"method="get"><!--<i class="fas fa-times error"></i>--><i class="fas fa-check check"></i>
-        
         </div>
         <!--<p class="texto-error">El mail ingresado no existe o es incorrecto.</p>-->
 
+        <!--Input contra-->
          <div class="input-contenedor-registro">
             <i class="fas fa-key icono"></i>
             <input type="password" placeholder="Contraseña"id="contra"method="get"><!--<i class="fas fa-times error"></i>--><i class="fas fa-check check"></i>
-            
         </div>
         <!--<p class="texto-error">La contraseña debe poseer al menos un numero y una letra.</p>-->
 
+        <!--Input contra2-->
         <div class="input-contenedor-registro">
             <i class="fas fa-key icono"></i>
             <input type="password" placeholder="Repetir contraseña"id="contra2"method="get"><!--<i class="fas fa-times error"></i>--><i class="fas fa-check check"></i>
-            
         </div>
         <!--<p class="texto-error">Las contraseñas no se repiten correctamente.</p>-->
 
+        <!--Barra de roles-->
         <div class="input-contenedor-registro">
-            <i class="fas fa-user-tag icono"></i>
-            <select class="input" name="tipo">
-            <option value="0">Seleccione un rol</option>
-            <option value="1">Usuario</option>
-            <option value="2">Comerciante</option>
-            <option value="3">Proveedor</option></select>
-        </div>
-        <!--<p class="texto-error">Seleccione un rol.</p>-->
-            <!-- <input type="text" placeholder="Usuario, Cliente o Proveedor">   -->
+            <i class="fas fa-user-tag icono" id="Barra__roles"></i>
+            <select class="input" onchange="Barra_Roles()" name="tipo" id="tipo">
+            <option value="0" selected="select" id="nada">Seleccione un rol</option>
+            <option value="1"id="usuario" >Usuario</option>
+            <option value="2"id="comerciante">Comerciante</option>
+            <option value="3"id="proveedor">Proveedor</option></select>
         </div>
 
+    <div id="activacion" class="escondido">
+        
+        <!--Input telefono-->
         <div class="input-contenedor-registro">
             <i class="fas fa-phone-alt icono"></i>
             <input type="number" placeholder="Telefono"id="telefono"method="get"><!--<i class="fas fa-times error"></i>--><i class="fas fa-check check"></i>
-            
         </div>
+
         <!--<p class="texto-error">El telefono ingresado es incorrecto o inexistente.</p>-->
 
+        <!--Input dni-->
         <div class="input-contenedor-registro">
             <i class="fas fa-address-book icono"></i>
             <input type="number" placeholder="DNI"id="dni"method="get"><!--<i class="fas fa-times error"></i>--><i class="fas fa-check check"></i>
-            
         </div>
         <!--<p class="texto-error">El dni es incorrecto o inexistente.</p>-->
 
-         <div class="input-contenedor-registro">
+        <!--Input direccion-->
+        <div class="input-contenedor-registro">
             <i class="fas fa-map-marker-alt icono"></i>
             <input type="text" placeholder="Dirección"id="direccion"method="get"><!--<i class="fas fa-times error"></i>--><i class="fas fa-check check"></i>
-            
         </div>
         <!--<p class="texto-error">La direccion es incorrecta o inexistente.</p>-->
 
+        <!--Input nombre_local-->
         <div class="input-contenedor-registro">
             <i class="fas fa-shopping-cart icono"></i>
             <input type="text" placeholder="Nombre del local" id="nom_local"method="get"><!--<i class="fas fa-times error"></i>--><i class="fas fa-check check"></i>
-            
         </div>
         <!--<p class="texto-error">Debe ingresar el nombre del local.</p>-->
        
-
-         <div class="input-contenedor-registro logo__contenedor">
+        <!--Subir logo -->
+    <div id="esconder_logo" class="escondido_logo">
+        <div class="input-contenedor-registro logo__contenedor">
             <i class="fas fa-apple-alt icono" style="margin-top:17px;"></i>
             <label>Subir logo</label>
                 <div id="contenedor_imagen">
@@ -99,15 +103,19 @@
                 </div>
                 <div id="cuadroImagen"></div>
         </div>
+    </div>
         <!--<p class="texto-error">Debe subir el logo del local.</p>-->
+    </div>
 
-        <input type="submit" onclick="sub()" value="Registrarse" class="button">
+        <!--Boton de registrarse -->
+        <input type="submit" onclick="EnviarFormulario()" value="Registrarse" class="button">
         <div class="texto-p">
         <p style="color:#666;">Al registrarte, aceptas nuestras condiciones de uso y politica de privacidad</p>
         <p>¿Ya tienes una cuenta? <a class="link" href="Iniciar-sesion.html">Iniciar sesión</a></p>
     </div>
+
+    
 </div>
     </div>
     </form>
-
 
