@@ -46,14 +46,6 @@ input[type="password"]{
     color:  green;
     font-size: 20px;
 }
-/** borde en rojo error**//**
- .input-contenedor-registro{
-    margin-bottom: 15px;
-    border: 1px solid red;
-}
-**/
-
-/**borde normal sin error**/
 .input-contenedor-registro{
     margin-bottom: 15px;
     border: 1px solid #aaa;
@@ -63,26 +55,6 @@ input[type="password"]{
     text-align: center;
     color: #999;
 }
-/** X **//**
-.error{
-     min-width: 50px;
-    text-align: center;
-    color: red;
-}**/
-/** check **/
-.check{
-     min-width: 50px;
-    text-align: center;
-    color: green;
-}
-
-
-/** texto-error**/
-.texto-error{
-    font-size: 14px;
-    margin: 1px;
-}
-
 .button{
     border: none;
     width: 100%;
@@ -173,9 +145,27 @@ label{
     margin:auto;
 }
 /*----------------Errores----------------*/
-
-/*----------------Validacion de datos----------------*/
-/*----------------Inputs----------------*/
+.texto-error{
+    font-size: 14px;
+    margin: 1px;
+    display: none;
+}
+.incorrecto {
+    min-width: 50px;
+    text-align: center;
+    color: red;
+    display: none;
+}
+.error_rojo{
+    margin-bottom: 15px;
+    /*border: 1px solid red;*/
+}
+.correcto{
+     min-width: 50px;
+    text-align: center;
+    color: green;
+    display: none;
+}
 /*----------------Menu de roles----------------*/
 .escondido{
  display: none;
@@ -185,4 +175,20 @@ label{
 }
 .escondido_logo{
 display: none;
+}
+/* ----- -----  Mediaqueries ----- ----- */
+@media screen and (max-width: 800px) {
+    .formulario {
+        grid-template-columns: 1fr;
+    }
+
+    .formulario__grupo-terminos, 
+    .formulario__mensaje,
+    .formulario__grupo-btn-enviar {
+        grid-column: 1;
+    }
+
+    .formulario__btn {
+        width: 100%;
+    }
 }
