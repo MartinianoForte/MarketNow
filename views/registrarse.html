@@ -22,33 +22,37 @@
         <h1 class="registrate">Registrate</h1>
         <div clas="contenedor-registro">
 
-        <!--Input nombre-->    
-        <div class="input-contenedor-registro" id="colorborde">
+        <!--Input nombre-->   
+        <p class="texto-error" id="texto-error" name="texto-error">Complete el campo, gracias.</p> 
+        <div class="input-contenedor-registro" id="colorborde" name="color_borde">
             <i class="fas fa-user icono"></i>
               <input type="text"  placeholder="Nombre" id="nombre"method="get" onchange="validar_nombre(document.getElementById('nombre'))"><i class="fas fa-times incorrecto" id="incorrecto"></i><i class="fas fa-check correcto" id="correcto"></i>
         </div>
-        <p class="texto-error" id="texto-error" name="texto-error">Por favor, complete el campo, gracias.</p>
+        
         
         <!--Input mail-->
+        <p class="texto-error" id="texto-error1" name="texto-error">El mail debe contar con un @(arroba) y con un .(punto), gracias.</p>
          <div class="input-contenedor-registro " id="colorborde2">
             <i class="fas fa-envelope icono"></i>
               <input type="text"  placeholder="Correo Electronico" id="mail"method="get" onchange="validar_mail(document.getElementById('mail'))"><i class="fas fa-times incorrecto" id="incorrecto1" ></i><i class="fas fa-check correcto" id="correcto1"></i>
         </div>
-        <p class="texto-error" id="texto-error1" name="texto-error">El mail debe contar con un @(arroba) y con un .(punto), gracias.</p>
+        
 
         <!--Input contra-->
+        <p class="texto-error" id="texto-error2">La contraseña debe poseer al menos un numero y una letra.</p>
          <div class="input-contenedor-registro"id="colorborde3">
             <i class="fas fa-key icono"></i>
             <input type="password" placeholder="Contraseña"id="contra"method="get"onchange="validar_contra(document.getElementById('contra'))"><i class="fas fa-times incorrecto" id="incorrecto2"></i><i class="fas fa-check correcto" id="correcto2"></i>
         </div>
-        <p class="texto-error" id="texto-error2">La contraseña debe poseer al menos un numero y una letra.</p>
+        
 
         <!--Input contra2-->
+        <p class="texto-error" id="texto-error3">La contraseña no conincide con la anterior.</p>
         <div class="input-contenedor-registro"id="colorborde4">
             <i class="fas fa-key icono"></i>
             <input type="password" placeholder=" Repita su contraseña"id="contra2"method="get"onchange="validar_contra2(document.getElementById('contra2'))"><i class="fas fa-times incorrecto" id="incorrecto3"></i><i class="fas fa-check correcto" id="correcto3"></i>
         </div>
-        <p class="texto-error" id="texto-error3">La contraseña no conincide con la anterior.</p>
+        
 
         <!--Barra de roles-->
         <div class="input-contenedor-registro">
@@ -63,26 +67,25 @@
     <div id="activacion" class="escondido">
         
         <!--Input telefono-->
-        <div class="input-contenedor-registro">
+        <p class="texto-error" id="texto-error4">Complete el Campo, Gracias.</p>
+         <div class="input-contenedor-registro"id="colorborde5">
             <i class="fas fa-phone-alt icono"></i>
-            <input type="number" placeholder="Telefono"id="telefono"method="get"><!--<i class="fas fa-times error"></i>--><i class="fas fa-check check"></i>
+            <input type="number" placeholder="Telefono"id="telefono"method="get"onchange="validar_telefono(document.getElementById('telefono'))"><i class="fas fa-times incorrecto" id="incorrecto4"></i><i class="fas fa-check correcto" id="correcto4"></i>
         </div>
-
-        <!--<p class="texto-error">El telefono ingresado es incorrecto o inexistente.</p>-->
 
         <!--Input dni-->
-        <div class="input-contenedor-registro">
+        <p class="texto-error" id="texto-error5">El DNI es Incorrecto.</p>
+         <div class="input-contenedor-registro"id="colorborde6">
             <i class="fas fa-address-book icono"></i>
-            <input type="number" placeholder="DNI"id="dni"method="get"><!--<i class="fas fa-times error"></i>--><i class="fas fa-check check"></i>
+            <input type="number" placeholder="Dni"id="dni"method="get"onchange="validar_dni(document.getElementById('dni'))"><i class="fas fa-times incorrecto" id="incorrecto5"></i><i class="fas fa-check correcto" id="correcto5"></i>
         </div>
-        <!--<p class="texto-error">El dni es incorrecto o inexistente.</p>-->
 
         <!--Input direccion-->
-        <div class="input-contenedor-registro">
+        <p class="texto-error" id="texto-error6">La direccion no es valida.</p>
+         <div class="input-contenedor-registro"id="colorborde7">
             <i class="fas fa-map-marker-alt icono"></i>
-            <input type="text" placeholder="Dirección"id="direccion"method="get"><!--<i class="fas fa-times error"></i>--><i class="fas fa-check check"></i>
+            <input type="text" placeholder="Direccion"id="direccion"method="get"onchange="validar_direccion(document.getElementById('direccion'))"><i class="fas fa-times incorrecto" id="incorrecto6"></i><i class="fas fa-check correcto" id="correcto6"></i>
         </div>
-        <!--<p class="texto-error">La direccion es incorrecta o inexistente.</p>-->
 
         <!--Input nombre_local-->
         <div class="input-contenedor-registro" id="colorborde7">
