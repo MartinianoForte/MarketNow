@@ -166,6 +166,11 @@ label{
     color: green;
     display: none;
 }
+.formulario__mensaje-exito{
+    font-size: 14px;
+    margin: 1px;
+    display: none;
+}
 /*----------------Menu de roles----------------*/
 .escondido{
  display: none;
@@ -191,4 +196,3 @@ display: none;
     .formulario__btn {
         width: 100%;
     }
-}
