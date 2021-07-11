@@ -16,8 +16,41 @@ function Barra_Roles() {
     document.getElementById('activacion').style.display="none";
   }
 } 
-/*---------------Validacion de Datos-------------------*/
+/*---------------Variables-------------------*/
 var i=0;
+const correcto_1 = () =>{
+  const correcto = document.getElementById('correcto').style.display="none";
+  const correcto1 =document.getElementById('correcto1').style.display="none";
+  const correcto2 =document.getElementById('correcto2').style.display="none";
+  const correcto3 =  document.getElementById('correcto3').style.display="none";
+  const color_borde=document.getElementById('colorborde').style.borderColor='#aaa';
+  const color_borde2=document.getElementById('colorborde2').style.borderColor='#aaa';
+  const color_borde3=document.getElementById('colorborde3').style.borderColor="#aaa";
+  const color_borde4=document.getElementById('colorborde4').style.borderColor="#aaa";
+}
+const correcto = () => {
+      const correcto=document.getElementById('correcto').style.display="none";
+      const correcto1=document.getElementById('correcto1').style.display="none";
+      const correcto2=document.getElementById('correcto2').style.display="none";
+      const correcto3=document.getElementById('correcto3').style.display="none";
+      const correcto4=document.getElementById('correcto4').style.display="none";
+      const correcto5=document.getElementById('correcto5').style.display="none";
+      const correcto6=document.getElementById('correcto6').style.display="none";
+      const correcto7=document.getElementById('correcto7').style.display="none";
+      const activacion=document.getElementById('activacion').style.display="none";
+}
+const color_borde = () => {
+      const color_borde=document.getElementById('colorborde').style.borderColor='#aaa';
+      const color_borde2=document.getElementById('colorborde2').style.borderColor='#aaa';
+      const color_borde3=document.getElementById('colorborde3').style.borderColor="#aaa";
+      const color_borde4=document.getElementById('colorborde4').style.borderColor="#aaa";
+      const color_borde5=document.getElementById('colorborde5').style.borderColor='#aaa';
+      const color_borde6=document.getElementById('colorborde6').style.borderColor='#aaa';
+      const color_borde7=document.getElementById('colorborde7').style.borderColor="#aaa";
+      const color_borde8=document.getElementById('colorborde8').style.borderColor="#aaa";
+      const activacion1=document.getElementById('activacion').style.display="none";
+}
+/*---------------Validacion de Datos-------------------*/
 function validar_nombre(nombre){
   let cb=document.getElementById('colorborde');
   if (nombre.value == "") {
@@ -59,7 +92,7 @@ function validar_mail(mail){
     document.getElementById('correcto1').style.display="block";
     cb2.style.borderColor= 'green';
     console.log("gordo traba chele");
-    if (i==1) {i=i+1;}
+    if (i>=1) {i=i+1;}
     console.log(i);
     return false;
   }
@@ -75,7 +108,8 @@ function validar_mail(mail){
   }
 }
 function validar_contra(contra){
-    var cb3=document.getElementById('colorborde3');
+  var cb3=document.getElementById('colorborde3');
+  var revi_contra=/^[a-z0-9_-]{4,20}$/;
   if (contra.value == "" ||contra.value == "0" ) {
     document.getElementById('texto-error2').style.display="block";
     document.getElementById('incorrecto2').style.display="block";
@@ -84,13 +118,13 @@ function validar_contra(contra){
     console.log("gordo traba");
     return false;
   }
-  if (!(/^[A-Z0-9-]{4,20}$/.test(contra.value))){
+  if (revi_contra.test(contra.value)){
     document.getElementById('texto-error2').style.display="none";
     document.getElementById('incorrecto2').style.display="none";
     document.getElementById('correcto2').style.display="block";
     cb3.style.borderColor= 'green';
-    console.log("gordo traga chele");
-    if (i==2) {i=i+1;}
+    console.log("gordo traga chele merquero");
+    if (i>=2) {i=i+1;}
     console.log(i);
     return false;
   }
@@ -120,7 +154,7 @@ function validar_contra2(contra2){
     document.getElementById('correcto3').style.display="block";
     cb4.style.borderColor= 'green';
     console.log("gordo traba chele, ojala t deporten, pedaso de forro");
-    if (i==3) {i=i+1;}
+    if (i>=3) {i=i+1;}
     console.log(i);
     return false;
     }
@@ -150,17 +184,20 @@ function validar_telefono(telefono){
     document.getElementById('correcto4').style.display="block";
     cb5.style.borderColor= 'green';
     console.log("gordo traba chele telefono");
-    if (i==4) {i=i+1;}
+    if (i>=4) {i=i+1;}
     console.log(i);
     return false;
   }
   else if(telefono.value!=telefono_revi){
-    alert("Sobran Numeros o Faltan Numeros, Revise su telefono, Gracias");
-  }
+    document.getElementById('texto-error4').style.display="block";
+    document.getElementById('incorrecto4').style.display="block";
+    document.getElementById('correcto4').style.display="none";
+    cb5.style.borderColor= 'red';
+  } 
 }
 function validar_dni(dni){
   var cb6=document.getElementById('colorborde6');
-  var revi_dni = /^\d{8}$/;
+  var revi_dni = /^\d{7,8}$/;
     if (dni.value == "") {
     document.getElementById('texto-error5').style.display="block";
     document.getElementById('incorrecto5').style.display="block";
@@ -175,17 +212,20 @@ function validar_dni(dni){
     document.getElementById('correcto5').style.display="block";
     cb6.style.borderColor= 'green';
     console.log("gordo traba chele telefono");
-    if (i==5) {i=i+1;}
+    if (i>=5) {i=i+1;}
     console.log(i);
     return false;
   }
   else if(dni.value!=revi_dni){
-    alert("Sobran Numeros o Faltan Numeros, Revise su DNI, Gracias");
-  }
+    document.getElementById('texto-error5').style.display="block";
+    document.getElementById('incorrecto5').style.display="block";
+    document.getElementById('correcto5').style.display="none";
+    cb6.style.borderColor= 'red';
+  } 
 }
 function validar_direccion(direccion){
   var cb7=document.getElementById('colorborde7');
-  var revi_direc=/^[A-Z]{1,30}\d{8}\.$/;
+  var revi_direc=/^[a-z0-9_-]{4,20}$/;
     if (direccion.value == "") {
     document.getElementById('texto-error6').style.display="block";
     document.getElementById('incorrecto6').style.display="block";
@@ -200,19 +240,19 @@ function validar_direccion(direccion){
     document.getElementById('correcto6').style.display="block";
     cb7.style.borderColor= 'green';
     console.log("gordo traba chele direccion");
-    if (i==6) {i=i+1;}
+    if (i>=6) {i=i+1;}
     console.log(i);
     return false;
   }
 }
 function validar_nombre_local(nombre_local){
-  var cb7=document.getElementById('colorborde7');
+  var cb8 = document.getElementById('colorborde8');
   var nombre_local=document.getElementById('nombre_local');
   if (nombre_local.value == "") {
     document.getElementById('texto-error7').style.display="block";
     document.getElementById('incorrecto7').style.display="block";
     document.getElementById('correcto7').style.display="none";
-    cb7.style.borderColor= 'red';
+    cb8.style.borderColor= 'red';
     console.log("gordo puto");
     nombre_local.focus();
     return false;
@@ -222,51 +262,48 @@ function validar_nombre_local(nombre_local){
     document.getElementById('correcto7').style.display="block";
     document.getElementById('texto-error7').style.display="none";
     document.getElementById('incorrecto7').style.display="none";
-    cb7.style.borderColor='green'; 
+    cb8.style.borderColor= 'green'; 
     console.log("tarado");
-    if (i==7) {i=i+1;}
+    if (i>=7) {i=i+1;}
     console.log(i);
     return false;
 
   }
 }
 function EnviarFormulario(){
-  if (document.getElementById('usuario').selected ==true && i ==4) {
+  if (document.getElementById('usuario').selected ==true && i >=4) {
     console.log("te ganaste mi poronga");
-    document.getElementById('correcto').style.display="none";
-    document.getElementById('correcto1').style.display="none";
-    document.getElementById('correcto2').style.display="none";
-    document.getElementById('correcto3').style.display="none";
-    document.getElementById('colorborde').style.borderColor='#aaa';
-    document.getElementById('colorborde2').style.borderColor='#aaa';
-    document.getElementById('colorborde3').style.borderColor="#aaa";
-    document.getElementById('colorborde4').style.borderColor="#aaa";
+    for(let i = 0; i < 10; i++){
+      correcto_1();
+      }
     setTimeout(() => {
       document.getElementById('formulario__mensaje-exito').style.display='block'
       i=0;
       form.reset();
     }, 50);
   }
-  if (document.getElementById('comerciante').selected == true || document.getElementById('proveedor').selected == true  && i ==8) {
+  if(document.getElementById('comerciante').selected == true && i >=6){
     console.log("te ganaste mi poronga sos un deforme");
     setTimeout(() => {
       document.getElementById('formulario__mensaje-exito').style.display='block'
-      document.getElementById('correcto').style.display="none";
-      document.getElementById('correcto1').style.display="none";
-      document.getElementById('correcto2').style.display="none";
-      document.getElementById('correcto3').style.display="none";
-      document.getElementById('correcto4').style.display="none";
-      document.getElementById('correcto5').style.display="none";
-      document.getElementById('correcto6').style.display="none";
-      document.getElementById('correcto7').style.display="none";
-      document.getElementById('activacion').style.display="none";
-      document.getElementById('colorborde').style.borderColor='#aaa';
-      document.getElementById('colorborde2').style.borderColor='#aaa';
-      document.getElementById('colorborde3').style.borderColor="#aaa";
-      document.getElementById('colorborde4').style.borderColor="#aaa";
-      document.getElementById('colorborde5').style.borderColor='#aaa';
-      document.getElementById('colorborde6').style.borderColor='#aaa';
-      document.getElementById('colorborde7').style.borderColor="#aaa";
+      var i=1;
+      for(let i = 0; i < 8; i++){
+        correcto();
+        color_borde();
+      }
+      i=0;
+      form.reset();
+    }, 50);
+  }
+  if (document.getElementById('proveedor').selected == true  && i >=6) {
+    console.log("te ganaste mi poronga sos un deforme");
+    setTimeout(() => {
+      document.getElementById('formulario__mensaje-exito').style.display='block'
+      var i=1;
+      for(let i = 0; i < 8; i++){
+        correcto();
+        color_borde();
+      }
       i=0;
       form.reset();
     }, 50);
