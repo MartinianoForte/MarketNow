@@ -176,14 +176,12 @@ main{ margin-left: 15em; }
 
 .border-bottom{ border-bottom: 1px solid #999; }
 
-.menu__contenido{
-    padding: 10px 0;
-}
+.menu__contenido { padding: 1.1vh 0; }
 
 .menu__opcion{
     display: flex;
     align-items: center;
-    padding: 10px 15px;
+    padding: 1.1vh 15px;
 }
 
 .menu__opcion:hover{ background: #f1f1f1; }

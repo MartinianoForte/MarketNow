@@ -13,36 +13,29 @@ function Barra_Roles() {
 } 
 
 /*---------------Validacion de Datos-------------------*/
-function validar_nombre(nombre){
-  let cb=document.getElementById('colorborde0');
-  if (nombre.value == "") {
-    validacion_incorrecta(0,cb);
-    return false;
-  }
-  else if (nombre.value!="") 
-    {
-    validacion_correcta(0,cb);
-    return false;
-  }
+function validar_nombre(nombre) {
+  let cb = document.getElementById("colorborde0");
+  if (nombre.value == "") validacion_incorrecta(0, cb);
+  else if (nombre.value != "") validacion_correcta(0, cb);
+  return false;
 }
-function validar_mail(mail){
-   let cb=document.getElementById('colorborde1');
-   var mailRevi = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
-    if (mail.value == "") {
-    validacion_incorrecta(1,cb);
-    }
-  else if (mailRevi.test(mail.value)){
-    validacion_correcta(1,cb);
-  }
-  else if (mail.value!=/^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i || mail.value==/^[-\w.%+]{1,64}/){
-    validacion_incorrecta(1,cb);
+function validar_mail(mail) {
+  let cb = document.getElementById("colorborde1");
+  var mailRevi = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
+  if (mail.value == "") {
+    validacion_incorrecta(1, cb);
+  } else if (mailRevi.test(mail.value)) {
+    validacion_correcta(1, cb);
+  } else if (mail.value != mailRevi || mail.value == /^[-\w.%+]{1,64}/
+  ) {
+    validacion_incorrecta(1, cb);
   }
   return false;
 }
 function validar_contra(contra){
   var cb=document.getElementById('colorborde2');
   var revi_contra=/^[a-z0-9_-]{4,20}$/;
-  if (contra.value == "" ||contra.value == "0" ) {
+  if (contra.value == "" || contra.value == "0" ) {
     validacion_incorrecta(2,cb);
   }
   if (revi_contra.test(contra.value)){
@@ -68,12 +61,8 @@ function validar_telefono(telefono){
    var cb=document.getElementById('colorborde4');
    var telefono_revi = /^\d{8,11}$/;
    const telefonoValidado = telefono_revi.test(telefono.value);
-    if ((telefono.value == "") || !telefonoValidado) {
-    validacion_incorrecta(4,cb);
-    }
-   else{
-    validacion_correcta(4,cb);
-  }
+    if ((telefono.value == "") || !telefonoValidado) validacion_incorrecta(4,cb);
+    else validacion_correcta(4,cb);
   return false;
 }
 function validar_dni(dni){
@@ -113,29 +102,25 @@ function validar_nombre_local(nombre_local){
   return false;
 }
 function EnviarFormulario(){
-  if (document.getElementById('usuario').selected ==true && validacion.reduce((a, b) => a + b, 0) >= 4) {
-    cambiarCosas(4);
-    setTimeout(() => {
-      document.getElementById('formulario__mensaje-exito').style.display='block'
-      form.reset();
-    }, 50);
-  }
-  if(((document.getElementById('comerciante').selected == true) || (document.getElementById('proveedor').selected == true )) && validacion.reduce((a, b) => a + b, 0) >= 6){
-    setTimeout(() => {
-      document.getElementById('formulario__mensaje-exito').style.display='block'
-      cambiarCosas(8);
-      form.reset();
-    }, 50);
-  }
+  if (document.getElementById('usuario').selected == true && validacion.reduce((a, b) => a + b, 0) >= 4)
+    reestablecerFormulario(4);
+  else if (((document.getElementById('comerciante').selected == true) || (document.getElementById('proveedor').selected == true )) && validacion.reduce((a, b) => a + b, 0) >= 8)
+    reestablecerFormulario(8);
   return false;
 }
-function cambiarCosas(limite){
-  for(let i = 0; i < limite; i++){
-        const correcto = document.getElementById('correcto' + i).style.display="none";
-        const color_borde = document.getElementById('colorborde' + i).style.borderColor='#aaa';
-      }
-  const activacion1=document.getElementById('activacion').style.display="none";
+
+function reestablecerFormulario(limite){
+    document.getElementById('formulario__mensaje-exito').style.display='block'
+    for(let i = 0; i < limite; i++){
+      document.getElementById('correcto' + i).style.display="none";
+      document.getElementById('colorborde' + i).style.borderColor='#aaa';
+    }
+    document.getElementById('activacion').style.display="none";
+    form.reset();
+    document.getElementById('activacion').style.display="none";
+    document.getElementById('form').submit;
 }
+
 function validacion_correcta(n,cb){
   document.getElementById('texto-error'+ n).style.display="none";
   document.getElementById('incorrecto'+ n).style.display="none";
@@ -143,6 +128,7 @@ function validacion_correcta(n,cb){
   cb.style.borderColor= 'green';
   if (validacion[n] == 0) validacion[n] = 1;
 }
+
 function validacion_incorrecta(n,cb){
   document.getElementById('texto-error'+ n).style.display="inline-block";
   document.getElementById('incorrecto'+ n).style.display="inline-block";

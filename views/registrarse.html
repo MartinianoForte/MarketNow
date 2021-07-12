@@ -23,18 +23,18 @@
         <div clas="contenedor-registro">
 
         <!--Input nombre-->   
-        <p class="texto-error" id="texto-error" name="texto-error">Complete el campo, gracias.</p> 
-        <div class="input-contenedor-registro" id="colorborde0" name="color_borde">
+        <p class="texto-error" id="texto-error0">Complete el campo, gracias.</p> 
+        <div class="input-contenedor-registro" id="colorborde0">
             <i class="fas fa-user icono"></i>
-              <input type="text"  placeholder="Nombre" id="nombre"method="get" onchange="validar_nombre(document.getElementById('nombre'))"><i class="fas fa-times incorrecto" id="incorrecto"></i><i class="fas fa-check correcto" id="correcto0"></i>
+              <input type="text"  placeholder="Nombre" id="nombre" name="nombre" onchange="validar_nombre(document.getElementById('nombre'))"><i class="fas fa-times incorrecto" id="incorrecto0"></i><i class="fas fa-check correcto" id="correcto0"></i>
         </div>
         
         
         <!--Input mail-->
-        <p class="texto-error" id="texto-error1" name="texto-error">El mail debe contar con un @(arroba) y con un .(punto), gracias.</p>
+        <p class="texto-error" id="texto-error1">El mail debe contar con un @(arroba) y con un .(punto), gracias.</p>
          <div class="input-contenedor-registro " id="colorborde1">
             <i class="fas fa-envelope icono"></i>
-              <input type="text"  placeholder="Correo Electronico" id="mail"method="get" onchange="validar_mail(document.getElementById('mail'))"><i class="fas fa-times incorrecto" id="incorrecto1" ></i><i class="fas fa-check correcto" id="correcto1"></i>
+              <input type="text" placeholder="Correo Electronico" id="mail" name="email" onchange="validar_mail(document.getElementById('mail'))"><i class="fas fa-times incorrecto" id="incorrecto1"></i><i class="fas fa-check correcto" id="correcto1"></i>
         </div>
         
 
@@ -42,7 +42,7 @@
         <p class="texto-error" id="texto-error2">La contraseña debe poseer al menos un numero y una letra.</p>
          <div class="input-contenedor-registro"id="colorborde2">
             <i class="fas fa-key icono"></i>
-            <input type="password" placeholder="Contraseña"id="contra"method="get"onchange="validar_contra(document.getElementById('contra'))"><i class="fas fa-times incorrecto" id="incorrecto2"></i><i class="fas fa-check correcto" id="correcto2"></i>
+            <input type="password" placeholder="Contraseña" id="contra" name="clave" onchange="validar_contra(document.getElementById('contra'))"><i class="fas fa-times incorrecto" id="incorrecto2"></i><i class="fas fa-check correcto" id="correcto2"></i>
         </div>
         
 
@@ -50,14 +50,14 @@
         <p class="texto-error" id="texto-error3">La contraseña no conincide con la anterior.</p>
         <div class="input-contenedor-registro"id="colorborde3">
             <i class="fas fa-key icono"></i>
-            <input type="password" placeholder=" Repita su contraseña"id="contra2"method="get"onchange="validar_contra2(document.getElementById('contra2'))"><i class="fas fa-times incorrecto" id="incorrecto3"></i><i class="fas fa-check correcto" id="correcto3"></i>
+            <input type="password" placeholder=" Repita su contraseña" id="contra2" onchange="validar_contra2(document.getElementById('contra2'))"><i class="fas fa-times incorrecto" id="incorrecto3"></i><i class="fas fa-check correcto" id="correcto3"></i>
         </div>
         
 
         <!--Barra de roles-->
         <div class="input-contenedor-registro">
             <i class="fas fa-user-tag icono" id="Barra__roles"></i>
-            <select class="input" onchange="Barra_Roles()" name="tipo" id="tipo">
+            <select class="input" onchange="Barra_Roles()" name="rol" id="tipo">
             <option value="0" selected="select" id="nada">Seleccione un rol</option>
             <option value="1"id="usuario" >Cliente</option>
             <option value="2"id="comerciante">Comerciante</option>
@@ -68,31 +68,31 @@
         
         <!--Input telefono-->
         <p class="texto-error" id="texto-error4">Complete el Campo, Gracias.</p>
-         <div class="input-contenedor-registro"id="colorborde4">
+         <div class="input-contenedor-registro" id="colorborde4">
             <i class="fas fa-phone-alt icono"></i>
-            <input type="number" placeholder="Telefono"id="telefono"method="get"onchange="validar_telefono(document.getElementById('telefono'))"><i class="fas fa-times incorrecto" id="incorrecto4"></i><i class="fas fa-check correcto" id="correcto4"></i>
+            <input type="number" placeholder="Telefono" id="telefono" name="telefono" onchange="validar_telefono(document.getElementById('telefono'))"><i class="fas fa-times incorrecto" id="incorrecto4"></i><i class="fas fa-check correcto" id="correcto4"></i>
         </div>
 
         <!--Input dni-->
         <p class="texto-error" id="texto-error5">El DNI es Incorrecto.</p>
          <div class="input-contenedor-registro"id="colorborde5">
             <i class="fas fa-address-book icono"></i>
-            <input type="number" placeholder="Dni"id="dni"method="get"onchange="validar_dni(document.getElementById('dni'))"><i class="fas fa-times incorrecto" id="incorrecto5"></i><i class="fas fa-check correcto" id="correcto5"></i>
+            <input type="number" placeholder="Dni" id="dni" name="dni" onchange="validar_dni(document.getElementById('dni'))"><i class="fas fa-times incorrecto" id="incorrecto5"></i><i class="fas fa-check correcto" id="correcto5"></i>
         </div>
 
         <!--Input direccion-->
         <p class="texto-error" id="texto-error6">La direccion no es valida.</p>
          <div class="input-contenedor-registro"id="colorborde6">
             <i class="fas fa-map-marker-alt icono"></i>
-            <input type="text" placeholder="Direccion"id="direccion"method="get"onchange="validar_direccion(document.getElementById('direccion'))"><i class="fas fa-times incorrecto" id="incorrecto6"></i><i class="fas fa-check correcto" id="correcto6"></i>
+            <input type="text" placeholder="Direccion"id="direccion" name="direccion" onchange="validar_direccion(document.getElementById('direccion'))"><i class="fas fa-times incorrecto" id="incorrecto6"></i><i class="fas fa-check correcto" id="correcto6"></i>
         </div>
 
         <!--Input nombre_local-->
         <div class="input-contenedor-registro" id="colorborde7">
               <i class="fas fa-shopping-cart icono"></i>
-              <input type="text"  placeholder="Nombre del Local" id="nombre_local"method="get" onchange="validar_nombre_local(document.getElementById('nombre_local'))"><i class="fas fa-times incorrecto" id="incorrecto7"></i><i class="fas fa-check correcto" id="correcto7"></i>
+              <input type="text"  placeholder="Nombre del Local" id="nombre_local" name="nombreLocal" onchange="validar_nombre_local(document.getElementById('nombre_local'))"><i class="fas fa-times incorrecto" id="incorrecto7"></i><i class="fas fa-check correcto" id="correcto7"></i>
         </div>
-        <p class="texto-error" id="texto-error7" name="texto-error">Por favor, complete el campo, gracias.</p>
+        <p class="texto-error" id="texto-error7">Por favor, complete el campo, gracias.</p>
     </div>
 
         <!--Boton de registrarse -->
