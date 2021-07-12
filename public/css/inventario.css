@@ -62,6 +62,12 @@ label {
 .contenedor__cupones::-webkit-scrollbar-thumb:active {
 	background-color: #999999;
 }
+
+.contenedor__tabla{
+	margin: 10px;
+	border-radius: 10px;
+}
+
 .table{
 	height: 100%;
 	background: white;

@@ -193,14 +193,15 @@ body {
 }
 
 .seisContenedores {
-    margin-left: 16%;
     padding-bottom: 20px;
 }
 
 .DosContenedores {
     margin: auto;
     width: 80%;
+    max-width: 1212px;
     display: flex;
+    justify-content: space-around;
 }
 
 .contenedor{
@@ -209,10 +210,11 @@ body {
     width: 1820px;
 }
 .contenedor_Ab {
-    display: inline-block;
     margin: 10px;
-    width: 33%;
-    flex: 1 auto;
+    width: 45%;
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    grid-gap: 20px;
 }
 .iconos {
     font-size: none;
@@ -226,16 +228,12 @@ body {
     font-size: larger;
     color: #b5a067;
     padding: 3px;
-    position: absolute;
-    transform: translateX(-4em);
-    display: -webkit-flex;
-    display: flex;
+    height: 50px;
     text-align: left;
 }
 
 .texto_Ab {
     text-align: left;
-    width: 60%;
     margin-top: 0;
 }
 
