@@ -122,6 +122,13 @@ main{
 	border: 1px solid grey;
 }
 
+.conteiner-tabla-buscador{
+	scroll-behavior: smooth;
+}
+.tabla-buscador{
+	scroll-behavior: smooth;
+}
+
 /**------------------------tabla-------------------------**/
 
 body{
