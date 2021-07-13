@@ -30,11 +30,12 @@ main{
 
 .input-barra{
 	font-size: 20px;
-	
+	margin-top: 10px;
 }
 
 .input-cliente{
 	font-size: 20px;
+	margin-top: 10px;
 }
 
 .clearfix{
@@ -50,12 +51,14 @@ main{
 	margin-top: 10px;
 	display: flex;
 	justify-content: space-around;
+	aling-items: center;
 }
 
-.terminar{
+.boton{
 	width: 200px;
-	margin-left:57px;
-	margin-top: 000.1px;
+	height: 50px;
+	margin-left:40px;
+	margin-top: 20px;
 	padding: 15px 10px;
 	color: white;
 	background: #4caf50;
@@ -64,21 +67,6 @@ main{
 	text-decoration: none;
 	border: none;
 	float: left;
-}
-
-.cancelar{
-	
-	width: 200px;
-	margin-left:57px;
-	margin-right: 30px;
-	margin-top: 000.1px;
-	padding: 15px 10px;
-	color: white;
-	background: #4caf50;
-	display: inline-block;
-	cursor: pointer;
-	text-decoration: none;
-	border: none;
 }
 
 .total{
@@ -103,14 +91,13 @@ main{
 	border: 1px solid black;
 	display: flex;
 	flex-direction: column;
-	width: ;
-
+	margin-left: 90px;
+	padding: 5px;
 }
 
 .hijos{
 	width: 100%;
 	margin-top: 15px;
-
 	font-size: 18px;
 }
 
@@ -119,16 +106,24 @@ main{
 	font-size: 20px;
 	margin-left: 1px;
 	margin-top: 15px;
-	border: 1px solid grey;
+	
 }
 
-.conteiner-tabla-buscador{
-	scroll-behavior: smooth;
-}
-.tabla-buscador{
-	scroll-behavior: smooth;
+.container-tabla-buscador{
+	height: 150px;
+	overflow-y: scroll;
+	width: 196px;
 }
 
+/** animacion horrible dela tabla**/
+.buscador-tr:hover .buscador-td{
+	background-color: #4caf50;
+	color: white;
+}
+
+input{
+	border-radius: 10px;
+}
 /**------------------------tabla-------------------------**/
 
 body{
@@ -145,6 +140,7 @@ body{
 #main-conteiner{
 	margin:  55px auto;
 	width:  900px;
+	margin-top: 1px;
 }
 
 .table{
