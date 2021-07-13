@@ -54,7 +54,7 @@ main{ margin-left: 15em; }
 }
 
 .input:focus{
-    box-shadow: 0px 0px 10px var(--doradoLg);
+    /*box-shadow: 0px 0px 10px var(--doradoLg);*/
     outline: none;
 }
 

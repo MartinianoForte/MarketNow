@@ -104,7 +104,7 @@
 				<label class="tarjeta__titulo"><b>Cupon1</b></label>
 			</div>
 			<div class="tarjeta__contenido">
-				<label>25% de descuento en paltas albinas</label>
+				<label class="cupon__desc">25% de descuento en paltas albinas</label>
 				<div class="cupon__info">
 					<label>5000</label>
 					<label>28/6</label>
@@ -116,7 +116,7 @@
 				<label class="tarjeta__titulo"><b>Cupon2</b></label>
 			</div>
 			<div class="tarjeta__contenido">
-				<label>25% de descuento en paltas albinas</label>
+				<label class="cupon__desc">25% de descuento en paltas albinas</label>
 				<div class="cupon__info">
 					<label>5000</label>
 					<label>28/6</label>
@@ -128,13 +128,25 @@
 				<label class="tarjeta__titulo"><b>Cupon3</b></label>
 			</div>
 			<div class="tarjeta__contenido">
-				<label>25% de descuento en paltas albinas</label>
+				<label class="cupon__desc">25% de descuento en paltas albinas</label>
 				<div class="cupon__info">
 					<label>5000</label>
 					<label>28/6</label>
 				</div>
 			</div>
-		</div>		
+		</div>	
+		<div class="tarjeta sombra">
+			<div class="tarjeta__header">
+				<label class="tarjeta__titulo"><b>Cupon3</b></label>
+			</div>
+			<div class="tarjeta__contenido">
+				<label class="cupon__desc">25% de descuento en paltas albinas</label>
+				<div class="cupon__info">
+					<label>5000</label>
+					<label>28/6</label>
+				</div>
+			</div>
+		</div>	
 	</div>
 	<div class="tarjeta admin">
 		<div class="tarjeta__header">
@@ -143,7 +155,7 @@
 		<dir class="tarjeta__contenido admin__contenido" style="margin: 0">
 			<form>
 			<button class="button_verde">Nuevo cupon</button>
-			<div class="admin__botones">
+			<div class="admin__inputs">
 			<input type="text" name="" class="input" placeholder="Nombre">
 			<input type="date" name="" class="input" placeholder="fecha">
 			<select class="input" style="width: 95%;" name="">
@@ -156,10 +168,11 @@
 			<input type="text" name="" class="input" placeholder="Categoria">
 			<input type="number" name="" class="input" placeholder="Palta Points">
 			</div>
-			<div class="vacio"></div>
-			<button class="button_verde">Modificar</button>
-			<button class="button_verde">Eliminar</button>
 			</form>
+			<div class="admin__botones">
+				<button class="button_verde">Eliminar</button>
+				<button class="button_verde">Modificar</button>
+			</div>
 		</dir>
 	</div>
 </div>

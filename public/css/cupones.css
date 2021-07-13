@@ -1,7 +1,7 @@
 body { background: #f7f7f7; }
 
 label {
-	color: #666;
+	color: #444;
 	font-size: 20px;
 	font-family: sans-serif;
 }
@@ -16,50 +16,83 @@ label {
 
 .contenedor__cupones {
 	padding: 10px;
-	/*overflow: scroll;*/
+	overflow-y: scroll;
 	display: grid;
 	grid-gap: 1em;
 	grid-auto-rows: 8rem;
-	grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
 }
 
-.admin { margin-top: 10px; }
+.admin { margin: 10px 5px 0 5px; }
 
-.admin__contenido { padding: 20px; }
-
-.admin__botones {
+.admin__contenido { 
+	padding: 20px; 
+	height: 80vh;	
 	display: flex;
 	flex-direction: column;
-	height: 40vh;
 }
 
-.vacio { height: 20vh; } 
+.titulo {
+	padding: 5px;
+	margin: auto;
+	color: var(--doradoDr);
+}
+
+.admin__inputs {
+	border-top: 1px solid #ddd;
+	padding-top: 10px;
+	text-align: left;
+	display: flex;
+	flex-direction: column;
+}
+
+.output { padding: 10px 0 10px 15px; }
+
+.cupon__desc {
+	padding: 3%;
+}
+
+.admin__botones {
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column-reverse;
+}
 
 .tarjeta__contenido{
 	height: 100%;
+	text-align: center;
 }
 
 .cupon__info {
-	padding-top: 10px;
+	padding-top: 4%;
 	display: flex;
 	justify-content: space-between;
 }
 
-/*scroll*/
-/* Ponemos un color de fondo y redondeamos las esquinas del thumb */
+/* Estilos para motores Webkit y blink (Chrome, Safari, Opera... )*/
+
+.contenedor__cupones::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+.contenedor__cupones::-webkit-scrollbar:vertical {
+    width:10px;
+}
+
+.contenedor__cupones::-webkit-scrollbar-button:increment,.contenedor__cupones::-webkit-scrollbar-button {
+    display: none;
+} 
+
+.contenedor__cupones::-webkit-scrollbar:horizontal {
+    height: 10px;
+}
+
 .contenedor__cupones::-webkit-scrollbar-thumb {
-	background: #ccc;
-	border-radius: 4px;
+    background-color: #bbb;
+    border-radius: 20px;
+    border: 2px solid #f1f2f3;
 }
 
-/* Cambiamos el fondo y agregamos una sombra cuando esté en hover */
-.contenedor__cupones::-webkit-scrollbar-thumb:hover {
-	background: #b3b3b3;
-	box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+.contenedor__cupones::-webkit-scrollbar-track {
+    border-radius: 10px;  
 }
-
-/* Cambiamos el fondo cuando esté en active */
-.contenedor__cupones::-webkit-scrollbar-thumb:active {
-	background-color: #999999;
-}
-
