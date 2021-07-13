@@ -16,7 +16,7 @@ label {
 
 .contenedor__cupones {
 	padding: 10px;
-	overflow-y: scroll;
+	padding-left: 15px;
 	display: grid;
 	grid-gap: 1em;
 	grid-auto-rows: 8rem;
@@ -58,6 +58,10 @@ label {
 	flex-direction: column-reverse;
 }
 
+/*.tarjeta__header{
+	background: var(--doradoLg);
+}*/
+
 .tarjeta__contenido{
 	height: 100%;
 	text-align: center;
@@ -67,32 +71,4 @@ label {
 	padding-top: 4%;
 	display: flex;
 	justify-content: space-between;
-}
-
-/* Estilos para motores Webkit y blink (Chrome, Safari, Opera... )*/
-
-.contenedor__cupones::-webkit-scrollbar {
-    -webkit-appearance: none;
-}
-
-.contenedor__cupones::-webkit-scrollbar:vertical {
-    width:10px;
-}
-
-.contenedor__cupones::-webkit-scrollbar-button:increment,.contenedor__cupones::-webkit-scrollbar-button {
-    display: none;
-} 
-
-.contenedor__cupones::-webkit-scrollbar:horizontal {
-    height: 10px;
-}
-
-.contenedor__cupones::-webkit-scrollbar-thumb {
-    background-color: #bbb;
-    border-radius: 20px;
-    border: 2px solid #f1f2f3;
-}
-
-.contenedor__cupones::-webkit-scrollbar-track {
-    border-radius: 10px;  
 }
