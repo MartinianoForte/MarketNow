@@ -3,6 +3,8 @@
 <head>
 <link rel="stylesheet" href="../public/css/predefinido.css">
 <link rel="stylesheet" href="../public/css/vender-producto.css">
+<script src="https://kit.fontawesome.com/ee5c196280.js" crossorigin="anonymous"></script>
+
 <meta charset="utf-8">
 </head>
 <body>
@@ -102,26 +104,34 @@
 </div>
 <!--------------------------------botones------------------------------------------------------------->
 <div class="flex-container-container">
-<div class="barra">
-<button class="terminar">Terminar venta</button>
-<button class="cancelar">Cancelar venta</button>
+    <div class="barra">
+        <button class="boton">Terminar venta</button>
+        <button class="boton">Cancelar venta</button>
+    </div>
+
+<!--------------------------------inputs del buscador--------------------------------------------->
+    <div class="flex-container-padre">
+        <div class="flex-container">
+            <input class="hijos" type="text" placeholder="Buscar Producto">
+            <input class="hijos" type="text" placeholder="Cantidad">
+            <label class="total-derecha">Total: $230</label>
+        </div>
+        
+    <div class="container-tabla-buscador">
+        <table>
+            <tr class="buscador-tr"><td class="buscador-td">Palta</td></tr>
+            <tr class="buscador-tr"><td class="buscador-td">Fapa</td></tr>
+            <tr class="buscador-tr"><td class="buscador-td">Choclo</td></tr>
+            <tr class="buscador-tr"><td class="buscador-td">Papa</td></tr>
+            <tr class="buscador-tr"><td class="buscador-td">Frutilla</td></tr>
+            <tr class="buscador-tr"><td class="buscador-td">Agua</td></tr>
+            <tr class="buscador-tr"><td class="buscador-td">Chicle</td></tr>
+        </table>
+    </div>
+    </div>
 </div>
 
-<!--------------------------------inputs de la calculadora--------------------------------------------->
-<div class="flex-container-padre">
-<div class="flex-container">
-    <input class="hijos" type="text" placeholder="Buscar Producto">
-    <input class="hijos" type="text" placeholder="Cantidad">
-    <label class="total-derecha">Total: $230</label>
-</div>
-<div class="conteiner-tabla-buscador">
-    <table class="tabla-buscador">
-    <tr><td>Palta</td></tr>
-    <tr><td>Fapa</td></tr>
-    <tr><td>Choclo</td></tr>
-    </table
-</div>
-</div>
+
 <!---------------------------------calculadora----------------------------------------------------------->
 <!---<div class="calculator">
 <div class="result-bar">
@@ -164,13 +174,13 @@
             <td>agua</td><td>Palta</td><td>$ 300</td><td>200</td><td><i class="fas fa-times-circle quitar"></i></td>
         </tr>
         <tr>
-            <td>luz</td><td>Papa</td><td>$695</td><td>100</td><td>$ 3000</td>
+            <td>luz</td><td>Papa</td><td>$695</td><td>100</td><td><i class="fas fa-times-circle quitar"></i></td>
         </tr>
         <tr>
-            <td>luz</td><td>Lechuga</td><td>$500</td><td>80</td><td>$ 3000</td>
+            <td>luz</td><td>Lechuga</td><td>$500</td><td>80</td><td><i class="fas fa-times-circle quitar"></i></td>
         </tr>
         <tr>
-            <td>luz</td><td>Fapa</td><td>$356</td><td>40</td><td>$ 3000</td>
+            <td>luz</td><td>Fapa</td><td>$356</td><td>40</td><td><i class="fas fa-times-circle quitar"></i></td>
         </tr>
     </table>
     </main>

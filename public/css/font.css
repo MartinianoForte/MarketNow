@@ -1,10 +1,10 @@
 @font-face {
     font-family: "icomoon";
-    src: url("fonts/icomoon.eot?ya9t2x");
-    src: url("fonts/icomoon.eot?ya9t2x#iefix") format("embedded-opentype"),
-        url("fonts/icomoon.ttf?ya9t2x") format("truetype"),
-        url("fonts/icomoon.woff?ya9t2x") format("woff"),
-        url("fonts/icomoon.svg?ya9t2x#icomoon") format("svg");
+    src: url("../fonts/icomoon.eot?ya9t2x");
+    src: url("../fonts/icomoon.eot?ya9t2x#iefix") format("embedded-opentype"),
+        url("../fonts/icomoon.ttf?ya9t2x") format("truetype"),
+        url("../fonts/icomoon.woff?ya9t2x") format("woff"),
+        url("../fonts/icomoon.svg?ya9t2x#icomoon") format("svg");
     font-weight: normal;
     font-style: normal;
     font-display: block;
@@ -149,7 +149,8 @@ body {
 .texto{
     color: #666;
     font-size: 20px;
-    text-align: center;
+    text-align: justify;
+    line-height: 150%;
 }
 
 /*-------------------- Cuerpo ------------------*/
