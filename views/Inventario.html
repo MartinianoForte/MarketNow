@@ -100,7 +100,7 @@
 <div class="granContenedor">
     <div class="contenedor__tabla">
     <div id = "main-conteiner">
-    <table class="table">
+    <table class="table scroll">
         <thead>
             <tr>
                 <th>Nombre del Articulo</th><th>Precio Venta</th><th>Precio Unitario </th><th>Cantidad </th><th>Cantidad Ideal </th>
@@ -149,16 +149,24 @@
     </table>    
     </div>      
     </div>
-    <div class="tarjeta admin">
+    <div class="tarjeta_derecha admin">
         <div class="tarjeta__header">
             <label class="tarjeta__titulo">Buscador</label>
         </div>
         <dir class="tarjeta__contenido admin__contenido" style="margin: 0">
             <form>
             <div class="admin__botones">
-            <input type="text" name="" class="input" placeholder="Nombre">
-            <input type="number" name="" class="input" placeholder="Precio">
-            <input type="text" name="" class="input" placeholder="Categoria">
+                <div class="input-contenedor">
+                    <i  data-feather="log-out" class="fas fa-shopping-cart derecho__icono"></i>
+                    <input type="text" data-feather="search derecho__icono" class="input "placeholder="Nombre">  
+                </div>
+
+            <select class="input" onchange="Barra_accion()" name="rol" id="tipo">
+            <option value="0" selected="select" id="nada">Seleccione una accion</option>
+            <option value="1"id="ord_menor_mayor_precio" >Ordenar el precio ascendente</option>
+            <option value="2"id="ord_mayor_menor_precio">Ordenar el precio desendente</option>
+            <option value="3"id="ord_z-a_mayor_precio">Ordenar nombre de la A-Z</option>
+            <option value="4"id="ord_z-a_mayor_precio">Ordenar nombre de la Z-A</option></select>
             </div>
             <div class="vacio"></div>
             <button class="button_verde">Buscar</button>

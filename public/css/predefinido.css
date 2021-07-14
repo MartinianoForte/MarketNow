@@ -46,7 +46,7 @@ main{ margin-left: 15em; }
 
 .input{
     font-size: 20px;
-    width: 87%;
+    /*width: 87%;*/
     padding: 10px;
     border: 1px solid #999;
     border-radius: 10px;
