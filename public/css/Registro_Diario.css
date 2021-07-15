@@ -1,0 +1,21 @@
+body { background: #f7f7f7; }
+
+label {
+	color: #666;
+	font-size: 20px;
+	font-family: sans-serif;
+}
+
+.contenedor_registro {
+	padding: 10px;
+	/*overflow: scroll;*/
+	display: grid;
+	grid-gap: 1em;
+	grid-auto-rows: 8rem;
+	grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
+}
+
+.tarjeta__contenido{
+	height: 100%;
+}
+
