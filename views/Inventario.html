@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="utf-8">
     <script src="https://unpkg.com/feather-icons"></script>
     <link rel="stylesheet" href="../public/css/predefinido.css">
-    <link rel="stylesheet" href="../public/css/Inventario.css">
-    <meta charset="utf-8">
+    <link rel="stylesheet" href="../public/css/inventario.css">
     <title>Inventario</title>
 </head>
 <body>
     <ul class="header__lista"><!-- Botones de la barra -->
     <li class="header__item" style="width: 15em;">
-        <div class="header__usuario">
+        <div class="header__usuario btn_open">
             <i data-feather="user" style="color: #222;" width="35" height="35"></i>
             <a class="header__dr" style="padding-left: 15px;" href="index.html">Usuario</a>
         </div>
@@ -24,7 +24,7 @@
             </div>
     </li>
 </ul>
-    <nav class="menu">
+    <nav class="menu" id="menu">
         <a href="index.html">
             <div class="menu__opcion border-bottom">
                 <i data-feather="home" class="menu__icono"></i>
@@ -175,8 +175,8 @@
     </div>
 </div>
 </main>
-<script>
-    feather.replace()
-</script>
+<script src="../public/js/predefinido.js"></script>
+<script>feather.replace()</script>
 </body>
 </html>
+
