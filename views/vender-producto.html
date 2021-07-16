@@ -3,6 +3,7 @@
 <head>
 <link rel="stylesheet" href="../public/css/predefinido.css">
 <link rel="stylesheet" href="../public/css/vender-producto.css">
+<script src="https://unpkg.com/feather-icons"></script>
 <script src="../public/js/Venta-Producto.js"></script>
 <script src="https://kit.fontawesome.com/ee5c196280.js" crossorigin="anonymous"></script>
 
@@ -10,72 +11,38 @@
 </head>
 <body>
     <ul class="header__lista"><!-- Botones de la barra -->
-    <li class="header__item"><a class="header__link" href="index.html">Inicio</a></li>
-    <li class="header__item"><a class="header__link" href="nosotros.html">Nosotros</a></li>
-    <li class="header__item"><h1 id="header__titulo">MarketNow</h1></li>
-    <li class="header__item" Style ="float:right"><a class="header__link" href="registrarse.html">Registrarse</a></li>
-    <li class="header__item" style="float:right"><a class="header__link" href="Iniciar-sesion.html">Iniciar Sesion</a></li>
-</ul>
+    <li class="header__item" style="width: 15em;">
+        <div class="header__usuario">
+            <i data-feather="user" style="color: #222;" width="35" height="35"></i>
+            <a class="header__dr" style="padding-left: 15px;" href="index.html">Usuario</a>
+        </div>
+    </li>
+    <li class="header__flex">
+        <span class="header__dr">Vender Productos</span>
+        <div>
+            <a href="Iniciar-sesion.html">
+                <i data-feather="log-out" style="" width="35" height="35" class="header__out"></i>
+            </a>
+        </div>
+    </li>
+    </ul>
 <!------------------------------------menu----------------------------------------------------------------->
-    <nav class="menu">
+    <nav class="menu" id="menu">
         <a href="index.html">
             <div class="menu__opcion border-bottom">
                 <i data-feather="home" class="menu__icono"></i>
                 <label class="texto menu__link">Inicio</label>
             </div>
         </a>
-        <div class="menu__contenido">
-            <a href="index.html">
-                <div class="menu__opcion">
-                    <i data-feather="pie-chart" class="menu__icono"></i>
-                    <label class="texto menu__link">Reporte diario</label>
-                </div>
-            </a>
-            <a href="index.html">
-                <div class="menu__opcion">
-                    <i data-feather="trending-up" class="menu__icono"></i>
-                    <label class="texto menu__link">Balance</label>
-                </div>
-            </a>
-            <a href="index.html">
-                <div class="menu__opcion">
-                    <i data-feather="clipboard" class="menu__icono"></i>
-                    <label class="texto menu__link">Inventario</label>
-                </div>
-            </a>
-            <a href="index.html">
-                <div class="menu__opcion">
-                    <i data-feather="package" class="menu__icono"></i>
-                    <label class="texto menu__link">Stock Faltante</label>
-                </div>
-            </a>
-            <a href="index.html">
-                <div class="menu__opcion">
-                    <i data-feather="shopping-bag" class="menu__icono"></i>
-                    <label class="texto menu__link">Comprar Stock</label>
-                </div>
-            </a>
-            <a href="cupones.html">
-                <div class="menu__opcion">
-                    <i data-feather="gift" class="menu__icono"></i>
-                    <label class="texto menu__link">Cupones</label>
-                </div>
-            </a>
-            <a href="index.html">
-                <div class="menu__opcion">
-                    <i data-feather="calendar" class="menu__icono"></i>
-                    <label class="texto menu__link">Entregas</label>
-                </div>
-            </a>
         </div>
         <div class="menu__pie">
-            <a href="index.html">
+            <a href="#">
                 <div class="menu__opcion">
                     <i data-feather="user" class="menu__icono"></i>
                     <label class="texto menu__link">Perfil</label>
                 </div>
             </a>
-            <a href="index.html">
+            <a href="#">
                 <div class="menu__opcion">
                     <i data-feather="help-circle" class="menu__icono"></i>
                     <label class="texto menu__link">Ayuda</label>
@@ -89,6 +56,7 @@
             </a>
         </div>
     </nav>
+    <script src="../public/js/predefinido.js"></script>
 
 <main>
 
@@ -157,6 +125,7 @@
     </table>
     </main>
 </div>
+<script> feather.replace() </script>
 </body>
 </html>
 
