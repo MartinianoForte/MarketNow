@@ -1,98 +1,70 @@
 *{
 	box-sizing: border-box;
 }
-main{
-	display: flex;
-	flex-direction: column;
-	margin-top: 10px;
-	margin-left: 250px;
+main{ margin-top: 10px; }
+body{
+	background-color: white;
+	font-family:  sans-serif;
+}
+
+
+.contenedor__cosas {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-row-gap: 5%;
+	width: 80%;
+	margin: 20px auto;
 }
 
 /** titulos **/
 
-.codigo-padre{
-	display: flex;
-}
-.codigo-de-barras{
-	width: 45%;
-	display: flex;
-	flex-direction: column;
-	justify-content: normal;
-
-}
-.codigo-de-cliente{
-	width: 45%;
-	margin-left: 15px;
-	display: flex;
-	flex-direction: column;
-	justify-content: normal;
+.codigos{
+	width: 80%;
 }
 
-.input-barra{
+.input-codigo{
 	font-size: 20px;
 	margin-top: 10px;
-}
-
-.input-cliente{
-	font-size: 20px;
-	margin-top: 10px;
+	width: 100%;
 }
 
 .clearfix{
 	clear: both;
 }
 
-
-
 /** botones **/
 
 .barra{
-	width: 40%;
+	width: 80%;
 	margin-top: 10px;
 	display: flex;
 	justify-content: space-around;
-	aling-items: center;
+	align-items: center;
 }
 
-.boton{
-	width: 200px;
-	height: 50px;
-	margin-left:40px;
-	margin-top: 20px;
-	padding: 15px 10px;
-	color: white;
-	background: #4caf50;
-	display: inline-block;
-	cursor: pointer;
-	text-decoration: none;
-	border: none;
-	float: left;
-}
+.button_verde { width: 200px; }
 
 .total{
 	text-indent: 10px;
-	margin-top: 50px;
 	font-size: 28px;
+	padding-left: 6%;
 }
 
 /** rectangulo de la derecha **/
-.flex-container-container{
-	display: flex;
-
-}
 
 .flex-container-padre{
  display: flex;
  width: 80%;
  margin-top: 10px;
+ border: 1px solid #666;
 }
 
 .flex-container{
-	border: 1px solid black;
+	border-right: 1px solid #999;
 	display: flex;
 	flex-direction: column;
-	margin-left: 90px;
 	padding: 5px;
+	width: 50%;
 }
 
 .hijos{
@@ -102,7 +74,7 @@ main{
 }
 
 .total-derecha{
-	color:grey ;
+	color:#555;
 	font-size: 20px;
 	margin-left: 1px;
 	margin-top: 15px;
@@ -111,25 +83,22 @@ main{
 
 .container-tabla-buscador{
 	height: 150px;
-	overflow-y: scroll;
-	width: 196px;
+	width: 50%;
 }
 
+.manual__tabla{
+	width: 100%;
+}
+.buscador-tr{
+	width: 100%;
+}
 /** animacion horrible dela tabla**/
 .buscador-tr:hover .buscador-td{
 	background-color: #4caf50;
 	color: white;
 }
 
-input{
-	border-radius: 10px;
-}
 /**------------------------tabla-------------------------**/
-
-body{
-	background-color: white;
-	font-family:  sans-serif;
-}
 
 .quitar{
 	min-width: 50px;
@@ -138,9 +107,10 @@ body{
 }
 
 #main-conteiner{
-	margin:  55px auto;
-	width:  900px;
+	margin: auto;
+	width: 80%;
 	margin-top: 1px;
+	padding-top: 5vh;
 }
 
 .table{
@@ -150,7 +120,21 @@ body{
 	width:  100%;
 }
 
+.buscador__lista {
+	padding: 0;
+	margin: 0;
+}
 
+.buscador_dato {
+	padding: 15px 10px;
+	list-style: none;
+	background: #f1f1f1;
+	cursor: pointer;
+}
+
+.par { background: #f9f9f9; }
+
+.buscador_dato:hover { background: var(--doradoLg); }
 
 th,td{
 	
@@ -214,21 +198,10 @@ tr:nth-child(even){
 
 .number,.operator{
 	font-size: 15px;
-	color: black;
+	color: #555;
 	border: none;
 
 }
-
-input:focus{
-	outline: none;
-	border-color: black;
-}
-
-input:hover{
-	filter: brightness(110%);
-}
-
-
 
 .operator{
 	background-color: white;
