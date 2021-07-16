@@ -1,6 +1,15 @@
 /*-----------------Cosas----------------------*/
 body{ margin: 0; }
-main{ margin-left: 15em; }
+main{ 
+    margin-left: 4em; 
+    transition: all 0.1s;
+}
+
+label {
+    color: #666;
+    font-size: 20px;
+    font-family: sans-serif;
+}
 
 .texto{
     color: #666;
@@ -140,6 +149,7 @@ main{ margin-left: 15em; }
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 15em;
 }
 
 .header__out{
@@ -170,11 +180,12 @@ main{ margin-left: 15em; }
 .menu{
     top: 72px;
     position: fixed;
-    left: -15em;
+    left: -11em;
     height: 100%;
     border-right: 1px solid #999;
     width: 15em;
     background: #f7f7f7;
+    transition: all 0.1s;
 }
 
 .border-bottom{ border-bottom: 1px solid #999; }
@@ -184,7 +195,7 @@ main{ margin-left: 15em; }
 .menu__opcion{
     display: flex;
     align-items: center;
-    padding: 1.1vh 15px;
+    padding: 1.5vh 15px;
 }
 
 .menu__opcion:hover{ background: #f1f1f1; }
@@ -195,12 +206,12 @@ main{ margin-left: 15em; }
     color: #555;
     padding: 2.5px;
     position: fixed;
-    left: 5px;
+    left: 1em;
 }
 
-.menu__link{
-    padding-left: 17.5px;
-    cursor: pointer;
+.menu__link{ 
+    padding-left: 2.5em;
+    color: #f7f7f7; 
 }
 
 .menu__pie{
@@ -298,15 +309,23 @@ main{ margin-left: 15em; }
 a{ text-decoration: none; }
 
 /*Clases para usar en JavaScript*/
-
 .body_move{
-    margin-left: 250px;
+    margin-left: 11em;
+    transition: all 0.2s;
 }
 
-.menu__side_move{
-    width: 250px;
+.main_move{
+    margin-left: 15em;
+    transition: all 0.2s;
 }
 
+.menu__link_move{
+    cursor: pointer;
+    color: #666;
+    transition: all 0.6s;
+}
+
+.menu__side_move{ width: 15em; }
 
 @media screen and (max-width: 760px){
     .body_move{

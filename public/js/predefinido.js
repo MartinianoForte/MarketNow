@@ -6,11 +6,17 @@ document.getElementById("menu").addEventListener("mouseout", open_close_menu);
 var side_menu = document.getElementById("menu");
 var btn_open = document.getElementById("btn_open");
 var body = document.getElementById("menu");
+let texto = document.querySelectorAll(".menu__link")
+let main = document.getElementsByTagName('main');
 
 //Evento para mostrar y ocultar menú
     function open_close_menu(){
         body.classList.toggle("body_move");
         side_menu.classList.toggle("menu__side_move");
+        main[0].classList.toggle('main_move');
+        for(let i = 0; i < texto.length; i++){
+            texto[i].classList.toggle('menu__link_move');
+        }
     }
 
 //Si el ancho de la página es menor a 760px, ocultará el menú al recargar la página

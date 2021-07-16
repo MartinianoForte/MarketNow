@@ -1,8 +1,8 @@
-CREATE DATABASE  IF NOT EXISTS `marketnow_prueba2` /*!40100 DEFAULT CHARACTER SET latin1 */;
-USE `marketnow_prueba2`;
+CREATE DATABASE  IF NOT EXISTS `marketnow` /*!40100 DEFAULT CHARACTER SET latin1 */;
+USE `marketnow`;
 -- MySQL dump 10.13  Distrib 5.7.17, for Win64 (x86_64)
 --
--- Host: 127.0.0.1    Database: marketnow_prueba2
+-- Host: 127.0.0.1    Database: marketnow
 -- ------------------------------------------------------
 -- Server version	5.1.45-community
 
