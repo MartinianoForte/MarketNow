@@ -1,8 +1,8 @@
 /*----------Variables----------*/
 const nom = document.getElementById('Nombre_producto');
-nom=addEventListener("keypress", productos);
+nom.addEventListener("keypress", producto);
 
-const info={
+const info= {
 	producto:[{
 	nombre: "cacho",
 	precio: "30",
@@ -18,9 +18,9 @@ const info={
 }
 /*----------Funciones----------*/
 function producto(){
-	const resultado=info.producto.filter(dato=>{
-		if(dato.nombre.includes(nom.valaue)) return true;
+	const resultado = info.producto.filter( dato=> {
+		if(dato.nombre.includes(nom.value)) return true;
 		return false;
 	})
-	console.log(resultado)
+	console.log(resultado[0].nombre)
 }
