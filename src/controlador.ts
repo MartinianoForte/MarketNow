@@ -12,3 +12,8 @@ export const inicio = async (req: Request, res: Response) => {
 export const index = (req: Request, res: Response) => {
 	res.render('index.html');
 }
+
+export const home = (req: Request, res: Response) => {
+	const param = req.params;
+	res.render(param.page + '.html');
+}

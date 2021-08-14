@@ -5,5 +5,6 @@ const ruta = Router();
 
 //sin Iniciar sesion
 ruta.get("/", controlador.index);
+ruta.get("/home/:page", controlador.home);
 
 export default ruta;

@@ -1,6 +1,7 @@
 import express, { Application } from "express";
 import rutas from "./rutas";
 import path from "path";
+require('dotenv').config({path: '.env.default'});
 
 class App {
 	private app: Application;
