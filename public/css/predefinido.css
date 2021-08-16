@@ -285,6 +285,8 @@ label {
     background: #333333;
     margin: 0;
     height: 72px;
+    position: sticky;
+    bottom: 0;
 }
 
 .footer__contenedor-Ab {
@@ -304,6 +306,22 @@ label {
     padding: 22px;
     display: flex;
 }
+
+.footer__centrar {
+    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.footer__derecha {
+    position: absolute;
+    right: 20px;
+    margin: auto;
+}
+
+/*-----------Otros-------------------*/
 
 /*-<a> no lleva decoracion. Punto-*/
 a{ text-decoration: none; }

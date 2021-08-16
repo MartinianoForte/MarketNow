@@ -2,23 +2,18 @@
 <html lang="es">
 <head>
     <script src="https://unpkg.com/feather-icons"></script>
-    <link rel="stylesheet" href="css/predefinido.css">
-    <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="/static/css/predefinido.css">
+    <link rel="stylesheet" href="/static/css/font.css">
     <meta charset="utf-8">
 </head>
 <body>
-<div class="fondo_verde maspixeles"></div>
-<ul class="header__lista"><!-- Botones de la barra -->
-    <li class="header__item"><a class="header__link" href="/">Inicio</a></li>
-    <li class="header__item"><a class="header__link" href="home/nosotros">Nosotros</a></li>
-    <li class="header__item"><h1 id="header__titulo">MarketNow</h1></li>
-    <li class="header__item" Style ="float:right"><a class="header__link" href="home/registrarse">Registrarse</a></li>
-    <li class="header__item" style="float:right"><a class="header__link" href="home/Iniciar-sesion">Iniciar Sesion</a></li>
-</ul>
-<div class="fondo_verde maspixeles"></div>
+
+    <div class="fondo_verde maspixeles"></div>
+    <%- include('partials/headerHome.html')%>
+    <div class="fondo_verde maspixeles"></div>
 <div class="fondo_verde"></div>
 <div class="fondo__logo">
-<img src= "img/imagen.png" class="imagen_Palta" width="100%">
+<img src= "static/img/logotipo.png" class="imagen_Palta" width="100%">
 </div>
 <script src="https://unpkg.com/feather-icons"></script>
 <div class="contenedor_principal">
@@ -118,25 +113,14 @@
     </div>
 </div>
 
-<footer>
-<div class="footer">
-    <div class="footer__contenedor.Ar">
-        <!-- <p Style ="float:right"><a href="#" class="boton">^</a></p> -->
-    </div>
-    <div class="footer__contenedor-Ab">
-        <span class="footer__texto">© 2021 MarketNow. Derechos reservados</span>
-        <a href="#"><i data-feather="home" class="footer__icono centrar"></i></a>
-        <span class="footer__texto derecha">Calle Palta 123</span>
-    </div>
-</div>
-</footer>
+<%- include('./partials/footer.html'); %>
+
 <script>feather.replace()</script>
 </symbol>
 <div class="social-bar">
     <a href="https://www.instragram.com" class="icon icon-instagram" target="_blank" >@MarketNow</a><!--Acá iria el Intagram de la MarketNow-->
     <a href="https://www.gmail.com" class="icon icon-mail4" target="_blank">@MarketNow</a><!--Acá iria el mail de la MarketNow-->
     <a class="icon icon-whatsapp" target="_blank">-0000000000</a><!--Acá iria el telefono de la MarketNow-->
-
 </div>
 </body>
 </html>

@@ -23,7 +23,7 @@ class App {
 
 	middlewars() {
 		this.app.use(express.urlencoded({ extended: true }));
-		this.app.use(express.static(path.join(__dirname, "..", "public")));
+		this.app.use('/static', express.static('public'));
 	}
 
 	rutas() {

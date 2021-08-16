@@ -1,5 +1,5 @@
 body{
-  overflow: hidden;
+  /*overflow: hidden;*/
   margin: 0;
   background: #fafafa;
 }
@@ -49,3 +49,9 @@ body{
 }
 
 
+/*-------otros----------*/
+
+/*.footer {
+  position: fixed;
+  bottom: 0;
+}*/

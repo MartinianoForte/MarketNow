@@ -2,21 +2,17 @@
 <html lang="es">
 <head>
     <script src="https://kit.fontawesome.com/ee5c196280.js" crossorigin="anonymous"></script>
-    <script src="../public/js/Registro.js"></script>
+    <script src="/static/js/Registro.js"></script>
     <meta charset="utf-8"/></meta>
     <title>Registrarse</title>
     
-<link rel="stylesheet" href="../css/predefinido.css">
-<link rel="stylesheet" href="../css/registro.css">
+<link rel="stylesheet" href="/static/css/predefinido.css">
+<link rel="stylesheet" href="/static/css/registro.css">
 </head>
 <body>
-<ul class="header__lista"><!-- Botones de la barra -->
-    <li class="header__item"><a class="header__link" href="/">Inicio</a></li>
-    <li class="header__item"><a class="header__link" href="home/nosotros">Nosotros</a></li>
-    <li class="header__item"><h1 id="header__titulo">MarketNow</h1></li>
-    <li class="header__item" Style ="float:right"><a class="header__link" href="home/registrarse">Registrarse</a></li>
-    <li class="header__item" style="float:right"><a class="header__link" href="home/Iniciar-sesion">Iniciar Sesion</a></li>
-</ul>
+<header>
+    <%- include('partials/headerHome.html')%>
+</header>
 
 <form class="formulario" id="form">
         <h1 class="registrate">Registrate</h1>
@@ -99,10 +95,9 @@
         <input type="submit" onclick="return EnviarFormulario() " value="Registrarse" class="button" id="boton_env"><p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente!</p>
         <div class="texto-p">
         <p style="color:#666;">Al registrarte, aceptas nuestras condiciones de uso y politica de privacidad</p>
-        <p>¿Ya tienes una cuenta? <a class="link" href="Iniciar-sesion.html">Iniciar sesión</a></p>
+        <p>¿Ya tienes una cuenta? <a class="link" href="Iniciar-sesion">Iniciar sesión</a></p>
+    </div>  
     </div>
-
-    
-</div>
-    </div>
-    </form>
+</form>
+</body>
+</html>
