@@ -11,17 +11,17 @@
     <%- include('partials/headerHome.html')%>
 </header>
 
-<form class="formulario">
+<form class="formulario" method="POST" action="/singIn">
     <h1 class="registrate">Iniciar Sesion</h1>
     <div clas="contenedor-registro">
         <div class="input-contenedor-registro">
             <i class="far fa-envelope icono"></i>
-            <input type="text" class="input" placeholder="Correo Electronico">
+            <input type="text" class="input" name="nombre" placeholder="Correo Electronico">
         </div>
 
          <div class="input-contenedor-registro sinMargin">
             <i class="fas fa-key icono"></i>
-            <input type="password" class="input" placeholder="Contraseña">
+            <input type="password" class="input" name="contra" placeholder="Contraseña">
         </div>
         <div class="derecha">
             <a href="Restablecer-Contraseña" class="link">¿Has olvidado tu contraseña?</a>
