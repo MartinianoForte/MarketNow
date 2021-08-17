@@ -2,11 +2,11 @@
     <li class="header__item" style="width: 15em;">
     	<div class="header__usuario">
     		<i data-feather="user" style="color: #222;" width="35" height="35"></i>
-    		<a class="header__dr" style="padding-left: 15px;" href="/">Usuario</a>
+    		<a class="header__dr" style="padding-left: 15px;" href="/"><%= typeof nombre != 'undefined' ? nombre : 'default' %></a>
     	</div>
     </li>
     <li class="header__flex">
-    		<span class="header__dr"><%= typeof sitio != 'undefined' ? sitio : 'default' %></span>
+    		<span class="header__dr"><%= typeof sitio != 'undefined' ? sitio : 'Usuario' %></span>
     		<div>
     			<a href="/logOut">
     				<i data-feather="log-out" style="" width="35" height="35" class="header__out"></i>

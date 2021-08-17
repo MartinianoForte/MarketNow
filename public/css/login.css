@@ -14,7 +14,6 @@ body{
     padding-top: 5px;
 }
 
-
 .contenedor-registrarse{
     width:  100%;
     padding: 15px;
@@ -32,6 +31,7 @@ body{
 }
 
 input[type="text"],
+input[type="email"],
 input[type="password"]{
     font-size:20px;
     width: 82%;

@@ -103,22 +103,10 @@ function validar_nombre_local(nombre_local){
 }
 function EnviarFormulario(){
   if (document.getElementById('usuario').selected == true && validacion.reduce((a, b) => a + b, 0) >= 4)
-    reestablecerFormulario(4);
+    document.getElementById('form').submit();
   else if (((document.getElementById('comerciante').selected == true) || (document.getElementById('proveedor').selected == true )) && validacion.reduce((a, b) => a + b, 0) >= 8)
-    reestablecerFormulario(8);
+    document.getElementById('form').submit();
   return false;
-}
-
-function reestablecerFormulario(limite){
-    document.getElementById('formulario__mensaje-exito').style.display='block'
-    for(let i = 0; i < limite; i++){
-      document.getElementById('correcto' + i).style.display="none";
-      document.getElementById('colorborde' + i).style.borderColor='#aaa';
-    }
-    document.getElementById('activacion').style.display="none";
-    form.reset();
-    document.getElementById('activacion').style.display="none";
-    document.getElementById('form').submit;
 }
 
 function validacion_correcta(n,cb){

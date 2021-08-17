@@ -1,5 +1,5 @@
 import mysql from "mysql2";
-require('dotenv').config({path: '.env.default'});
+require("dotenv").config({ path: ".env.default" });
 
 const pool = mysql.createPool({
 	host: "localhost",
