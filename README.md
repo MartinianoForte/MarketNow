@@ -3,7 +3,8 @@
 
 ### Importante!
 Crear un archivo llamado ".env.default" en el directorio raiz con los siguientes datos de su servidor SQL:
-```DB_PASS=(su contraseña)
+```
+DB_PASS=(su contraseña)
 DB_USER=(nombre o root, segun corresponda)
 ```
 
@@ -11,7 +12,8 @@ DB_USER=(nombre o root, segun corresponda)
 Este proyecto utiliza NodeJs (14.17 LTS) para su funcionaminto,
 por lo cual debe instalarlo y poner los siguientes comandos
 en la consola de windows (posicionado en la carpeta raiz del proyecto):
-```npm i 
+```
+npm i 
 npm start
 ```
 
