@@ -5,7 +5,7 @@ import * as auth from "./controladores/auth";
 const ruta = Router();
 
 //sin Iniciar sesion
-ruta.get("/", controlador.inicio);
+ruta.get("/", controlador.index);
 ruta.get("/home/:page", controlador.home);
 ruta.get("/logOut", auth.logOut);
 ruta.get("/dev/:page", controlador.devPage);

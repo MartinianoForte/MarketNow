@@ -2,7 +2,7 @@ import express, { Application } from "express";
 import rutas from "./rutas";
 import path from "path";
 import mySqlSession from "express-mysql-session";
-require('dotenv').config({path: '.env.default'});
+require("dotenv").config({ path: ".env.default" });
 
 class App {
 	private app: Application;
@@ -25,28 +25,33 @@ class App {
 
 	middlewars() {
 		this.app.use(express.urlencoded({ extended: true }));
-		this.app.use('/static', express.static(path.join(__dirname, "..", "public")));
+		this.app.use(
+			"/static",
+			express.static(path.join(__dirname, "..", "public"))
+		);
 	}
 
-	sesiones(){
+	sesiones() {
 		const session = require("express-session");
 		const MySQLStore = mySqlSession(session);
 		const opciones = {
-			host: 'localhost',
+			host: "localhost",
 			user: process.env.DB_USER,
 			password: process.env.DB_PASS,
-			database: 'prueba_session'
+			database: "prueba_session",
 		};
 		const sessionStore = new MySQLStore(opciones);
-		this.app.use(session({
-    		key: 'session_cookie',
-    		secret: 'Peron',
-    		resave: false,
-    		saveUninitialized: true,
-    		cookie: {
-            	maxAge:(1000 * 60 * 100)
-    		}      
-		}));
+		this.app.use(
+			session({
+				key: "session_cookie",
+				secret: "Peron",
+				resave: false,
+				saveUninitialized: true,
+				cookie: {
+					maxAge: 1000 * 60 * 100,
+				},
+			})
+		);
 	}
 
 	rutas() {
@@ -55,7 +60,7 @@ class App {
 
 	prender() {
 		this.app.listen(this.app.get("port"), () => {
-			console.log("Servidor escuchando en", this.app.get("port"));
+			console.log("Servidor escuchando en puerto ", this.app.get("port"));
 		});
 	}
 }

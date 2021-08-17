@@ -176,7 +176,6 @@ DROP TABLE IF EXISTS `clientes`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `clientes` (
   `idCliente` int(6) NOT NULL AUTO_INCREMENT,
-  `pin` int(6) DEFAULT NULL,
   `idUsuario` int(6) DEFAULT NULL,
   PRIMARY KEY (`idCliente`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -201,10 +200,11 @@ DROP TABLE IF EXISTS `comercio`;
 CREATE TABLE `comercio` (
   `idComercio` int(6) NOT NULL AUTO_INCREMENT,
   `dni` int(12) DEFAULT NULL,
-  `dirección` varchar(100) DEFAULT NULL,
+  `direccion` varchar(100) DEFAULT NULL,
   `logo` varchar(100) DEFAULT NULL,
   `estado` varchar(100) DEFAULT NULL,
   `telefono` int(12) DEFAULT NULL,
+  `nombreLocal` varchar(100) DEFAULT NULL,
   `idUsuario` int(6) DEFAULT NULL,
   PRIMARY KEY (`idComercio`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -335,8 +335,10 @@ CREATE TABLE `pedido` (
   `monto` int(10) DEFAULT NULL,
   `estado` varchar(20) DEFAULT NULL,
   `fecha` date DEFAULT NULL,
+  `hora` time DEFAULT NULL,
+  `tipo` int(2) DEFAULT NULL,
   `comprobante` varchar(100) DEFAULT NULL,
-  `idProveedor` int(6) DEFAULT NULL,
+  `idUsuario` int(6) DEFAULT NULL,
   `idComercio` int(6) DEFAULT NULL,
   PRIMARY KEY (`idPedido`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -364,6 +366,7 @@ CREATE TABLE `proveedor` (
   `direccion` varchar(100) DEFAULT NULL,
   `logo` varchar(100) DEFAULT NULL,
   `telefono` int(12) DEFAULT NULL,
+  `nombreLocal` varchar(100) DEFAULT NULL,
   `idUsuario` int(6) DEFAULT NULL,
   PRIMARY KEY (`idProveedor`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -431,33 +434,6 @@ LOCK TABLES `registrocompra` WRITE;
 UNLOCK TABLES;
 
 --
--- Table structure for table `registroventa`
---
-
-DROP TABLE IF EXISTS `registroventa`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `registroventa` (
-  `idVenta` int(6) NOT NULL AUTO_INCREMENT,
-  `fecha` date DEFAULT NULL,
-  `cdb` int(14) DEFAULT NULL,
-  `total` float DEFAULT NULL,
-  `idCliente` int(6) DEFAULT NULL,
-  `idComercio` int(6) DEFAULT NULL,
-  PRIMARY KEY (`idVenta`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `registroventa`
---
-
-LOCK TABLES `registroventa` WRITE;
-/*!40000 ALTER TABLE `registroventa` DISABLE KEYS */;
-/*!40000 ALTER TABLE `registroventa` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `usuarios`
 --
 
@@ -472,7 +448,8 @@ CREATE TABLE `usuarios` (
   `clave` varchar(100) DEFAULT NULL,
   `fechaReg` date DEFAULT NULL,
   `rol` int(4) DEFAULT NULL,
-  PRIMARY KEY (`idUsuario`)
+  PRIMARY KEY (`idUsuario`),
+  UNIQUE KEY `email` (`email`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -494,4 +471,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-07-15 19:08:31
+-- Dump completed on 2021-08-17 13:30:13

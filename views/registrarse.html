@@ -11,7 +11,7 @@
 </head>
 <body>
 <header>
-    <%- include('partials/headerHome.html')%>
+    <%- include('partials/headerHome.html', {loged: loged})%>
 </header>
 
 <form class="formulario" id="form" method="POST" action="/singUp">
@@ -54,10 +54,10 @@
         <div class="input-contenedor-registro">
             <i class="fas fa-user-tag icono" id="Barra__roles"></i>
             <select class="input" onchange="Barra_Roles()" name="rol" id="tipo">
-            <option value="0" selected="select" id="nada">Seleccione un rol</option>
-            <option value="1"id="usuario" >Cliente</option>
-            <option value="2"id="comerciante">Comerciante</option>
-            <option value="3"id="proveedor">Proveedor</option></select>
+            <option value="nashe" selected="select" id="nada">Seleccione un rol</option>
+            <option value="3"id="usuario" >Cliente</option>
+            <option value="1"id="comerciante">Comerciante</option>
+            <option value="2"id="proveedor">Proveedor</option></select>
         </div>
 
     <div id="activacion" class="escondido">
