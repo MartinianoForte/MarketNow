@@ -11,12 +11,12 @@
     <%- include('partials/headerHome.html', {loged: loged})%>
 </header>
 
-<form class="formulario">
+<form class="formulario" method="POST" action="/nuevaPass/<%= token %>">
     <h1 class="registrate">Recuperar Contraseña</h1>
     <div clas="contenedor-registro">
         <div class="input-contenedor-registro">
-            <i class="far fa-envelope icono"></i>
-            <input type="text" class="input" placeholder="Nueva Contraseña">
+            <i class="fas fa-key icono"></i>
+            <input type="password" class="input" name="contra" placeholder="Nueva Contraseña">
         </div>
 
          <div class="input-contenedor-registro sinMargin">
@@ -25,8 +25,10 @@
         </div>
         <br>
         <div class="login-button">
-            <input type="submit" value="Login" class="button">
+            <input type="submit" value="Aceptar" class="button">
         </div>
         <br>
     </div>
 </form>
+<script> feather.replace() </script>
+</body>

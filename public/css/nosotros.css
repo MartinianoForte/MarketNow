@@ -1,5 +1,4 @@
 body{
-  /*overflow: hidden;*/
   margin: 0;
   background: #fafafa;
 }
@@ -13,7 +12,7 @@ body{
   /*border: 1px solid #666;*/
   border-top: 0;
   background: #fff;
-  height: 100vh;
+  min-height: 80vh;
 }
 
 .contendor__segundo{
@@ -47,11 +46,3 @@ body{
   font-size: 30px;
   color: #b5a067;
 }
-
-
-/*-------otros----------*/
-
-/*.footer {
-  position: fixed;
-  bottom: 0;
-}*/

@@ -37,5 +37,6 @@ export const comercio = (req: Request, res: Response) => {
 
 export const devPage = (req: Request, res: Response) => {
 	const param = req.params.page;
-	res.render(param + ".html");
+	const loged = (req.session.loggedin == undefined)? false: true;
+	res.render(param + ".html", ({loged: loged, nombre: 'admin'}));
 };

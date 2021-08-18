@@ -2,6 +2,8 @@ import pool from "../modulos/conexion";
 import { Request, Response, NextFunction } from "express";
 import * as bcryptjs from "bcrypt";
 import { RowDataPacket, OkPacket, ResultSetHeader } from "mysql2";
+import * as jwt from 'jsonwebtoken';
+import transporter from '../modulos/emailer'
 import "express-session";
 
 declare module "express-session" {
@@ -14,6 +16,15 @@ declare module "express-session" {
 }
 
 const promisePool = pool.promise();
+
+const enviarEmail = async (dest: string, asunto: string, mensaje:string) => {
+	transporter.sendMail({
+		from: "MarketNow <" + process.env.NM_EMAIL + ">",
+		to: dest,
+		subject: asunto,
+		html: mensaje,
+	});
+};
 
 export const singUp = async (req: Request, res: Response) => {
 	const pass = await bcryptjs.hash(req.body.contra, 8);
@@ -30,7 +41,6 @@ export const singUp = async (req: Request, res: Response) => {
 			const insertSQL = (sql: string, valores:any[]) => {
 				pool.query(sql,valores,(error, rowDos) => {
 						if (error) throw error;
-						console.log(rowDos);
 						res.redirect("/");
 					}
 				);
@@ -52,10 +62,8 @@ export const singUp = async (req: Request, res: Response) => {
 export const singIn = async (req: Request, res: Response) => {
 	const pass = req.body.contra;
 	const email = req.body.email;
-	console.log(pass)
 	const [result, fields] = await promisePool.query("SELECT * FROM usuarios WHERE email = ?", email);
 	const rows = <RowDataPacket>result;
-	console.log(rows)
 	if (rows.length == 0) res.json("El usuario no existe");
 	else if (await bcryptjs.compare(pass, rows[0].clave)) {
 		req.session.loggedin = true;
@@ -71,11 +79,61 @@ export const logOut = (req: Request, res: Response) => {
 };
 
 export const verifyLogged = (req: Request, res: Response, next: NextFunction) => {
+	const verificar = (process.env.LOGIN == 'false')? false: true;
+	if(!verificar) next();
 	if (req.session.loggedin) next();
-	else res.render('avisos/noLogueado.html');
+	else {
+		res.status(401).render('avisos/noLogueado.html');
+	}
 }
 
-export const enviarEmail = (req: Request, res: Response) => {
+export const enviarCambioContra = async (req: Request, res: Response) => {
 	const email = req.body.email;
-	res.render('avisos/seEnvioEmail.html', ({email: email}));
+	const verificar = (process.env.NM_ACT == 'true')? true: false;
+	const [result, fields] = await promisePool.query("SELECT * FROM usuarios WHERE email = ?", email);
+	const rows = <RowDataPacket>result;
+	if (rows.length == 0) res.json("El email no posee cuenta");
+	else {
+		jwt.sign({user:email},'secretkey', {expiresIn: '10m'}, (err, token) => {
+			const mensaje = `
+				<h3>Buenas tardes ${rows[0].nombre}</h3>
+        		<b> Para poder cambiar su contraseña presione el siguiente link</b><br>
+        		<a href="http://localhost:3000/recuperePass/${token}">Click Aqui</a>
+        		`;
+			if (verificar) {
+				enviarEmail(email, 'Cambiar Contraseña', mensaje)
+				res.render('avisos/seEnvioEmail.html', ({email: email, dato: ''}));
+			} else {
+			res.render('avisos/seEnvioEmail.html', ({email: email,
+			dato: '<label>Lo siguiente es el mensaje que llegaria si la opcion de mandar emails estuviera activada: </label>' + mensaje}));
+		}
+		});
+	}
 }
+
+export const recuperePass = (req: Request, res: Response) => {
+	const token = req.params.token;
+	jwt.verify(token, 'secretkey', (error, authData) => {
+		if(error){
+			console.log(error);
+			res.send('token no valido');
+		}
+		else
+			res.render('Nueva-Contraseña.html', {loged: false, token: token});
+		});
+}
+
+export const nuevaPass = (req: Request, res: Response) => {
+	jwt.verify(req.params.token, "secretkey", async (error, authData) => {
+		if (error) 
+			res.send("token no valido");
+		else {
+			let encript = await bcryptjs.hash(req.body.contra, 8);
+			const data = { clave: encript };
+			pool.query("UPDATE usuarios set ? WHERE email = ?", [data, authData!.user], (err, row) => {
+				if (err) throw err;
+				res.redirect('/home/Iniciar-sesion');
+			});	
+		}
+	});
+};

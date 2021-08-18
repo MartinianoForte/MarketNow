@@ -6,12 +6,14 @@ const ruta = Router();
 
 //sin Iniciar sesion
 ruta.get("/", controlador.index);
+ruta.get("/dev/:page", controlador.devPage);
 ruta.get("/home/:page", controlador.home);
 ruta.get("/logOut", auth.logOut);
-ruta.get("/dev/:page", controlador.devPage);
-ruta.post("/singUp", auth.singUp);
+ruta.get("/recuperePass/:token", auth.recuperePass);
+ruta.post("/enviarEmail", auth.enviarCambioContra);
 ruta.post("/singIn", auth.singIn);
-ruta.post("/enviarEmail", auth.enviarEmail);
+ruta.post("/singUp", auth.singUp);
+ruta.post("/nuevaPass/:token", auth.nuevaPass);
 
 //Inicio sesion
 ruta.get("/comercio/:page", auth.verifyLogged, controlador.comercio);
