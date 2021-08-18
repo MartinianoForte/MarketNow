@@ -13,24 +13,24 @@
 <div class="granContenedor">
     <div class="contenedor__tabla scroll">
     <div id = "main-conteiner">
-    <table class="table">
+    <table class="table"id="tabla">
         <thead>
             <tr>
                 <th>Nombre del Articulo</th><th>Precio Venta</th><th>Precio Unitario </th><th>Cantidad </th><th>Cantidad Ideal </th>
             </tr>
         </thead>
 
-        <tr>
-            <td>agua</td><td>$ 30</td><td>$ 5</td><td>8</td><td>60</td>
+        <tr id="t1">
+            <td>cacho</td><td>$ 30</td><td>$ 5</td><td>8</td><td>60</td>
         </tr>
         <tr>
-            <td>palta</td><td>$ 30</td><td>$ 5</td><td>8</td><td>60</td>
+            <td>Arma 9mm</td><td>$ 20</td><td>$ 5</td><td>8</td><td>60</td>
         </tr>
         <tr>
-            <td>Palta Acuatica</td><td>$ 60</td><td>$ 8</td><td>90</td><td>120</td>
+            <td>Palta Albina</td><td>$ 120</td><td>$ 8</td><td>90</td><td>120</td>
         </tr>
         <tr>
-            <td>agua</td><td>$ 30</td><td>$ 5</td><td>8</td><td>60</td>
+            <td>pepe</td><td>$ 60</td><td>$ 5</td><td>8</td><td>60</td>
         </tr>
          <tr>
             <td>Pelotas</td><td>$ 120</td><td>$ 900</td><td>5</td><td>12</td>
@@ -75,19 +75,20 @@
                 </div>
 
             <select class="input" onchange="Barra_accion()" name="rol" id="tipo">
-            <option value="1"id="ord_z-a_mayor_precio">Ordenar nombre de la A-Z</option>
-            <option value="2"id="ord_z-a_mayor_precio">Ordenar nombre de la Z-A</option>
-            <option value="3"id="ord_menor_mayor_precio" >Ordenar por precio ascendente</option>
-            <option value="4"id="ord_mayor_menor_precio">Ordenar por precio desendente</option>
+            <option value="0"id="nada">Seleccione una Accion</option>
+            <option value="1"id="ord_a-z">Ordenar nombre de la A-Z</option>
+            <option value="2"id="ord_z-a">Ordenar nombre de la Z-A</option>
+            <option value="3"id="ord_pre_as" >Ordenar por precio ascendente</option>
+            <option value="4"id="ord_pre_des">Ordenar por precio desendente</option>
             </select>
             </div>
             <div class="vacio"></div>
-            <button class="button_verde">Buscar</button>
             </form>
         </dir>
     </div>
 </div>
 </main>
+<script src="/static/js/inventario.js"></script>
 <script>feather.replace()</script>
 </body>
 </html>
