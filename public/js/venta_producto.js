@@ -19,8 +19,12 @@ const info= {
 /*----------Funciones----------*/
 function producto(){
 	const resultado = info.producto.filter( dato=> {
-		if(dato.nombre.includes(nom.value)) return true;
+		if(dato.nombre.includes(nom.value)) 
+		return true;
 		return false;
+		document.getElementById('filtrado').remove(0);
+		if (document.getElementById('filtrado') == true){
+			}
 	})
 	console.log(resultado[0].nombre)
 }

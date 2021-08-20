@@ -19,12 +19,12 @@
                 <th>Nombre del Articulo</th><th>Precio Venta</th><th>Precio Unitario </th><th>Cantidad </th><th>Cantidad Ideal </th>
             </tr>
         </thead>
-
-        <tr id="t1">
+    <tbody id="cuerpo">
+        <tr>
             <td>cacho</td><td>$ 30</td><td>$ 5</td><td>8</td><td>60</td>
         </tr>
         <tr>
-            <td>Arma 9mm</td><td>$ 20</td><td>$ 5</td><td>8</td><td>60</td>
+            <td>Arma 5mm</td><td>$ 20</td><td>$ 5</td><td>8</td><td>60</td>
         </tr>
         <tr>
             <td>Palta Albina</td><td>$ 120</td><td>$ 8</td><td>90</td><td>120</td>
@@ -59,6 +59,7 @@
         <tr>
             <td>Zapatillas</td><td>$ 1000</td><td>$ 500</td><td>3</td><td>30</td>
         </tr>
+    </tbody>
     </table>    
     </div>      
     </div>
@@ -71,7 +72,7 @@
             <div class="admin__botones">
                 <div class="input-contenedor">
                     <!-- <i  data-feather="log-out" class="fas fa-shopping-cart derecho__icono"></i> -->
-                    <input type="text" data-feather="search derecho__icono" class="input "placeholder="Nombre">  
+                    <input type="text" data-feather="search derecho__icono" class="input "placeholder="Nombre" id="text_busacador">  
                 </div>
 
             <select class="input" onchange="Barra_accion()" name="rol" id="tipo">
