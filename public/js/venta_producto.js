@@ -1,6 +1,6 @@
 /*----------Variables----------*/
 const nom = document.getElementById('Nombre_producto');
-nom.addEventListener("keypress", producto);
+nom.addEventListener("keypress", filtrador);
 
 const info= {
 	producto:[{
@@ -17,14 +17,25 @@ const info= {
 	cdb:"003"}]
 }
 /*----------Funciones----------*/
-function producto(){
-	const resultado = info.producto.filter( dato=> {
-		if(dato.nombre.includes(nom.value)) 
-		return true;
-		return false;
-		document.getElementById('filtrado').remove(0);
-		if (document.getElementById('filtrado') == true){
-			}
-	})
-	console.log(resultado[0].nombre)
+function filtrador() { 
+  var input, filter, table, tr, td, i, j, visible;
+  input = document.getElementById('Nombre_producto');
+  filter = input.value.toUpperCase();
+  table = document.getElementById("cuerpo");
+  tr = table.getElementsByTagName("tr");
+
+  for (i = 0; i < tr.length; i++) {
+    visible = false;
+    td = tr[i].getElementsByTagName("td");
+    for (j = 0; j < td.length; j++) {
+      if (td[j] && td[j].innerHTML.toUpperCase().indexOf(filter) > -1) {
+        visible = true;
+      }
+    }
+    if (visible === true) {
+      tr[i].style.display = "";
+    } else {
+      tr[i].style.display = "none";
+    }
+  }
 }

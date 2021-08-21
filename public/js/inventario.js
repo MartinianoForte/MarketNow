@@ -1,7 +1,7 @@
 /*-------------Variables----------*/
 const cuerpo = document.getElementById('cuerpo');
 const buscador = document.getElementById('text_busacador')
-buscador.addEventListener("keypress", tabla);
+buscador.addEventListener("keypress", filtrador);
 /*-------------Ejemplos-----------*/
 const info= {
 	producto:[{
@@ -22,18 +22,15 @@ const info= {
 	cdb:"004"}]
 }
 /*-------------Filtrador----------*/
-function tabla() {
-  // Declare variables 
+function filtrador() { 
   var input, filter, table, tr, td, i, j, visible;
   input = document.getElementById("text_busacador");
   filter = input.value.toUpperCase();
   table = document.getElementById("cuerpo");
   tr = table.getElementsByTagName("tr");
 
-  // Loop through all table rows, and hide those who don't match the search query
   for (i = 0; i < tr.length; i++) {
     visible = false;
-    /* Obtenemos todas las celdas de la fila, no sólo la primera */
     td = tr[i].getElementsByTagName("td");
     for (j = 0; j < td.length; j++) {
       if (td[j] && td[j].innerHTML.toUpperCase().indexOf(filter) > -1) {
@@ -55,7 +52,7 @@ function Barra_accion(){
    if (document.getElementById('ord_a-z').selected == true ){
  	info.producto.sort((a, b) =>{
  	if (a.nombre < b.nombre)
- 	return -1;
+ 	return -1; 
    })
    }
    if (document.getElementById('ord_z-a').selected == true ){
