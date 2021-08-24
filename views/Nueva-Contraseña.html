@@ -11,24 +11,51 @@
     <%- include('partials/headerHome.html', {loged: loged})%>
 </header>
 
-<form class="formulario" method="POST" action="/nuevaPass/<%= token %>">
+<form class="formulario" id="form" method="POST" action="/nuevaPass/<%= token %>">
     <h1 class="registrate">Recuperar Contraseña</h1>
     <div clas="contenedor-registro">
         <div class="input-contenedor-registro">
             <i class="fas fa-key icono"></i>
-            <input type="password" class="input" name="contra" placeholder="Nueva Contraseña">
+            <input type="password" class="input" id="contra0" name="contra" placeholder="Nueva Contraseña">
         </div>
 
          <div class="input-contenedor-registro sinMargin">
             <i class="fas fa-key icono"></i>
-            <input type="password" class="input" placeholder="Repetir Contraseña">
+            <input type="password" class="input" id="contra1" placeholder="Repetir Contraseña">
         </div>
         <br>
         <div class="login-button">
-            <input type="submit" value="Aceptar" class="button">
+            <input type="submit" id="submit" onclick="return enviarForm()" value="Aceptar" class="button">
         </div>
         <br>
     </div>
 </form>
 <script> feather.replace() </script>
+<script type="text/javascript">
+    const contraUno = document.getElementById("contra0");
+    const contraDos = document.getElementById("contra1");
+    contraUno.addEventListener("keydown", verficarForm);
+    contraDos.addEventListener("keyup", verficarForm);
+    const padreUno = contraUno.parentElement;
+    const padreDos = contraDos.parentElement;
+
+    function verficarForm() {
+        console.log(contraUno)
+        if (contraUno.value == contraDos.value && contraUno.value != "") {
+            padreUno.style.border = "1px solid green";
+            padreDos.style.border = "1px solid green";
+        } else {
+            padreUno.style.border = "1px solid #999";
+            if (contraDos.value != "") padreDos.style.border = "1px solid red";
+            else padreDos.style.border = "1px solid #999";
+        }
+    }
+
+    function enviarForm() {
+        if (contraUno.value == contraDos.value && contraUno.value != "") {
+            document.getElementById("form").submit();
+        } else console.log("ta mal");
+        return false;
+    }
+</script>
 </body>

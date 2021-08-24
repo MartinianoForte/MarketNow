@@ -2,25 +2,20 @@
 const cuerpo = document.getElementById('cuerpo');
 const buscador = document.getElementById('text_busacador')
 buscador.addEventListener("keypress", filtrador);
-/*-------------Ejemplos-----------*/
-const info= {
-	producto:[{
-	nombre: "cacho",
-	precio: "30",
-	cdb:"001"
-	},{
-	nombre: "pepe",
-	precio: "60",
-	cdb:"002"
-	},{
-	nombre: "Arma 9mm",
-	precio: "20",
-	cdb:"003"
-	},{
-	nombre: "palta albina",
-	precio: "120",
-	cdb:"004"}]
-}
+
+let info;
+fetch('/comercio/productos')
+    .then((resp) => resp.json())
+    .then(function(data){
+      info = data;
+      for(let i = 0; i < info.length; i++) {
+        cuerpo.insertAdjacentHTML('beforeend', `
+        <tr><td>${info[i].nombre}</td><td>$${info[i].precioVenta}</td><td>$${info[i].precioUnitario}</td><td>${info[i].cantidad}</td><td>${info[i].cantIdeal}</td></tr>`)
+        }
+    })
+    .catch((error) => {
+      console.log(error);
+    });
 /*-------------Filtrador----------*/
 function filtrador() { 
   var input, filter, table, tr, td, i, j, visible;

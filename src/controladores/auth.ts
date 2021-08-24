@@ -11,6 +11,7 @@ declare module "express-session" {
 		idUser: number;
 		email: string;
 		name: string;
+		rol: number;
 		loggedin: boolean;
 	}
 }
@@ -69,7 +70,8 @@ export const singIn = async (req: Request, res: Response) => {
 		req.session.loggedin = true;
 		req.session.email = email;
 		req.session.name = rows[0].nombre;
-		req.session.idUser = rows[0].id;
+		req.session.rol = rows[0].rol;
+		req.session.idUser = rows[0].idUsuario;
 		res.redirect("/comercio/cupones");
 	} else res.json("Contraseña incorrecta");
 };
@@ -115,7 +117,6 @@ export const recuperePass = (req: Request, res: Response) => {
 	const token = req.params.token;
 	jwt.verify(token, 'secretkey', (error, authData) => {
 		if(error){
-			console.log(error);
 			res.send('token no valido');
 		}
 		else

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://unpkg.com/feather-icons"></script>
+	<link rel="stylesheet" href="/static/css/predefinido.css">
+	<link rel="stylesheet" href="/static/css/Reporte_Diario.css">
+	<meta charset="utf-8">
+	<title>Reporte Dairio</title>
+</head>
+<body>
+	<%- include('partials/menuComercio.html', {sitio:'Reporte Diario', nombre: nombre}) %>
+<main>
+	<blockquote>
+	<div class="contenedor_registro">
+		<div class="tarjeta sombra">
+			<div class="tarjeta__header">
+				<label class="tarjeta__titulo"><b>Registro Diario</b></label>
+			</div>
+			<div class="tarjeta__contenido" >
+						<div>
+							<label>Ganancia</label>
+							<span style="color: green;">+1200</span>
+						</div>
+						<div>
+							<label>Gastos</label>
+							<span style="color: red;">-600</span>
+						</div>
+						<div>
+							<label>Balance</label>
+							<span style="color: green;">+600</span>
+						</div>
+				</div>
+		</div>
+	</div>
+	</blockquote>
+</main>
+<script>
+    feather.replace()
+</script>
+</body>
+</html>
+
+

@@ -6,16 +6,33 @@ label {
 	font-family: sans-serif;
 }
 
-.contenedor_registro {
-	padding: 10px;
-	/*overflow: scroll;*/
-	display: grid;
-	grid-gap: 1em;
-	grid-auto-rows: 8rem;
-	grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
+.tarjeta {
+	width: 80%;
+	margin: auto;
+	margin-top: 5vh;
+}
+
+.tarjeta label {
+	color: #333;
+}
+
+.tarjeta__contenido div {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	width: 120px;
 }
 
 .tarjeta__contenido{
 	height: 100%;
+	display: flex;
+	justify-content: space-between;
+	padding: 30px;
+}
+
+.tarjeta__contenido label {
+	line-height: 150%;
 }
 

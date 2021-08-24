@@ -1,0 +1,17 @@
+.contenedor__input {
+    display: flex;
+    flex-direction: column;
+    margin: 10px auto;
+    width: 60%;
+    min-width: 400px;
+}
+
+.contenedor__input label {
+    line-height: 150%;
+}
+
+.tarjeta {
+    width: 60%;
+    margin: auto;
+    min-width: 460px;
+}

@@ -30,14 +30,15 @@ CREATE TABLE `articulocliente` (
   `cdb` int(14) DEFAULT NULL,
   `categoria` varchar(100) DEFAULT NULL,
   `iva` int(4) DEFAULT NULL,
-  `PdeGanacia` int(4) DEFAULT NULL,
+  `PdeGanancia` int(4) DEFAULT NULL,
   `precioUnitario` float DEFAULT NULL,
   `precioVenta` float DEFAULT NULL,
   `cantidad` int(6) DEFAULT NULL,
   `cantMinima` int(6) DEFAULT NULL,
   `cantIdeal` int(6) DEFAULT NULL,
+  `idComercio` int(6) DEFAULT NULL,
   PRIMARY KEY (`idArticulo`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -46,6 +47,7 @@ CREATE TABLE `articulocliente` (
 
 LOCK TABLES `articulocliente` WRITE;
 /*!40000 ALTER TABLE `articulocliente` DISABLE KEYS */;
+INSERT INTO `articulocliente` VALUES (1,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(2,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(3,'Palta Albina',314141,'Frutas',21,25,100,200,30,10,30,NULL),(4,'Kerosen',312451,'Nose',21,100,100,200,10,5,10,1),(5,'Armando',3123123,'caca',21,500,100,200,40,10,30,1);
 /*!40000 ALTER TABLE `articulocliente` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -178,7 +180,7 @@ CREATE TABLE `clientes` (
   `idCliente` int(6) NOT NULL AUTO_INCREMENT,
   `idUsuario` int(6) DEFAULT NULL,
   PRIMARY KEY (`idCliente`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -187,6 +189,7 @@ CREATE TABLE `clientes` (
 
 LOCK TABLES `clientes` WRITE;
 /*!40000 ALTER TABLE `clientes` DISABLE KEYS */;
+INSERT INTO `clientes` VALUES (1,1),(2,2);
 /*!40000 ALTER TABLE `clientes` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -450,7 +453,7 @@ CREATE TABLE `usuarios` (
   `rol` int(4) DEFAULT NULL,
   PRIMARY KEY (`idUsuario`),
   UNIQUE KEY `email` (`email`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -459,6 +462,7 @@ CREATE TABLE `usuarios` (
 
 LOCK TABLES `usuarios` WRITE;
 /*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;
+INSERT INTO `usuarios` VALUES (1,'Cacho',NULL,'cachito@gmail.com','$2b$08$QHB9jR7eK6TDuOr/Sp9WoeEoTQuRrfVrKpkNaMk/WOl3zgRsFtuDi','2021-08-17',3),(2,'Roberto',NULL,'Javi@gmail.com','$2b$08$j1FWVOTM86SG02Ym6hfGuujGTsBZbcDJOhnKdytM3g3CDUJm.KSzu','2021-08-19',3);
 /*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -471,4 +475,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-08-17 13:30:13
+-- Dump completed on 2021-08-23 23:53:44

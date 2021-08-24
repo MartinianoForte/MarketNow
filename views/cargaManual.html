@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://unpkg.com/feather-icons"></script>
+	<link rel="stylesheet" href="/static/css/predefinido.css">
+	<link rel="stylesheet" href="/static/css/cargaManual.css">
+	<meta charset="utf-8">
+</head>
+<body>
+	<%- include('partials/menuComercio.html', {sitio:'Carga Manual', nombre: nombre}) %>
+	<main>
+		<blockquote>
+			<div class="tarjeta sombra">
+				<div class="tarjeta__header">
+					<label class="tarjeta__titulo"><b>Cargar Producto</b></label>
+				</div>
+				<div class="tarjeta__contenido" style="height: 300%;">
+					<form method="POST" action="/comercio/nuevoProducto">
+					<div class="contenedor__input">
+						<label>Codigo de barras</label>
+            			<input type="number" name="cdb" class="input">
+            		</div>
+            		<div class="contenedor__input">
+						<label>Nombre del producto</label>
+						<input type="text" name="nombre" class="input">
+					</div>
+					<div class="contenedor__input">
+						<label>Categoria</label>
+						<input type="text" name="categoria" class="input">
+					</div>
+					<div class="contenedor__input">
+						<label>Iva</label>
+						<input type="number" name="iva" class="input" value="21">
+					</div>
+					<div class="contenedor__input">
+						<label>Porcentaje de Ganancia</label>
+						<input type="number" name="PdeGanancia" class="input">
+					</div>
+					<div class="contenedor__input">
+						<label>Precio Unitario de Compra</label>
+						<input type="number" name="precioUnitario" class="input">
+					</div>
+					<div class="contenedor__input">
+						<label>Precio de Venta</label>
+						<input type="number" name="precioVenta" class="input">
+					</div>
+					<div class="contenedor__input">
+						<label>Cantidad de Stock</label>
+						<input type="number" name="cantidad" class="input">
+					</div>
+					<div class="contenedor__input">
+						<label>Cantidad Minima (opcional)</label>
+						<input type="number" name="cantMinima" class="input">
+					</div>
+					<div class="contenedor__input">
+						<label>Cantidad Ideal (opcional)</label>
+						<input type="number" name="cantIdeal" class="input">
+					</div>
+					<br>
+					<input type="submit" value="Cargar" class="button_verde">
+					</form>
+				</div>
+			</div>
+		</blockquote>
+	</main>
+	<script>feather.replace()</script>
+</body>
+</html>

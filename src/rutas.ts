@@ -1,5 +1,6 @@
 import { Router } from "express";
 import * as controlador from "./controladores/controlador";
+import * as comercio from "./controladores/comercioControl";
 import * as auth from "./controladores/auth";
 
 const ruta = Router();
@@ -15,7 +16,9 @@ ruta.post("/singIn", auth.singIn);
 ruta.post("/singUp", auth.singUp);
 ruta.post("/nuevaPass/:token", auth.nuevaPass);
 
-//Inicio sesion
-ruta.get("/comercio/:page", auth.verifyLogged, controlador.comercio);
+//Comercio
+ruta.get("/comercio/productos", auth.verifyLogged, comercio.verProductos)
+ruta.get("/comercio/:page", auth.verifyLogged, comercio.comercio);
+ruta.post("/comercio/nuevoProducto", auth.verifyLogged, comercio.nuevoProducto)
 
 export default ruta;

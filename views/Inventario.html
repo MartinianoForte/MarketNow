@@ -20,45 +20,6 @@
             </tr>
         </thead>
     <tbody id="cuerpo">
-        <tr>
-            <td>cacho</td><td>$ 30</td><td>$ 5</td><td>8</td><td>60</td>
-        </tr>
-        <tr>
-            <td>Arma 5mm</td><td>$ 20</td><td>$ 5</td><td>8</td><td>60</td>
-        </tr>
-        <tr>
-            <td>Palta Albina</td><td>$ 120</td><td>$ 8</td><td>90</td><td>120</td>
-        </tr>
-        <tr>
-            <td>pepe</td><td>$ 60</td><td>$ 5</td><td>8</td><td>60</td>
-        </tr>
-         <tr>
-            <td>Pelotas</td><td>$ 120</td><td>$ 900</td><td>5</td><td>12</td>
-        </tr>
-         <tr>
-            <td>Zapatillas</td><td>$ 1000</td><td>$ 500</td><td>3</td><td>30</td>
-        </tr>
-         <tr>
-            <td>agua</td><td>$ 30</td><td>$ 5</td><td>8</td><td>60</td>
-        </tr>
-         <tr>
-            <td>agua</td><td>$ 30</td><td>$ 5</td><td>8</td><td>60</td>
-        </tr>
-         <tr>
-            <td>agua</td><td>$ 30</td><td>$ 5</td><td>8</td><td>60</td>
-        </tr>
-        <tr>
-            <td>Zapatillas</td><td>$ 1000</td><td>$ 500</td><td>3</td><td>30</td>
-        </tr>
-        <tr>
-            <td>Zapatillas</td><td>$ 1000</td><td>$ 500</td><td>3</td><td>30</td>
-        </tr>
-        <tr>
-            <td>Zapatillas</td><td>$ 1000</td><td>$ 500</td><td>3</td><td>30</td>
-        </tr>
-        <tr>
-            <td>Zapatillas</td><td>$ 1000</td><td>$ 500</td><td>3</td><td>30</td>
-        </tr>
     </tbody>
     </table>    
     </div>      
@@ -70,12 +31,11 @@
         <dir class="tarjeta__contenido admin__contenido" style="margin: 0">
             <form>
             <div class="admin__botones">
-                <div class="input-contenedor">
-                    <!-- <i  data-feather="log-out" class="fas fa-shopping-cart derecho__icono"></i> -->
-                    <input type="text" data-feather="search derecho__icono" class="input "placeholder="Nombre" id="text_busacador">  
+                <div class="input-contenedor input">
+                    <i  data-feather="search" class="fas fa-shopping-cart derecho__icono"></i>
+                    <input type="text" placeholder="Nombre" class="input input_none" id="text_busacador">  
                 </div>
-
-            <select class="input" onchange="Barra_accion()" name="rol" id="tipo">
+            <select class="input select" onchange="Barra_accion()" name="rol" id="tipo">
             <option value="0"id="nada">Seleccione una Accion</option>
             <option value="1"id="ord_a-z">Ordenar nombre de la A-Z</option>
             <option value="2"id="ord_z-a">Ordenar nombre de la Z-A</option>
@@ -84,6 +44,9 @@
             </select>
             </div>
             <div class="vacio"></div>
+            <div class="ulti">
+            <a href="/comercio/cargaManual" class="button_verde">Nuevo Producto</a>
+            </div>
             </form>
         </dir>
     </div>
