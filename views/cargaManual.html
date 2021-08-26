@@ -30,19 +30,19 @@
 					</div>
 					<div class="contenedor__input">
 						<label>Iva</label>
-						<input type="number" name="iva" class="input" value="21">
-					</div>
-					<div class="contenedor__input">
-						<label>Porcentaje de Ganancia</label>
-						<input type="number" name="PdeGanancia" class="input">
+						<input type="number" name="iva" id="iva" class="input" value="21">
 					</div>
 					<div class="contenedor__input">
 						<label>Precio Unitario de Compra</label>
-						<input type="number" name="precioUnitario" class="input">
+						<input type="number" name="precioUnitario" id="precioUnitario" class="input">
+					</div>
+					<div class="contenedor__input">
+						<label>Porcentaje de Ganancia</label>
+						<input type="text" name="PdeGanancia" id="PdeGanancia" class="input">
 					</div>
 					<div class="contenedor__input">
 						<label>Precio de Venta</label>
-						<input type="number" name="precioVenta" class="input">
+						<input type="text" name="precioVenta" id="precioVenta" class="input">
 					</div>
 					<div class="contenedor__input">
 						<label>Cantidad de Stock</label>
@@ -63,6 +63,40 @@
 			</div>
 		</blockquote>
 	</main>
+	<script type="text/javascript">
+		const precioUnitario = document.getElementById('precioUnitario');
+		const iva = document.getElementById('iva');
+		const precioVenta = document.getElementById('precioVenta');
+		const pGanancia = document.getElementById('PdeGanancia');
+		let ulti;
+
+		pGanancia.addEventListener('keyup', calcularVenta);
+		precioVenta.addEventListener('keyup', calcularPGanancia);
+		iva.addEventListener('keyup', actualizarPrecio);
+		precioUnitario.addEventListener('keyup', actualizarPrecio);
+
+		const porcentaje = num => (num / 100) + 1
+
+		function actualizarPrecio(){
+			if (precioVenta.value == '' || pGanancia.value == '' || ulti == undefined) return 0;
+			ulti();
+		}
+
+		function calcularVenta() {
+			if (precioUnitario.value == '' || iva.value == '' || pGanancia.value == '') return 0;
+			const pv = precioUnitario.value * porcentaje(pGanancia.value) * porcentaje(iva.value);
+			const nv = precioUnitario.value * porcentaje(pGanancia.value) - precioUnitario.value;
+			precioVenta.value = pv.toFixed(2);
+			ulti = calcularVenta;
+		}
+
+		function calcularPGanancia() {
+			if (precioUnitario.value == '' || iva.value == '' || precioUnitario.value == '') return 0;
+			const pg = precioVenta.value / porcentaje(iva.value) / precioUnitario.value;
+			pGanancia.value = ((pg - 1) * 100).toFixed(2);
+			ulti = calcularPGanancia;
+		}
+	</script>
 	<script>feather.replace()</script>
 </body>
 </html>

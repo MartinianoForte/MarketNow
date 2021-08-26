@@ -19,15 +19,15 @@
 			<div class="tarjeta__contenido" >
 						<div>
 							<label>Ganancia</label>
-							<span style="color: green;">+1200</span>
+							<span style="color: green;">+<%= ingreso %></span>
 						</div>
 						<div>
 							<label>Gastos</label>
-							<span style="color: red;">-600</span>
+							<span style="color: red;">-<%= egreso %></span>
 						</div>
 						<div>
 							<label>Balance</label>
-							<span style="color: green;">+600</span>
+							<span style="color: <% if(balance >= 0) { %>green<% } else {%> red <% } %>;"><%= balance %></span>
 						</div>
 				</div>
 		</div>

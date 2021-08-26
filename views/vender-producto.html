@@ -13,21 +13,20 @@
     <li class="header__item" style="width: 15em;">
         <div class="header__usuario">
             <i data-feather="user" style="color: #222;" width="35" height="35"></i>
-            <a class="header__dr" style="padding-left: 15px;" href="index.html">Usuario</a>
+            <a class="header__dr" style="padding-left: 15px;" href="/">Cajero</a>
         </div>
     </li>
     <li class="header__flex">
         <span class="header__dr">Vender Productos</span>
         <div>
-            <a href="Iniciar-sesion.html">
+            <a href="/logOut">
                 <i data-feather="log-out" style="" width="35" height="35" class="header__out"></i>
             </a>
         </div>
     </li>
     </ul>
-<!------------------------------------menu----------------------------------------------------------------->
     <nav class="menu" id="menu">
-        <a href="index.html">
+        <a href="/">
             <div class="menu__opcion border-bottom">
                 <i data-feather="home" class="menu__icono"></i>
                 <label class="texto menu__link">Inicio</label>
@@ -47,7 +46,7 @@
                     <label class="texto menu__link">Ayuda</label>
                 </div>
             </a>
-            <a href="index.html">
+            <a href="/logOut">
                 <div class="menu__opcion">
                     <i data-feather="log-out" class="menu__icono"></i>
                     <label class="texto menu__link">Salir</label>
@@ -58,7 +57,6 @@
     <script src="/static/js/predefinido.js"></script>
 
 <main>
-
 <div class="contenedor__cosas">
     <div class="codigos">
         <label class="input-codigo">Codigo de barras</label><br>
@@ -73,8 +71,8 @@
 <!--------------------------------botones------------------------------------------------------------->
 <div>
     <div class="barra">
-        <button class="button_verde">Terminar venta</button>
-        <button class="button_verde">Cancelar venta</button>
+        <button id="terminarVenta" class="button_verde">Terminar venta</button>
+        <button id="cancelarVenta" class="button_verde">Cancelar venta</button>
     </div>
     <p class="total">Total: $2,000.000</p>
 </div>
@@ -90,23 +88,8 @@
             <ul class="buscador__lista" id="filtrado">
                 <table class="table"id="tabla">
                     <tbody id="cuerpo">
-                    <tr>
-                        <td>cacho</td>
-                    </tr>
-                    <tr>
-                        <td>Arma 5mm</td>
-                    </tr>
-                    <tr>
-                        <td>pepe</td>
-                    </tr>
-                    <tr>
-                        <td>palta Albina</td>
-                    </tr>
-                    <tr>
-                        <td>cacho</td>
-                    </tr>
+                    </tbody>
                 </table>
-                
             </ul>
         </div>
         </div>
@@ -121,7 +104,6 @@
                 <th>Codigo de barra</th><th>Nombre</th><th>Precio</th><th>Cantidad</th><th>Quitar</th>
             </tr>
         </thead>
-
         <tr>
             <td>agua</td><td>Palta</td><td>$ 300</td><td>200</td><td><i class="fas fa-times-circle quitar"></i></td>
         </tr>

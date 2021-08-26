@@ -25,6 +25,7 @@ class App {
 
 	middlewars() {
 		this.app.use(express.urlencoded({ extended: true }));
+		this.app.use(express.json());
 		this.app.use(
 			"/static",
 			express.static(path.join(__dirname, "..", "public"))

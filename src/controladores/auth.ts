@@ -55,7 +55,10 @@ export const singUp = async (req: Request, res: Response) => {
 			else if (post.rol == 3) //cliente
 				insertSQL("insert into clientes(idUsuario) values(?)",
 					[row.insertId])
-			}
+			else if (post.rol == 4)
+				insertSQL("INSERT INTO cajero(idComercio, idUsuario) values(?,?)",
+					[post.idComercio, row.insertId])
+			}	
 		}
 	);
 };
