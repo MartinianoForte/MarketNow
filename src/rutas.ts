@@ -36,6 +36,7 @@ ruta.post("/nuevaPass/:token", auth.nuevaPass);
 //Comercio
 ruta.get("/comercio/productos", auth.verifyLogged, comercio.verProductos);
 ruta.get("/comercio/reporteDiario", auth.verifyLogged, comercio.reporteDiario);
+ruta.get("/comercio/ventas", auth.verifyLogged, comercio.verVentas);
 ruta.get("/comercio/:page", auth.verifyLogged, comercio.comercio);
 ruta.post("/comercio/nuevoProducto", auth.verifyLogged, comercio.nuevoProducto);
 ruta.post("/comercio/venderProducto", auth.verifyLogged, comercio.venderProducto);

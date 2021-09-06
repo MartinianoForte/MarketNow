@@ -6,7 +6,7 @@ const promisePool = pool.promise();
 
 export const comercio = (req: Request, res: Response) => {
 	const param = req.params.page;
-	const permitidas = ["cargaManual", "cupones", "Inventario", "reporteDiario"];
+	const permitidas = ["cargaManual", "cupones", "Inventario", "reporteDiario", 'regVentas'];
 	if (typeof param === "string" && permitidas.includes(param))
 		res.render(param + ".html", {
 			nombre: req.session.name,
@@ -144,3 +144,9 @@ export const reporteDiario = async (req: Request, res: Response) => {
 		balance: balance,
 	});
 };
+
+export const verVentas = async (req: Request, res: Response) => {
+	const [result, fields] = await promisePool.query("SELECT * FROM pedido WHERE idComercio = ?", req.session.idUser);
+	const rows = <RowDataPacket>result;
+	res.json(rows);
+}
