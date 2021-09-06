@@ -5,11 +5,12 @@
     <link rel="stylesheet" href="/static/css/predefinido.css">
     <link rel="stylesheet" href="/static/css/font.css">
     <meta charset="utf-8">
+    <title>MarketNow</title>
 </head>
 <body>
 
     <div class="fondo_verde maspixeles"></div>
-    <%- include('partials/headerHome.html', {loged: loged})%>
+    <%- include('partials/headerHome.html', {loged: loged, rol: (rol)? rol: null})%>
     <div class="fondo_verde maspixeles"></div>
 <div class="fondo_verde"></div>
 <div class="fondo__logo">

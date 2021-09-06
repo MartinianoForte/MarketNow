@@ -38,7 +38,7 @@ CREATE TABLE `articulocliente` (
   `cantIdeal` int(6) DEFAULT NULL,
   `idComercio` int(6) DEFAULT NULL,
   PRIMARY KEY (`idArticulo`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -47,6 +47,7 @@ CREATE TABLE `articulocliente` (
 
 LOCK TABLES `articulocliente` WRITE;
 /*!40000 ALTER TABLE `articulocliente` DISABLE KEYS */;
+INSERT INTO `articulocliente` VALUES (1,'Kerosen',312451,'Combustible',21,20,75,108,6,3,15,1),(2,'Palta Albina',3123123,'Frutas',21,32,75,120,22,5,25,1);
 /*!40000 ALTER TABLE `articulocliente` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -60,10 +61,12 @@ DROP TABLE IF EXISTS `articuloproveedor`;
 CREATE TABLE `articuloproveedor` (
   `idArtProv` int(6) NOT NULL AUTO_INCREMENT,
   `calificacion` int(6) DEFAULT NULL,
-  `descripcion` varchar(100) DEFAULT NULL,
+  `nombre` varchar(100) DEFAULT NULL,
+  `descripcion` varchar(300) DEFAULT NULL,
   `precio` float DEFAULT NULL,
   `cantidad` int(6) DEFAULT NULL,
   `cdb` int(14) DEFAULT NULL,
+  `imagen` varchar(100) DEFAULT NULL,
   `idProveedor` int(6) DEFAULT NULL,
   PRIMARY KEY (`idArtProv`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -208,7 +211,7 @@ CREATE TABLE `comercio` (
   `nombreLocal` varchar(100) DEFAULT NULL,
   `idUsuario` int(6) DEFAULT NULL,
   PRIMARY KEY (`idComercio`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -217,6 +220,7 @@ CREATE TABLE `comercio` (
 
 LOCK TABLES `comercio` WRITE;
 /*!40000 ALTER TABLE `comercio` DISABLE KEYS */;
+INSERT INTO `comercio` VALUES (1,33123123,'joseyalvaro3123',NULL,'1',1123424252,'EToro',1);
 /*!40000 ALTER TABLE `comercio` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -285,7 +289,7 @@ CREATE TABLE `egresovario` (
   `fecha` date DEFAULT NULL,
   `idComercio` int(6) DEFAULT NULL,
   PRIMARY KEY (`idEgreso`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -294,6 +298,7 @@ CREATE TABLE `egresovario` (
 
 LOCK TABLES `egresovario` WRITE;
 /*!40000 ALTER TABLE `egresovario` DISABLE KEYS */;
+INSERT INTO `egresovario` VALUES (1,'egresoCompras',908,'2021-08-26',1),(2,'egresoCompras',2723,'2021-08-26',1);
 /*!40000 ALTER TABLE `egresovario` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -342,7 +347,7 @@ CREATE TABLE `pedido` (
   `idUsuario` int(6) DEFAULT NULL,
   `idComercio` int(6) DEFAULT NULL,
   PRIMARY KEY (`idPedido`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -351,6 +356,7 @@ CREATE TABLE `pedido` (
 
 LOCK TABLES `pedido` WRITE;
 /*!40000 ALTER TABLE `pedido` DISABLE KEYS */;
+INSERT INTO `pedido` VALUES (1,500,'exitoso','2021-08-26','16:34:34',2,NULL,1,1),(2,500,'exitoso','2021-08-27','00:24:24',2,NULL,1,1);
 /*!40000 ALTER TABLE `pedido` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -370,7 +376,7 @@ CREATE TABLE `proveedor` (
   `nombreLocal` varchar(100) DEFAULT NULL,
   `idUsuario` int(6) DEFAULT NULL,
   PRIMARY KEY (`idProveedor`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -379,6 +385,7 @@ CREATE TABLE `proveedor` (
 
 LOCK TABLES `proveedor` WRITE;
 /*!40000 ALTER TABLE `proveedor` DISABLE KEYS */;
+INSERT INTO `proveedor` VALUES (1,23123123,'joseyalvaro3123',NULL,1123232323,'EToro',2);
 /*!40000 ALTER TABLE `proveedor` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -395,7 +402,7 @@ CREATE TABLE `puntosporcomercio` (
   `idComercio` int(6) DEFAULT NULL,
   `idCliente` int(6) DEFAULT NULL,
   PRIMARY KEY (`idPuntos`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -404,6 +411,7 @@ CREATE TABLE `puntosporcomercio` (
 
 LOCK TABLES `puntosporcomercio` WRITE;
 /*!40000 ALTER TABLE `puntosporcomercio` DISABLE KEYS */;
+INSERT INTO `puntosporcomercio` VALUES (1,10,1,1);
 /*!40000 ALTER TABLE `puntosporcomercio` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -422,7 +430,7 @@ CREATE TABLE `registrocompra` (
   `idProducto` int(6) DEFAULT NULL,
   `idPedido` int(6) DEFAULT NULL,
   PRIMARY KEY (`idCompra`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -431,6 +439,7 @@ CREATE TABLE `registrocompra` (
 
 LOCK TABLES `registrocompra` WRITE;
 /*!40000 ALTER TABLE `registrocompra` DISABLE KEYS */;
+INSERT INTO `registrocompra` VALUES (1,2,200,312451,1,1),(2,4,25,3123123,2,1),(3,2,108,312451,1,2),(4,4,25,3123123,2,2);
 /*!40000 ALTER TABLE `registrocompra` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -451,7 +460,7 @@ CREATE TABLE `usuarios` (
   `rol` int(4) DEFAULT NULL,
   PRIMARY KEY (`idUsuario`),
   UNIQUE KEY `email` (`email`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -460,6 +469,7 @@ CREATE TABLE `usuarios` (
 
 LOCK TABLES `usuarios` WRITE;
 /*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;
+INSERT INTO `usuarios` VALUES (1,'Cacho',NULL,'cachito@gmail.com','$2b$08$i9C714OoB38Mr5ufoaYRyOYQkQwgsr8iudDGHDmMNKDsUQmfHExO2','2021-08-26',1),(2,'Armando',NULL,'prove@gmail.com','$2b$08$VdU.gWAkIv.ZbrXFDKAs6OBbrmTB6qM.kI2KaeR10oqWh7QE7xAgu','2021-09-05',2);
 /*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -472,4 +482,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-08-26 16:26:39
+-- Dump completed on 2021-09-05 22:23:25

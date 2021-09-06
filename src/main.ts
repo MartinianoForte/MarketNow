@@ -2,6 +2,7 @@ import express, { Application } from "express";
 import rutas from "./rutas";
 import path from "path";
 import mySqlSession from "express-mysql-session";
+import favicon from 'serve-favicon';
 require("dotenv").config({ path: ".env.default" });
 
 class App {
@@ -24,6 +25,7 @@ class App {
 	}
 
 	middlewars() {
+		this.app.use(favicon(path.join(__dirname, '..', '/public/img/favicon.ico'))); 
 		this.app.use(express.urlencoded({ extended: true }));
 		this.app.use(express.json());
 		this.app.use(
@@ -61,7 +63,7 @@ class App {
 
 	prender() {
 		this.app.listen(this.app.get("port"), () => {
-			console.log("Servidor escuchando en puerto ", this.app.get("port"));
+			console.log("Servidor escuchando en puerto", this.app.get("port"));
 		});
 	}
 }

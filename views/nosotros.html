@@ -5,9 +5,10 @@
   <link rel="stylesheet" href="/static/css/predefinido.css">
   <link rel="stylesheet" href="/static/css/nosotros.css">
   <meta charset="utf-8">
+  <title>Nosotros | MarketNow</title>
 </head>
 <body>
-<%- include('partials/headerHome.html', {loged: loged})%>
+<%- include('partials/headerHome.html', {loged: loged, rol: (rol)? rol: null})%>
 
 <div class="contenedor">
   <div class="contenedor__primero">

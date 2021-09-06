@@ -5,18 +5,30 @@
     <script src="https://unpkg.com/feather-icons"></script>
     <link rel="stylesheet" href="/static/css/predefinido.css">
     <link rel="stylesheet" href="/static/css/inventario.css">
-    <title>Inventario</title>
+    <title>Inventario | MarketNow</title>
 </head>
 <body>
-    <%- include('partials/menuComercio.html', {sitio:'Inventario', nombre: nombre}) %>
+    <% if(rol == 2) { %>
+        <%- include('partials/menuProveedor.html', {sitio:'Inventario', nombre: nombre}) %>
+    <% } else { %>
+        <%- include('partials/menuComercio.html', {sitio:'Inventario', nombre: nombre}) %>
+    <% } %>
 <main>
 <div class="granContenedor">
     <div class="contenedor__tabla scroll">
     <div id = "main-conteiner">
-    <table class="table"id="tabla">
+        <% if(rol == 2){ %>
+            <table class="table proveedor"id="tabla">
+        <% } else { %>
+            <table class="table comercio"id="tabla">
+        <% } %>
         <thead>
             <tr>
-                <th>Nombre del Articulo</th><th>Precio Venta</th><th>Precio Unitario </th><th>Cantidad </th><th>Cantidad Ideal </th>
+                <% if(rol == 2){ %>
+                    <th>Imagen</th><th>Nombre </th><th>Descripcion </th><th>Precio </th><th>Cantidad </th>
+                <% } else { %>
+                    <th>Nombre del Articulo</th><th>Categoria </th><th>Precio Venta</th><th>Precio Unitario </th><th>Cantidad </th><th>Cantidad Ideal </th>
+                <% } %>
             </tr>
         </thead>
     <tbody id="cuerpo">
@@ -45,7 +57,11 @@
             </div>
             <div class="vacio"></div>
             <div class="ulti">
-            <a href="/comercio/cargaManual" class="button_verde">Nuevo Producto</a>
+                <% if(rol == 2){ %>
+                    <a href="/proveedor/cargaProveedor" class="button_verde">Nuevo Producto</a>
+                <% } else { %>
+                    <a href="/comercio/cargaManual" class="button_verde">Nuevo Producto</a>
+                <% } %>
             </div>
             </form>
         </dir>

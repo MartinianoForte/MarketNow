@@ -46,7 +46,7 @@ function subirVenta(){
   console.log('terminar venta');
   const ventas = [{
     cantidad: 2,
-    precio: 200,
+    precio: 108.90,
     cdb: 312451,
     idArticulo: 1,
   },

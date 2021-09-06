@@ -1,0 +1,82 @@
+.contenedor__input {
+    display: flex;
+    flex-direction: column;
+    margin: 10px auto;
+    width: 60%;
+    min-width: 400px;
+}
+
+.input{
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid var(--doradoLg);
+    padding: 4px 5px;
+}
+
+.contenedor__input label {
+    line-height: 150%;
+}
+
+.tarjeta {
+    width: 60%;
+    margin: auto;
+    min-width: 830px;
+}
+
+.contenedor__nashe {
+    display: flex;
+    height: 35vh ;
+    width: 80%;
+    margin: 10px auto;
+}
+
+.contenedor__inferior .contenedor__input {
+    width: 80%;
+}
+
+.contenedor__nashe .contenedor__input {
+    width: 80%;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+#cuadroImagen {
+    width: 15vw;
+    height: 15vw;
+    background: #f3f3f3;
+    margin: 5px;
+    min-width: 200px;
+    min-height: 200px;
+}
+
+.contenedor__imagen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contenedor__imagen .button_verde {
+    width: 15vw;
+    min-width: 200px;
+    text-align: center;
+}
+
+.contenedor__datos {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#previsualizar{
+    object-fit: contain;
+    border: 1px solid #999;
+    display:block;
+    width: 15vw;
+    height: 15vw;
+    background: #f3f3f3;
+    min-width: 200px;
+    min-height: 200px;
+}

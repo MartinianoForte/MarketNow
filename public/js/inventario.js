@@ -1,16 +1,20 @@
 /*-------------Variables----------*/
 const cuerpo = document.getElementById('cuerpo');
 const buscador = document.getElementById('text_busacador')
-buscador.addEventListener("keypress", filtrador);
+buscador.addEventListener("keyup", filtrador);
 
 let info;
-fetch('/comercio/productos')
+const pathname = window.location.pathname;
+const urlFetch = (pathname == '/comercio/Inventario')? '/comercio/productos': '/proveedor/productos';
+fetch(urlFetch)
     .then((resp) => resp.json())
     .then(function(data){
       info = data;
       for(let i = 0; i < info.length; i++) {
-        cuerpo.insertAdjacentHTML('beforeend', `
-        <tr><td>${info[i].nombre}</td><td>$${info[i].precioVenta}</td><td>$${info[i].precioUnitario}</td><td>${info[i].cantidad}</td><td>${info[i].cantIdeal}</td></tr>`)
+        const htmlInsert = (pathname == '/comercio/Inventario')?
+        `<tr><td>${info[i].nombre}</td><td>${info[i].categoria}</td><td>$${info[i].precioVenta}</td><td>$${info[i].precioUnitario}</td><td>${info[i].cantidad}</td><td>${info[i].cantIdeal}</td></tr>`:
+        `<tr><td><img style="object-fit: contain;" src="${info[i].imagen}" height="100" width="100"></td><td>${info[i].nombre}</td><td>${info[i].descripcion}</td><td>${info[i].precio}</td><td>${info[i].cantidad}</td></tr>`
+        cuerpo.insertAdjacentHTML('beforeend', htmlInsert)
         }
     })
     .catch((error) => {

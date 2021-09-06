@@ -5,10 +5,11 @@
     <link rel="stylesheet" href="/static/css/predefinido.css">
     <link rel="stylesheet" href="/static/css/login.css">
     <meta charset="utf-8">
+    <title>Iniciar Sesion | MarketNow</title>
 </head>
 <body>
 <header>
-    <%- include('partials/headerHome.html', {loged: loged})%>
+    <%- include('partials/headerHome.html', {loged: loged, rol: (rol)? rol: null})%>
 </header>
 
 <form class="formulario" method="POST" action="/singIn">

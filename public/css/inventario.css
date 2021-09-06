@@ -128,7 +128,10 @@ body { background: #f7f7f7;
 	width: 100%;
 }
 
-th,td{ padding: 20px; }
+th { padding: 20px; }
+
+.comercio td { padding: 20px; }
+.proveedor td { padding: 10px; }
 
 thead{
 	background-color: #4caf50;

@@ -4,14 +4,14 @@
     <script src="https://kit.fontawesome.com/ee5c196280.js" crossorigin="anonymous"></script>
     <script src="/static/js/Registro.js"></script>
     <meta charset="utf-8"/></meta>
-    <title>Registrarse</title>
+    <title>Registrarse | MarketNow</title>
     
 <link rel="stylesheet" href="/static/css/predefinido.css">
 <link rel="stylesheet" href="/static/css/registro.css">
 </head>
 <body>
 <header>
-    <%- include('partials/headerHome.html', {loged: loged})%>
+    <%- include('partials/headerHome.html', {loged: loged, rol: (rol)? rol: null})%>
 </header>
 
 <form class="formulario" id="form" method="POST" action="/singUp">

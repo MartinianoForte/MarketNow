@@ -10,6 +10,7 @@ export const comercio = (req: Request, res: Response) => {
 	if (typeof param === "string" && permitidas.includes(param))
 		res.render(param + ".html", {
 			nombre: req.session.name,
+			rol: req.session.rol
 		});
 	else res.redirect("/home/Iniciar-sesion");
 };
@@ -125,17 +126,21 @@ export const venderProducto = async (req: Request, res: Response) => {
 };
 
 export const reporteDiario = async (req: Request, res: Response) => {
-	const [ result1 ] = await promisePool.query('SELECT sum(cantidad) as totalGasto FROM egresovario WHERE idComercio = ?', 
-			req.session.idUser);
-	const [ result2 ] = await promisePool.query('SELECT sum(monto) as totalGanancia FROM pedido WHERE idComercio = ?', 
-			req.session.idUser);
+	const [result1] = await promisePool.query(
+		"SELECT sum(cantidad) as totalGasto FROM egresovario WHERE idComercio = ? AND fecha = CURDATE()",
+		req.session.idUser
+	);
+	const [result2] = await promisePool.query(
+		"SELECT sum(monto) as totalGanancia FROM pedido WHERE idComercio = ? AND fecha = CURDATE()",
+		req.session.idUser
+	);
 	const row1 = <RowDataPacket>result1;
 	const row2 = <RowDataPacket>result2;
 	const balance = row2[0].totalGanancia - row1[0].totalGasto;
 	res.render("reporteDiario.html", {
-			nombre: req.session.name,
-			egreso: row1[0].totalGasto,
-			ingreso: row2[0].totalGanancia,
-			balance: balance,
-		});
-}
+		nombre: req.session.name,
+		egreso: row1[0].totalGasto,
+		ingreso: row2[0].totalGanancia,
+		balance: balance,
+	});
+};
