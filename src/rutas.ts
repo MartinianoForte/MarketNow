@@ -37,6 +37,7 @@ ruta.post("/nuevaPass/:token", auth.nuevaPass);
 ruta.get("/comercio/productos", auth.verifyLogged, comercio.verProductos);
 ruta.get("/comercio/reporteDiario", auth.verifyLogged, comercio.reporteDiario);
 ruta.get("/comercio/ventas", auth.verifyLogged, comercio.verVentas);
+ruta.get("/comercio/ventas/:idPedido/detalles", auth.verifyLogged, comercio.verDetallesVentas);
 ruta.get("/comercio/:page", auth.verifyLogged, comercio.comercio);
 ruta.post("/comercio/nuevoProducto", auth.verifyLogged, comercio.nuevoProducto);
 ruta.post("/comercio/venderProducto", auth.verifyLogged, comercio.venderProducto);
@@ -45,5 +46,9 @@ ruta.post("/comercio/venderProducto", auth.verifyLogged, comercio.venderProducto
 ruta.get("/proveedor/productos", auth.verifyLogged, proveedor.verProductos);
 ruta.get("/proveedor/:page", auth.verifyLogged, proveedor.proveedor);
 ruta.post("/proveedor/nuevoProducto", upload.single("imagen"), proveedor.nuevoProducto);
+
+//Mercado
+ruta.get("/mercado/:valor", controlador.verMercado);
+ruta.get('/mercado/verProducto/:idProducto', controlador.verProducto)
 
 export default ruta;

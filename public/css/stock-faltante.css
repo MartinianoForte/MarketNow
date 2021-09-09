@@ -5,32 +5,28 @@ body{
 .contenedor-cuadrado{
 	display: grid;
 	grid-auto-rows: 10rem;
-    grid-template-columns: repeat(auto-fit, minmax(14em, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(16em, 1fr));
     grid-gap: 1em;
     margin: auto;
     width: 80%;
+    margin-top: 20px;
 }
 
 .contenedor-padre{
 	display: flex;
-
+	justify-content: space-between;
 }
 
 .cuadrado-1{
-	
-	margin-top: 20px;
-	width: 250px;
-	height: 150px;
+	height: 100%;
+	width: 100%;
 	border: 1px solid #aaa;
 	box-shadow: 0 7px 16px 0 rgb(0 0 0 / 5%), 0 1px 3px 0 rgb(0 0 0 / 5%);
-	
-	/**border: none;**/
 }
 
 .contenedor-label{
 	display: flex;
 	flex-direction: column;
-
 }
 
 .label-1{
@@ -52,7 +48,5 @@ body{
 	text-align: center;
 	font-size: 45px;
 	padding: 20px;
-	margin-left: 170px;
 	color: #b5a067;
-	position: absolute;
 }

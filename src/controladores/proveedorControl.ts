@@ -30,7 +30,7 @@ export const nuevoProducto = (req: Request, res: Response) => {
 		res.status(500).redirect("/proveedor/cargaProveedor");
 		return 0;
 	}
-	console.log(req.body)
+	console.log(post.descripcion)
 	pool.query(
 		"INSERT INTO ArticuloProveedor(nombre, descripcion, precio, cantidad, cdb, imagen, idProveedor) VALUES (?,?,?,?,?,?,?)",
 		[

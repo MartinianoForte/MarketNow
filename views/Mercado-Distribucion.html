@@ -10,91 +10,31 @@
 <meta charset="utf-8">
 </head>
 <body>
- <%- include('partials/menuComercio.html', {sitio:'nombre del sitio', nombre: nombre}) %>
+ <%- include('partials/menuComercio.html', {sitio:'Mercado de Distribucion', nombre: nombre}) %>
 <main>
 <div class="wrapper">
-	<div class="busqueda">
-		<input type="text" class="input" name="contra" placeholder="Search">
-		<i class="fas fa-search icono"></i>
+	<div class="wrapper__busqueda">
+		<input type="text" class="wrapper__input" id="buscador" name="contra" placeholder="Buscar Productos">
+		<i class="fas fa-search wrapper__icono"></i>
 	</div>
-</div>
-
-<div class="container-relevante">
-	<p class="ordenar"><b>Ordenar por:</b></p>
+	<div class="wrapper__filtros">
+	<p class="wrapper__ordenar"><b>Ordenar por:</b></p>
 	<div class="opciones">
-	<select class="input-1" onchange="Barra_Roles()" name="rol" id="tipo">
-	<option value="ordenar" selected="select" id="nada">Más Relevantes</option>
-	<option value="2"id="menor">Menor Precio</option>
-    <option value="3"id="mayor">Mayor Precio</option></select>
-</div>
-</div>
-
-<div class="container-relevante">
-<p class="ordenar"><b>Ordenar por:</b></p>
-<div class="dropdown">
-	<div class="dropdown-select">
-		<span class="select">Más Relevante</span>
-		<i class="fa fa-caret-down icon"></i>
-	<div class="dropdown-list">
-		<div class="dropdown-list__item">Menor Precio</div>
-		<div class="dropdown-list__item">Mayor Precio</div>
-	</div>
+		<select class="wrapper__select" onchange="Barra_Roles()" name="rol" id="tipo">
+		<option value="ordenar" selected="select" id="nada">Más Relevantes</option>
+		<option value="2"id="menor">Menor Precio</option>
+    	<option value="3"id="mayor">Mayor Precio</option></select>
 	</div>
 </div>
 </div>
 
-<div class="contenedor-paltero">
-	<div class="palta-1">
-		<div class="contenedor-imagen"><img class="palta-img" src="/static/img/palta.jpg" width="100%"></div>
-		<div class="monto"><label><b>$300</b></label></div>
-		<div class="descripcion"><label>Palta recien importada de Bolivia, del mejor arbol paltero de la region</label></div>
-	</div>
-
-	<div class="palta-1">
-		<div class="contenedor-imagen"><img class="palta-img" src="/static/img/palta.jpg" width="100%"></div>
-		<div class="monto"><label><b>$300</b></label></div>
-		<div class="descripcion"><label>Palta recien importada de Bolivia, del mejor arbol paltero de la region</label></div>
-	</div>
-
-	<div class="palta-1">
-		<div class="contenedor-imagen"><img class="palta-img" src="/static/img/palta.jpg" width="100%"></div>
-		<div class="monto"><label><b>$300</b></label></div>
-		<div class="descripcion"><label>Palta recien importada de Bolivia, del mejor arbol paltero de la region</label></div>
-	</div>
-
-	<div class="palta-1">
-		<div class="contenedor-imagen"><img class="palta-img" src="/static/img/palta.jpg" width="100%"></div>
-		<div class="monto"><label><b>$300</b></label></div>
-		<div class="descripcion"><label>Palta recien importada de Bolivia, del mejor arbol paltero de la region</label></div>
-	</div>
-
-	<div class="palta-1">
-		<div class="contenedor-imagen"><img class="palta-img" src="/static/img/palta.jpg" width="100%"></div>
-		<div class="monto"><label><b>$300</b></label></div>
-		<div class="descripcion"><label>Palta recien importada de Bolivia, del mejor arbol paltero de la region</label></div>
-	</div>
-
-	<div class="palta-1">
-		<div class="contenedor-imagen"><img class="palta-img" src="/static/img/palta.jpg" width="100%"></div>
-		<div class="monto"><label><b>$300</b></label></div>
-		<div class="descripcion"><label>Palta recien importada de Bolivia, del mejor arbol paltero de la region</label></div>
-	</div>
-
-	<div class="palta-1">
-		<div class="contenedor-imagen"><img class="palta-img" src="/static/img/palta.jpg" width="100%"></div>
-		<div class="monto"><label><b>$300</b></label></div>
-		<div class="descripcion"><label>Palta recien importada de Bolivia, del mejor arbol paltero de la region</label></div>
-	</div>
-
-	<div class="palta-1">
-		<div class="contenedor-imagen"><img class="palta-img" src="/static/img/palta.jpg" width="100%"></div>
-		<div class="monto"><label><b>$300</b></label></div>
-		<div class="descripcion"><label>Palta recien importada de Bolivia, del mejor arbol paltero de la region</label></div>
-	</div>
+<div class="contenedor-paltero" id="contenedor-paltero">
+	
 </div>
 
 </main>
 <script>feather.replace()</script>
+<script src="/static/js/mercado-distribucion.js"></script>
 </body>
 
 </html>

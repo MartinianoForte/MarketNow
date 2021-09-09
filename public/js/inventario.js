@@ -1,6 +1,6 @@
 /*-------------Variables----------*/
-const cuerpo = document.getElementById('cuerpo');
-const buscador = document.getElementById('text_busacador')
+const cuerpo = document.getElementById('tabla_tbody');
+const buscador = document.getElementById('buscador')
 buscador.addEventListener("keyup", filtrador);
 
 let info;
@@ -33,9 +33,9 @@ fetch(urlFetch[pathname])
 /*-------------Filtrador----------*/
 function filtrador() { 
   var input, filter, table, tr, td, i, j, visible;
-  input = document.getElementById("text_busacador");
+  input = document.getElementById("buscador");
   filter = input.value.toUpperCase();
-  table = document.getElementById("cuerpo");
+  table = document.getElementById("tabla_tbody");
   tr = table.getElementsByTagName("tr");
 
   for (i = 0; i < tr.length; i++) {

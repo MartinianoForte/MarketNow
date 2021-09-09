@@ -10,6 +10,7 @@ fetch('/comercio/productos')
     .then((resp) => resp.json())
     .then(function(data){
       info = data;
+      console.log(info)
       for(let i = 0; i < info.length; i++) {
         cuerpo.insertAdjacentHTML('beforeend', `
         <tr><td>${info[i].nombre}</td><td>$${info[i].precioVenta}</td><td>$${info[i].precioUnitario}</td><td>${info[i].cantidad}</td><td>${info[i].cantIdeal}</td></tr>`)

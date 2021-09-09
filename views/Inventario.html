@@ -14,59 +14,49 @@
         <%- include('partials/menuComercio.html', {sitio:'Inventario', nombre: nombre}) %>
     <% } %>
 <main>
-<div class="granContenedor">
-    <div class="contenedor__tabla scroll">
-    <div id = "main-conteiner">
-        <% if(rol == 2){ %>
-            <table class="table proveedor"id="tabla">
+<div class="wrapper">
+    <div class="wrapper__busqueda">
+        <input type="text" class="wrapper__input" id="buscador" placeholder="Buscar Productos">
+        <i class="fas fa-search wrapper__icono"></i>
+    </div>
+    <div class="wrapper__filtros">
+        <p class="wrapper__ordenar"><b>Ordenar por:</b></p>
+        <div class="opciones">
+            <select class="wrapper__select" onchange="Barra_accion()" name="rol" id="tipo">
+            <option value="ordenar" selected="select"value="1"id="ord_a-z">Nombre de la A-Z</option>
+            <option value="2"id="ord_z-a">Nombre de la Z-A</option>
+            <option value="3"id="ord_pre_as" >Precio Ascendente</option>
+            <option value="4"id="ord_pre_des">Precio Descendente</option>
+            </select>
+        </div>
+    </div>
+    <% if(rol == 2){ %>
+            <a href="/proveedor/cargaProveedor" class="button_verde">Nuevo Producto</a>
         <% } else { %>
-            <table class="table comercio"id="tabla">
+             <a href="/comercio/cargaManual" class="button_verde">Nuevo Producto</a>
         <% } %>
-        <thead>
-            <tr>
+</div>
+    <div class="contenedor__tabla scroll">
+        <div id = "main-conteiner">
+            <% if(rol == 2){ %>
+                <table class="table proveedor"id="tabla">
+            <% } else { %>
+                <table class="table comercio"id="tabla">
+            <% } %>
+                <thead>
+                    <tr>
                 <% if(rol == 2){ %>
                     <th>Imagen</th><th>Nombre </th><th>Descripcion </th><th>Precio </th><th>Cantidad </th>
                 <% } else { %>
                     <th>Nombre del Articulo</th><th>Categoria </th><th>Precio Venta</th><th>Precio Unitario </th><th>Cantidad </th><th>Cantidad Ideal </th>
                 <% } %>
-            </tr>
-        </thead>
-    <tbody id="cuerpo">
-    </tbody>
-    </table>    
-    </div>      
+                    </tr>
+                </thead>
+                <tbody id="tabla_tbody">
+                </tbody>
+            </table>    
+        </div>      
     </div>
-    <div class="tarjeta_derecha admin">
-        <div class="tarjeta__header">
-            <label class="tarjeta__titulo">Buscador</label>
-        </div>
-        <dir class="tarjeta__contenido admin__contenido" style="margin: 0">
-            <form>
-            <div class="admin__botones">
-                <div class="input-contenedor input">
-                    <i  data-feather="search" class="fas fa-shopping-cart derecho__icono"></i>
-                    <input type="text" placeholder="Nombre" class="input input_none" id="text_busacador">  
-                </div>
-            <select class="input select" onchange="Barra_accion()" name="rol" id="tipo">
-            <option value="0"id="nada">Seleccione una Accion</option>
-            <option value="1"id="ord_a-z">Ordenar nombre de la A-Z</option>
-            <option value="2"id="ord_z-a">Ordenar nombre de la Z-A</option>
-            <option value="3"id="ord_pre_as" >Ordenar por precio ascendente</option>
-            <option value="4"id="ord_pre_des">Ordenar por precio desendente</option>
-            </select>
-            </div>
-            <div class="vacio"></div>
-            <div class="ulti">
-                <% if(rol == 2){ %>
-                    <a href="/proveedor/cargaProveedor" class="button_verde">Nuevo Producto</a>
-                <% } else { %>
-                    <a href="/comercio/cargaManual" class="button_verde">Nuevo Producto</a>
-                <% } %>
-            </div>
-            </form>
-        </dir>
-    </div>
-</div>
 </main>
 <script src="/static/js/inventario.js"></script>
 <script>feather.replace()</script>

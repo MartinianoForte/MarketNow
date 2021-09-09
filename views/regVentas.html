@@ -6,6 +6,11 @@
     <link rel="stylesheet" href="/static/css/predefinido.css">
     <link rel="stylesheet" href="/static/css/inventario.css">
     <title>Registro de Ventas | MarketNow</title>
+    <style type="text/css">
+        tr:hover {
+            background: #e9e9e9;
+        }
+    </style>
 </head>
 <body>
     <% if(rol == 1) { %>
@@ -30,28 +35,11 @@
     </div>
     <div class="tarjeta_derecha admin">
         <div class="tarjeta__header">
-            <label class="tarjeta__titulo">Buscador</label>
+            <label class="tarjeta__titulo">Detalles</label>
         </div>
-        <dir class="tarjeta__contenido admin__contenido" style="margin: 0">
-            <form>
-            <div class="admin__botones">
-                <div class="input-contenedor input">
-                    <i  data-feather="search" class="fas fa-shopping-cart derecho__icono"></i>
-                    <input type="text" placeholder="Nombre" class="input input_none" id="text_busacador">  
-                </div>
-            <select class="input select" onchange="Barra_accion()" name="rol" id="tipo">
-            <option value="0"id="nada">Seleccione una Accion</option>
-            <option value="1"id="ord_a-z">Ordenar nombre de la A-Z</option>
-            <option value="2"id="ord_z-a">Ordenar nombre de la Z-A</option>
-            <option value="3"id="ord_pre_as" >Ordenar por precio ascendente</option>
-            <option value="4"id="ord_pre_des">Ordenar por precio desendente</option>
-            </select>
-            </div>
-            <div class="vacio"></div>
-            <div class="ulti">
-            </div>
-            </form>
-        </dir>
+        <div class="tarjeta__contenido admin__contenido" id="detalles" style="margin: 0">
+            
+        </div>
     </div>
 </div>
 </main>
