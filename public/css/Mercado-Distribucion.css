@@ -9,7 +9,7 @@ body{
 }
 
 .busqueda{
-    width: 1000px;
+    width: 80%;
     padding: 0px;
     border: 1px solid grey;
     background: white;
@@ -50,13 +50,13 @@ body{
 
 }
 
-
+**/
 
 .input-1{
-    font-size: 1px;
+    font-size: 15px;
     border: none;
-    background: black;
-}**/
+    outline: none;
+}
 
 .dropdown{
     position: relative;
@@ -73,7 +73,7 @@ body{
 
 .dropdown-select{
     padding: 2px;
-    border-radius: 4px;
+    border-radius: 10px;
     background-color: #f7f7f7;
     width: 100%;
 
@@ -107,16 +107,67 @@ body{
 
 .contenedor-paltero{
     display: grid;
-    grid-template-columns: 300px 300px 300px;
+    margin: auto;
+    width: 80%;
+    /**grid-template-columns: 300px 300px 300px;**/
+    grid-auto-rows: 23rem;
+    grid-template-columns: repeat(auto-fit, minmax(14em, 1fr));
+    grid-gap: 1em;
 }
 
 .palta-1{
     background-color: white;
     border: 1px solid grey;
     border-radius: 3px;
-    width: 250px;
-    height: 300px;
-    margin-left: 250px;
-    margin-top: 20px;
+    /**width: 250px;
+    height: 350px;*//
+    width: 100%;
+    height: 100%;
+    /**margin-left: 250px;
+    margin-top: 20px;*//
 
+    box-shadow: 0 7px 16px 0 rgb(0 0 0 / 5%), 0 1px 3px 0 rgb(0 0 0 / 5%);
+
+}
+
+.linea{
+    margin-top: 100px;
+}
+
+/** .sombra:hover{
+    box-shadow: 0 7px 16px 0 rgb(0 0 0 / 20%), 0 1px 3px 0 rgb(0 0 0 / 10%);
+} **/
+
+.contenedor-imagen{
+    border-bottom: 1px solid #aaa;
+    display: flex;
+    align-items: centers;
+}
+
+.palta-img{
+  
+    object-fit: contain;
+    width: 80%;
+    height: 80%;
+    margin: auto;
+}
+
+.monto{
+    font-size: 20px;
+    margin-left: 15px;
+    color: black;
+}
+
+.descripcion{
+    font-size: 19px;
+    margin-top: 2px;
+    margin-left: 15px;
+    margin-right: 10px;
+    color: black;
+    overflow: hidden
+}
+
+label{
+    color: #555;
+    font-size: 18px;
 }
