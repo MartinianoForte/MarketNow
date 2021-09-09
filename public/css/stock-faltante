@@ -1,0 +1,58 @@
+body{
+	background: #f7f7f7;
+}
+
+.contenedor-cuadrado{
+	display: grid;
+	grid-auto-rows: 10rem;
+    grid-template-columns: repeat(auto-fit, minmax(14em, 1fr));
+    grid-gap: 1em;
+    margin: auto;
+    width: 80%;
+}
+
+.contenedor-padre{
+	display: flex;
+
+}
+
+.cuadrado-1{
+	
+	margin-top: 20px;
+	width: 250px;
+	height: 150px;
+	border: 1px solid #aaa;
+	box-shadow: 0 7px 16px 0 rgb(0 0 0 / 5%), 0 1px 3px 0 rgb(0 0 0 / 5%);
+	
+	/**border: none;**/
+}
+
+.contenedor-label{
+	display: flex;
+	flex-direction: column;
+
+}
+
+.label-1{
+	color: black;
+	font-size: 40px;
+	padding: 20px;
+	margin-top: 10px;
+	margin-left: 1px;
+}
+
+.label-2{
+	margin-top: 1px;
+	margin-left: 22px;
+}
+
+.icono{
+	margin-top: 10px;
+	min-width: 30px;
+	text-align: center;
+	font-size: 45px;
+	padding: 20px;
+	margin-left: 170px;
+	color: #b5a067;
+	position: absolute;
+}
