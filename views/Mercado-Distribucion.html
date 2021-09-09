@@ -10,55 +10,8 @@
 <meta charset="utf-8">
 </head>
 <body>
-    <ul class="header__lista"><!-- Botones de la barra -->
-    <li class="header__item" style="width: 15em;">
-        <div class="header__usuario">
-            <i data-feather="user" style="color: #222;" width="35" height="35"></i>
-            <a class="header__dr" style="padding-left: 15px;" href="index.html">Usuario</a>
-        </div>
-    </li>
-    <li class="header__flex">
-        <span class="header__dr">Vender Productos</span>
-        <div>
-            <a href="Iniciar-sesion.html">
-                <i data-feather="log-out" style="" width="35" height="35" class="header__out"></i>
-            </a>
-        </div>
-    </li>
-    </ul>
-<!------------------------------------menu----------------------------------------------------------------->
-    <nav class="menu" id="menu">
-        <a href="index.html">
-            <div class="menu__opcion border-bottom">
-                <i data-feather="home" class="menu__icono"></i>
-                <label class="texto menu__link">Inicio</label>
-            </div>
-        </a>
-        </div>
-        <div class="menu__pie">
-            <a href="#">
-                <div class="menu__opcion">
-                    <i data-feather="user" class="menu__icono"></i>
-                    <label class="texto menu__link">Perfil</label>
-                </div>
-            </a>
-            <a href="#">
-                <div class="menu__opcion">
-                    <i data-feather="help-circle" class="menu__icono"></i>
-                    <label class="texto menu__link">Ayuda</label>
-                </div>
-            </a>
-            <a href="index.html">
-                <div class="menu__opcion">
-                    <i data-feather="log-out" class="menu__icono"></i>
-                    <label class="texto menu__link">Salir</label>
-                </div>
-            </a>
-        </div>
-    </nav>
-    <script src="/static/js/predefinido.js"></script>
-<!-------------------------------------------------------------------------------------------->
-
+ <%- include('partials/menuComercio.html', {sitio:'nombre del sitio', nombre: nombre}) %>
+<main>
 <div class="wrapper">
 	<div class="busqueda">
 		<input type="text" class="input" name="contra" placeholder="Search">
@@ -66,7 +19,7 @@
 	</div>
 </div>
 
-<!---<div class="container-relevante">
+<div class="container-relevante">
 	<p class="ordenar"><b>Ordenar por:</b></p>
 	<div class="opciones">
 	<select class="input-1" onchange="Barra_Roles()" name="rol" id="tipo">
@@ -75,7 +28,7 @@
     <option value="3"id="mayor">Mayor Precio</option></select>
 </div>
 </div>
--->
+
 <div class="container-relevante">
 <p class="ordenar"><b>Ordenar por:</b></p>
 <div class="dropdown">
@@ -91,10 +44,57 @@
 </div>
 
 <div class="contenedor-paltero">
-	<div class="palta-1"></div>
-	<div class="palta-1"></div>
-	<div class="palta-1"></div>
+	<div class="palta-1">
+		<div class="contenedor-imagen"><img class="palta-img" src="/static/img/palta.jpg" width="100%"></div>
+		<div class="monto"><label><b>$300</b></label></div>
+		<div class="descripcion"><label>Palta recien importada de Bolivia, del mejor arbol paltero de la region</label></div>
+	</div>
+
+	<div class="palta-1">
+		<div class="contenedor-imagen"><img class="palta-img" src="/static/img/palta.jpg" width="100%"></div>
+		<div class="monto"><label><b>$300</b></label></div>
+		<div class="descripcion"><label>Palta recien importada de Bolivia, del mejor arbol paltero de la region</label></div>
+	</div>
+
+	<div class="palta-1">
+		<div class="contenedor-imagen"><img class="palta-img" src="/static/img/palta.jpg" width="100%"></div>
+		<div class="monto"><label><b>$300</b></label></div>
+		<div class="descripcion"><label>Palta recien importada de Bolivia, del mejor arbol paltero de la region</label></div>
+	</div>
+
+	<div class="palta-1">
+		<div class="contenedor-imagen"><img class="palta-img" src="/static/img/palta.jpg" width="100%"></div>
+		<div class="monto"><label><b>$300</b></label></div>
+		<div class="descripcion"><label>Palta recien importada de Bolivia, del mejor arbol paltero de la region</label></div>
+	</div>
+
+	<div class="palta-1">
+		<div class="contenedor-imagen"><img class="palta-img" src="/static/img/palta.jpg" width="100%"></div>
+		<div class="monto"><label><b>$300</b></label></div>
+		<div class="descripcion"><label>Palta recien importada de Bolivia, del mejor arbol paltero de la region</label></div>
+	</div>
+
+	<div class="palta-1">
+		<div class="contenedor-imagen"><img class="palta-img" src="/static/img/palta.jpg" width="100%"></div>
+		<div class="monto"><label><b>$300</b></label></div>
+		<div class="descripcion"><label>Palta recien importada de Bolivia, del mejor arbol paltero de la region</label></div>
+	</div>
+
+	<div class="palta-1">
+		<div class="contenedor-imagen"><img class="palta-img" src="/static/img/palta.jpg" width="100%"></div>
+		<div class="monto"><label><b>$300</b></label></div>
+		<div class="descripcion"><label>Palta recien importada de Bolivia, del mejor arbol paltero de la region</label></div>
+	</div>
+
+	<div class="palta-1">
+		<div class="contenedor-imagen"><img class="palta-img" src="/static/img/palta.jpg" width="100%"></div>
+		<div class="monto"><label><b>$300</b></label></div>
+		<div class="descripcion"><label>Palta recien importada de Bolivia, del mejor arbol paltero de la region</label></div>
+	</div>
 </div>
+
+</main>
+<script>feather.replace()</script>
 </body>
 
 </html>
