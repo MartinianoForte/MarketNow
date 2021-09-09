@@ -1,0 +1,122 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background: #f7f7f7;
+}
+
+.busqueda{
+    width: 1000px;
+    padding: 0px;
+    border: 1px solid grey;
+    background: white;
+    margin: 35px auto;
+}
+
+.icono{
+    min-width: 50px;
+    text-align: center;
+    color: #999;
+}
+
+.input{
+    font-size: 20px;
+    width: 94%;
+    padding: 10px;
+    border: none;
+    color: #666;
+}
+
+.container-relevante{
+    margin-left: 985px;
+    display: flex;
+    border: none;
+
+}
+
+.ordenar{
+    color: black;
+}
+/**
+.ordenar{
+    width: 100px;
+}
+
+.opciones{
+    width: 200px;
+
+}
+
+
+
+.input-1{
+    font-size: 1px;
+    border: none;
+    background: black;
+}**/
+
+.dropdown{
+    position: relative;
+}
+
+.dropdown:hover .dropdown-list{
+    opacity: 1;
+    visibility: visible;
+}
+
+.dropdown-select{
+    width: 30rem;
+}
+
+.dropdown-select{
+    padding: 2px;
+    border-radius: 4px;
+    background-color: #f7f7f7;
+    width: 100%;
+
+    align-items: center;
+    justify-content: space-between;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.dropdown-list{
+    border: 1px solid grey;
+    border-radius: 2px;
+    background: white;
+    position: absolute;
+    top: 110%;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s linear, visibility 0.2s linear;
+}
+
+.dropdown-list__item{
+    padding: 1rem;
+    font-size: 15px;
+}
+
+.icon{
+    color:blue;
+}
+
+.contenedor-paltero{
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+}
+
+.palta-1{
+    background-color: white;
+    border: 1px solid grey;
+    border-radius: 3px;
+    width: 250px;
+    height: 300px;
+    margin-left: 250px;
+    margin-top: 20px;
+
+}
