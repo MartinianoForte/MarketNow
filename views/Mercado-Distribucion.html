@@ -1,0 +1,100 @@
+<!doctype	html>
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="/static/css/predefinido.css">
+<link rel="stylesheet" href="/static/css/Mercado-Distribucion.css">
+<script src="https://unpkg.com/feather-icons"></script>
+<script src="https://kit.fontawesome.com/ee5c196280.js" crossorigin="anonymous"></script>
+
+<meta charset="utf-8">
+</head>
+<body>
+    <ul class="header__lista"><!-- Botones de la barra -->
+    <li class="header__item" style="width: 15em;">
+        <div class="header__usuario">
+            <i data-feather="user" style="color: #222;" width="35" height="35"></i>
+            <a class="header__dr" style="padding-left: 15px;" href="index.html">Usuario</a>
+        </div>
+    </li>
+    <li class="header__flex">
+        <span class="header__dr">Vender Productos</span>
+        <div>
+            <a href="Iniciar-sesion.html">
+                <i data-feather="log-out" style="" width="35" height="35" class="header__out"></i>
+            </a>
+        </div>
+    </li>
+    </ul>
+<!------------------------------------menu----------------------------------------------------------------->
+    <nav class="menu" id="menu">
+        <a href="index.html">
+            <div class="menu__opcion border-bottom">
+                <i data-feather="home" class="menu__icono"></i>
+                <label class="texto menu__link">Inicio</label>
+            </div>
+        </a>
+        </div>
+        <div class="menu__pie">
+            <a href="#">
+                <div class="menu__opcion">
+                    <i data-feather="user" class="menu__icono"></i>
+                    <label class="texto menu__link">Perfil</label>
+                </div>
+            </a>
+            <a href="#">
+                <div class="menu__opcion">
+                    <i data-feather="help-circle" class="menu__icono"></i>
+                    <label class="texto menu__link">Ayuda</label>
+                </div>
+            </a>
+            <a href="index.html">
+                <div class="menu__opcion">
+                    <i data-feather="log-out" class="menu__icono"></i>
+                    <label class="texto menu__link">Salir</label>
+                </div>
+            </a>
+        </div>
+    </nav>
+    <script src="/static/js/predefinido.js"></script>
+<!-------------------------------------------------------------------------------------------->
+
+<div class="wrapper">
+	<div class="busqueda">
+		<input type="text" class="input" name="contra" placeholder="Search">
+		<i class="fas fa-search icono"></i>
+	</div>
+</div>
+
+<!---<div class="container-relevante">
+	<p class="ordenar"><b>Ordenar por:</b></p>
+	<div class="opciones">
+	<select class="input-1" onchange="Barra_Roles()" name="rol" id="tipo">
+	<option value="ordenar" selected="select" id="nada">Más Relevantes</option>
+	<option value="2"id="menor">Menor Precio</option>
+    <option value="3"id="mayor">Mayor Precio</option></select>
+</div>
+</div>
+-->
+<div class="container-relevante">
+<p class="ordenar"><b>Ordenar por:</b></p>
+<div class="dropdown">
+	<div class="dropdown-select">
+		<span class="select">Más Relevante</span>
+		<i class="fa fa-caret-down icon"></i>
+	<div class="dropdown-list">
+		<div class="dropdown-list__item">Menor Precio</div>
+		<div class="dropdown-list__item">Mayor Precio</div>
+	</div>
+	</div>
+</div>
+</div>
+
+<div class="contenedor-paltero">
+	<div class="palta-1"></div>
+	<div class="palta-1"></div>
+	<div class="palta-1"></div>
+</div>
+</body>
+
+</html>
