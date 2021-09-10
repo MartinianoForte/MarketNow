@@ -55,26 +55,67 @@ function filtrador() {
 }
 /*-------------Botones----------*/
 function Barra_accion(){
-	console.log(document.getElementById('tabla'));
-	/*if (document.getElementById('nada').selected == true) 
-	{console.log("que trolo, man")}*/
-   if (document.getElementById('ord_a-z').selected == true ){
- 	info.producto.sort((a, b) =>{
- 	if (a.nombre < b.nombre)
- 	return -1; 
-   })
-   }
-   if (document.getElementById('ord_z-a').selected == true ){
- 	info.producto.sort((a, b) =>{
- 	if (a.nombre > b.nombre)
- 	return -1;
-   }) 
-   }
- 	if (document.getElementById('ord_pre_as').selected == true ){
- 	info.producto.sort((a, b) => a.precio - b.precio)
-   }
-   if (document.getElementById('ord_pre_des').selected == true ){
- 	info.producto.sort((a, b) => b.precio - a.precio)
-   }
-console.log(info);
- }
+    var  rows, switching, i, x, y, shouldSwitch,z;
+  if (document.getElementById('ord_a-z').selected == true ){
+    switching = true;
+    while (switching) {
+    switching = false;
+    rows = cuerpo.rows;
+    for (i = 0; i < (rows.length - 1); i++) {
+      shouldSwitch = false;
+      x = rows[i].getElementsByTagName("TD")[0];
+      y = rows[i + 1].getElementsByTagName("TD")[0];
+      if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+        shouldSwitch = true;
+        break;
+      }
+    }
+    if (shouldSwitch) {
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      switching = true;
+    }
+    }
+    }
+  if (document.getElementById('ord_z-a').selected == true ){
+    switching = true;
+    while (switching) {
+    switching = false;
+    rows = cuerpo.rows;
+    for (i = 0; i < (rows.length - 1); i++) {
+      shouldSwitch = false;
+      x = rows[i].getElementsByTagName("TD")[0];
+      y = rows[i + 1].getElementsByTagName("TD")[0];
+      if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+        shouldSwitch = true;
+        break;
+      }
+    }
+    if (shouldSwitch) {
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      switching = true;
+    }
+    }
+    }
+  if (document.getElementById('ord_pre_as').selected == true ){
+    cuerpo.innerHTML = '';
+        let ord = info;
+        ord.sort(function(a, b) {
+        if (a.precioVenta < b.precioVenta)
+         return -1;
+        });
+        for(let i = 0; i < ord.length; i++) {
+          cuerpo.insertAdjacentHTML('beforeend',`<tr><td>${ord[i].nombre}</td><td>${ord[i].categoria}</td><td>$${ord[i].precioVenta}</td><td>$${ord[i].precioUnitario}</td><td>${ord[i].cantidad}</td><td>${ord[i].cantIdeal}</td></tr>`)
+        } 
+    }
+  if (document.getElementById('ord_pre_des').selected == true ){
+   cuerpo.innerHTML = '';
+        let ord = info;
+        ord.sort(function(a, b) {
+        if (a.precioVenta > b.precioVenta)
+         return -1;
+        });
+        for(let i = 0; i < ord.length; i++) {
+          cuerpo.insertAdjacentHTML('beforeend',`<tr><td>${ord[i].nombre}</td><td>${ord[i].categoria}</td><td>$${ord[i].precioVenta}</td><td>$${ord[i].precioUnitario}</td><td>${ord[i].cantidad}</td><td>${ord[i].cantIdeal}</td></tr>`)
+        } 
+    }
+}
