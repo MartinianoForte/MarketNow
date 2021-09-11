@@ -6,20 +6,23 @@
 <link rel="stylesheet" href="/static/css/stock-faltante.css">
 <script src="https://unpkg.com/feather-icons"></script>
 <script src="https://kit.fontawesome.com/ee5c196280.js" crossorigin="anonymous"></script>
-<title>Entregas Faltantes | MarketNow</title>
+
 <meta charset="utf-8">
 </head>
 <body>
-<%- include('partials/menuComercio.html', {sitio:'Entregas Pendientes', nombre: nombre}) %>
+<%- include('partials/menuComercio.html', {sitio:'nombre del sitio', nombre: nombre}) %>
 <main>
 <div class="contenedor-cuadrado">
 	<div class="cuadrado-1">
 		<div class="contenedor-padre">
 			<div class="contenedor-label">
 				<label class="label-1">54</label>
+				
+
 				<label class="label-2">Pedidos</label>
 			</div>
 			<i class="fas fa-parachute-box icono"></i>
+			
 		</div>
 	</div>
 	<div class="cuadrado-1">
@@ -62,7 +65,59 @@
 	</div>
 </div>
 
+<div class="contenedor-padre">
 
+	<div class="contenedor-tabla">
+
+		<div class="tabla-title">
+			<label class="label-3"><b>Pedidos Pendientes</b></label>
+		</div>
+
+		<div class="tabla-rol">
+			<label class="label-4">Numero de pedido</label>
+			<label class="label-proveedor">Proveedor</label>
+			<label class="label-estado">Estado</label>
+
+		</div>
+
+
+		<div class="tabla-descripcion">
+			<label class="label-descripcion">16741</label>
+			<label class="label-raul">Raul Paltero</label>
+			<div class="contenedor-status">
+				<i class="fas fa-circle icon-status"></i><label class="label-status">Llegó</label>
+			</div>
+
+			<label class="label-descripcion">16741</label>
+			<label class="label-raul">Raul Paltero</label>
+			<div class="contenedor-status">
+				<i class="fas fa-circle icon-status"></i><label class="label-status">Llegó</label>
+			</div>
+
+			<label class="label-descripcion">16741</label>
+			<label class="label-raul">Raul Paltero</label>
+			<div class="contenedor-status">
+				<i class="fas fa-circle icon-status"></i><label class="label-status">Llegó</label>
+			</div>
+
+			<label class="label-descripcion">16741</label>
+			<label class="label-raul">Raul Paltero</label>
+			<div class="contenedor-status">
+				<i class="fas fa-circle icon-status"></i><label class="label-status">Llegó</label>
+			</div>
+
+		</div>
+</div>
+	<div class="contenedor-tabla-proveedores">
+		<div class="tabla-proveedores">
+			<label class="label-3"><b>Proveedores</b></label>
+		</div>
+
+		<div class="tabla-descripcion-proveedores">
+			
+		</div>
+	</div>
+</div>
 
 <script>feather.replace()</script>
 </main>
