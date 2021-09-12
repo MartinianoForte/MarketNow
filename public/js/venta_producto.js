@@ -1,9 +1,12 @@
 /*----------Variables----------*/
+const cdb = document.getElementById('cdb');
+const cdc = document.getElementById('cdc');
+const cuerpo = document.getElementById('cuerpo');
 const nom = document.getElementById('Nombre_producto');
 nom.addEventListener("keyup", filtrador);
 document.getElementById('terminarVenta')
-.addEventListener('click', subirVenta);
-const cuerpo = document.getElementById('cuerpo');
+.addEventListener("click", pp);
+
 
 let info;
 fetch('/comercio/productos')
@@ -42,6 +45,30 @@ function filtrador() {
     }
   }
 }
+document.getElementById('terminarVenta').onclick = function pp() {
+            // Obtiene el valor del cuadro de entrada
+            let cdb = document.getElementById('cdb').value;
+            let cdc = document.getElementById('cdc').value;
+            let cant = document.getElementById('cant').value;
+            let nom = document.getElementById('Nombre_producto').value;
+
+            // Usa innerHTML para agregar
+            var table_node = document.getElementsByTagName("table")[0];
+            // Agrega una línea
+            table_node.innerHTML += "        <tr οnmοuseοver=\"set_color(this);\">\n" +
+                "            <td><input type=\"  name=\"cb\" ></td>\n" +
+                "            <td>"+cdb+"</td>\n" +
+                "            <td>"+nom+"</td>\n" +
+                "            <td>"+cant+"</td>\n" +
+                "<td> <a href=\"javascript:void(0);\" οnclick=\"del_tr(this);\"> Eliminar </a> </td> \ n" +
+                "        </tr>"
+        }
+        del_tr = function (obj) {// Devuelto es el objeto de la etiqueta a
+            // Eliminar nodos secundarios a través del nodo principal
+            // Elimina tr a través de la tabla, obtén el nodo de la tabla primero
+            var table_node = obj.parentNode.parentNode.parentNode;
+            table_node.removeChild(obj.parentNode.parentNode);
+        }
 
 function subirVenta(){
   console.log('terminar venta');
