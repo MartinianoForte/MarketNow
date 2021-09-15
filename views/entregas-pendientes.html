@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="/static/css/predefinido.css">
+<link rel="stylesheet" href="/static/css/stock-faltante.css">
+<script src="https://unpkg.com/feather-icons"></script>
+<script src="https://kit.fontawesome.com/ee5c196280.js" crossorigin="anonymous"></script>
+
+<meta charset="utf-8">
+</head>
+<body>
+<%- include('partials/menuComercio.html', {sitio:'Productos Faltantes', nombre: nombre}) %>
+<main>
+<div class="contenedor-cuadrado">
+	<div class="cuadrado-1">
+		<div class="contenedor-padre">
+			<div class="contenedor-label">
+				<label class="label-1">54</label>
+				<label class="label-2">Productos</label>
+			</div>
+			<i class="fas fa-parachute-box icono"></i>
+			
+		</div>
+	</div>
+	<div class="cuadrado-1">
+		<div class="contenedor-padre">
+			<div class="contenedor-label">
+				<label class="label-1">$10.000</label>
+				<label class="label-2">Monto Estimativo</label>
+			</div>
+			<i class="fas fa-wallet icono"></i>
+			
+		</div>
+	</div>		
+
+	<div class="cuadrado-1">
+		<div class="contenedor-padre">
+			<div class="contenedor-label">
+				<label class="label-1">8</label>			
+				<label class="label-2">Urgente</label>
+			</div>
+			<i class="fas fa-calendar-check icono"></i>
+			
+		</div>
+	</div>
+
+	<div class="cuadrado-1">
+		<div class="contenedor-padre">
+			<div class="contenedor-label">
+				<label class="label-1">10</label>			
+				<label class="label-2">No se que poner aca</label>
+			</div>
+			<i class="fas fa-truck icono"></i>
+			
+		</div>
+	</div>
+</div>
+
+<div class="contenedor-padre" style="width: 80%;">
+
+	<div class="contenedor-tabla">
+		<div class="tabla-title">
+			<label class="label-3"><b>Productos Faltantes</b></label>
+		</div>
+		<div class="tabla">
+		<table>
+			<thead>
+				<tr>
+					<th><label class="label-titulo">Cantidad</label></th><th><label class="label-titulo">Producto</label></th><th><label class="label-titulo">Estado</label></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><label>1</label></td><td><label>Tomates</label></td><td><div class="contenedor-status">
+					<i class="fas fa-circle icon-status"></i><label class="label-status">Poco</label>
+				</div></td>
+				</tr>
+				<tr>
+					<td><label>1</label></td><td><label>Tomates</label></td><td><div class="contenedor-status">
+					<i class="fas fa-circle icon-status"></i><label class="label-status">Poco</label>
+				</div></td>
+				</tr>
+				<tr>
+					<td><label>1</label></td><td><label>Tomates</label></td><td><div class="contenedor-status">
+					<i class="fas fa-circle icon-status"></i><label class="label-status">Poco</label>
+				</div></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+			</div>
+	
+
+
+		</div>
+	</div>
+</div>
+
+<script>feather.replace()</script>
+</main>
+</body>
+</html>
