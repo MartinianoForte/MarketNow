@@ -23,9 +23,12 @@ body{
 	height: 150px;
 	border: 1px solid #aaa;
 	box-shadow: 0 7px 16px 0 rgb(0 0 0 / 5%), 0 1px 3px 0 rgb(0 0 0 / 5%);
+	/**---**/
+	background: white;
+	border: none;
 	
-	/**border: none;**/
 }
+
 
 .contenedor-label{
 	display: flex;
@@ -65,9 +68,11 @@ body{
 	border: 1px solid #aaa;
 	box-shadow: 0 7px 16px 0 rgb(0 0 0 / 5%), 0 1px 3px 0 rgb(0 0 0 / 5%);
 	display: flex;
-	/**border: none;**/
-	/**border-bottom: 1px solid #aaa;**/
-
+	border: none;
+	border-bottom: 1px solid #aaa;
+	/**---**/
+		background: white;
+		
 }
 
 .label-3{
@@ -79,7 +84,8 @@ body{
 }
 
 .tabla-rol{
-	margin-top: 2px;
+	/**margin-top: 2px;**/
+	margin-top:0px ;
 	margin-left: 133px;
 	width: 700px;
 	height: 40px;
@@ -89,6 +95,10 @@ body{
 	grid-auto-rows: 23rem;
 	grid-template-columns: repeat(auto-fit, minmax(13em, 1fr));
 	grid-gap: 1em;
+	/**---**/
+	background: white;
+	border: none;
+	border-bottom: 1px solid #aaa;
 }
 
 .label-4{
@@ -113,19 +123,27 @@ body{
 }
 
 .tabla-descripcion{
-	margin-top: 2px;
+	/**margin-top: 2px;**/
+	margin-top: 0px;
 	margin-left: 133px;
 	width: 700px;
 	height: 400px;
 	border: 1px solid #aaa;
 	box-shadow: 0 7px 16px 0 rgb(0 0 0 / 5%), 0 1px 3px 0 rgb(0 0 0 / 5%);
+	/**---**/
+	background: white;
+	border: none;
+}
+
+.contenedor-tabla-descripcion{
 	display: grid;
 	grid-auto-rows: 23rem;
 	grid-template-columns: auto auto auto;
 	grid-template-rows: 10px 10px 10px;
 	grid-gap: 1em;
-}
 
+
+}
 
 .label-descripcion{
 	color: black;
@@ -154,7 +172,7 @@ body{
 }
 
 .icon-status{
-	color: red;
+	color: green;
 	margin-top: 12px;
 	font-size: 15px;
 }
@@ -167,7 +185,7 @@ body{
 }
 
 .icon-status{
-	color: green;
+	color: red;
 	margin-top: 12px;
 	font-size: 15px;
 }**/
@@ -185,18 +203,75 @@ body{
 	grid-template-columns: auto auto auto;
 	grid-template-rows: 10px 10px 10px;
 	grid-gap: 1em;
+
+	/**---**/
+	background: white;
+	border: none;
+	border-bottom: 1px solid #aaa;
 }
 
 .tabla-descripcion-proveedores{
-	margin-top: 2px;
+	margin-top: 0px;
 	margin-left: 28px;
 	width: 300px;
 	height: 445px;
 	border: 1px solid #aaa;
 	box-shadow: 0 7px 16px 0 rgb(0 0 0 / 5%), 0 1px 3px 0 rgb(0 0 0 / 5%);
+
+	/**---**/
+	background: white;
+	border: none;
+}
+
+.contenedor-tabla-descripcion-proveedores{
 	display: grid;
 	grid-auto-rows: 23rem;
 	grid-template-columns: auto auto auto;
 	grid-template-rows: 10px 10px 10px;
 	grid-gap: 1em;
+	margin-top: 0px;
+	border: none;
+	
+}
+
+.contenedor-tabla-descripcion-proveedores-1{
+	display: grid;
+	grid-auto-rows: 23rem;
+	grid-template-columns: auto auto auto;
+	grid-template-rows: 10px 10px 10px;
+	grid-gap: 1em;
+	margin-top: 1px;
+}
+
+.proveedor-img{
+	width: 40px;
+
+}
+
+.nombre-rol{
+	display: grid;
+	margin-left: 1px;
+	height: 50px;
+	width: 130px;
+}
+
+.label-nombre{
+	color: black;
+	font-size: 15px;
+}
+
+.label-rol{
+	color: #aaa;
+	font-size: 15px;
+}
+
+
+.contenedor-icon-desc{
+	margin-top: 10px;
+	margin-right: 5px;
+}
+
+.desc{
+	color: #b5a067;
+	margin-left: 10px;
 }
