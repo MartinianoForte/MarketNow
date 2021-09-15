@@ -2,11 +2,19 @@
 const cdb = document.getElementById('cdb');
 const cdc = document.getElementById('cdc');
 const cuerpo = document.getElementById('cuerpo');
+const cuerpo2 = document.getElementById('cuerpo2');
+const cuerpo3 = document.getElementById('cuerpo3');
 const nom = document.getElementById('Nombre_producto');
-nom.addEventListener("keyup", filtrador);
+let monto =0;
+let p2=[];
+const cant = document.getElementById("cant");
+nom.addEventListener("keyup", filtrador_nombre);
 document.getElementById('terminarVenta')
-.addEventListener("click", pp);
-
+.addEventListener("click", subirVenta);
+document.getElementById("cdb")
+.addEventListener("keyup",pepe);
+document.getElementById('cancelarVenta')
+.addEventListener("click",cancelarcompra);
 
 let info;
 fetch('/comercio/productos')
@@ -16,19 +24,18 @@ fetch('/comercio/productos')
       console.log(info)
       for(let i = 0; i < info.length; i++) {
         cuerpo.insertAdjacentHTML('beforeend', `
-        <tr><td>${info[i].nombre}</td><td>$${info[i].precioVenta}</td><td>$${info[i].precioUnitario}</td><td>${info[i].cantidad}</td><td>${info[i].cantIdeal}</td></tr>`)
+        <tr><td>${info[i].nombre}</td><td>${info[i].precioVenta}</td></tr>`)
         }
     })
     .catch((error) => {
       console.log(error);
     });
 /*----------Funciones----------*/
-function filtrador() { 
-  var input, filter, table, tr, td, i, j, visible;
+function filtrador_nombre() { 
+  var input, filter, table, tr, td, i, j, visible,precio,producto;
   input = document.getElementById('Nombre_producto');
   filter = input.value.toUpperCase();
-  table = document.getElementById("cuerpo");
-  tr = table.getElementsByTagName("tr");
+  tr = cuerpo.getElementsByTagName("tr");
 
   for (i = 0; i < tr.length; i++) {
     visible = false;
@@ -36,56 +43,46 @@ function filtrador() {
     for (j = 0; j < td.length; j++) {
       if (td[j] && td[j].innerHTML.toUpperCase().indexOf(filter) > -1) {
         visible = true;
+        producto=td[j];
+        
       }
     }
     if (visible === true) {
       tr[i].style.display = "";
+      precio = td[1];
     } else {
       tr[i].style.display = "none";
     }
   }
-}
-document.getElementById('terminarVenta').onclick = function pp() {
-            // Obtiene el valor del cuadro de entrada
-            let cdb = document.getElementById('cdb').value;
-            let cdc = document.getElementById('cdc').value;
-            let cant = document.getElementById('cant').value;
-            let nom = document.getElementById('Nombre_producto').value;
+  producto.addEventListener("click", subirVenta);
+  console.log(precio);
+  console.log(producto);}
 
-            // Usa innerHTML para agregar
-            var table_node = document.getElementsByTagName("table")[0];
-            // Agrega una línea
-            table_node.innerHTML += "        <tr οnmοuseοver=\"set_color(this);\">\n" +
-                "            <td><input type=\"  name=\"cb\" ></td>\n" +
-                "            <td>"+cdb+"</td>\n" +
-                "            <td>"+nom+"</td>\n" +
-                "            <td>"+cant+"</td>\n" +
-                "<td> <a href=\"javascript:void(0);\" οnclick=\"del_tr(this);\"> Eliminar </a> </td> \ n" +
-                "        </tr>"
-        }
-        del_tr = function (obj) {// Devuelto es el objeto de la etiqueta a
-            // Eliminar nodos secundarios a través del nodo principal
-            // Elimina tr a través de la tabla, obtén el nodo de la tabla primero
-            var table_node = obj.parentNode.parentNode.parentNode;
-            table_node.removeChild(obj.parentNode.parentNode);
-        }
+function cancelarcompra(){
+  document.querySelectorAll("td").cuerpo3.forEach(function(e){e.remove()})
+}
+function pepe(e){
+  if (e.key=="Enter")productos();
+}
+function productos(){
+  var total =document.getElementById("total");
+  const caca = info.filter(val=>{
+    if (val.cdb== cdb.value){
+      val.cantidad=1;
+      return true;}
+  })
+  p2.push(caca);
+  monto+= parseInt(caca[0].precioVenta)*parseInt(caca[0].cantidad);
+  total.innerText="Total:$ "+monto;
+  var total, i, j;
+  tr = cuerpo.getElementsByTagName("tr");
+   cuerpo2.insertAdjacentHTML('beforeend', `
+      <tr><td>${caca[0].cdb}</td><td>${caca[0].nombre}</td><td>${caca[0].precioVenta}</td><td>${caca[0].cantidad}</td><td><i class="fas fa-times-circle quitar"></i></td></tr>`)
+}
 
 function subirVenta(){
-  console.log('terminar venta');
-  const ventas = [{
-    cantidad: 2,
-    precio: 108.90,
-    cdb: 312451,
-    idArticulo: 1,
-  },
-  {
-    cantidad: 4,
-    precio: 25,
-    cdb: 3123123,
-    idArticulo: 2,
-  }];
-  const monto = 500;
-  const idCliente = 1;
+  const ventas=p2 ;
+  const idCliente = cdc;
 
 fetch('http://localhost:3000/comercio/venderProducto', {
   method: "POST",
@@ -93,6 +90,10 @@ fetch('http://localhost:3000/comercio/venderProducto', {
   headers: {"Content-type": "application/json"}
 })
 .then(response => response.json()) 
-.then(json => console.log(json))
+.then(json =>{ 
+  console.log(json);
+  monto=0; })
 .catch(err => console.log(err));
+console.log('terminar venta');
+
 }

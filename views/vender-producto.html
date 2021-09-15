@@ -59,13 +59,13 @@
 <main>
 <div class="contenedor__cosas">
     <div class="codigos">
-        <label class="input-codigo">Codigo de barras</label><br>
-        <input type="text" class="input-codigo">
+        <label class="input-codigo" >Codigo de barras</label><br>
+        <input type="text" class="input-codigo"id="cdb">
     </div>    
 
     <div class= "codigos">
-        <label class="input-codigo">Codigo de cliente</label><br>
-        <input type="text" class="input-codigo">
+        <label class="input-codigo" >Codigo de cliente</label><br>
+        <input type="text" class="input-codigo"id="cdc">
     </div>
 
 <!--------------------------------botones------------------------------------------------------------->
@@ -74,13 +74,13 @@
         <button id="terminarVenta" class="button_verde">Terminar venta</button>
         <button id="cancelarVenta" class="button_verde">Cancelar venta</button>
     </div>
-    <p class="total">Total: $2,000.000</p>
+    <p class="total" id="total">Total: $</p>
 </div>
 <!--------------------------------inputs del buscador--------------------------------------------->
     <div class="flex-container-padre">
         <div class="flex-container">
             <input class="hijos" type="text" placeholder="Buscar Producto" id="Nombre_producto">
-            <input class="hijos" type="text" placeholder="Cantidad">
+            <input class="hijos" type="text" placeholder="Cantidad" id="cant">
             <label class="total-derecha">Total: $230</label>
         </div>
         
@@ -98,24 +98,13 @@
 
 <!-----------------------------------------------Tabla------------------------------------------------------------>
 <div id = "main-conteiner">
-    <table class="table">
-        <thead>
+    <table class="table" id="cuerpo2">
+        <thead >
             <tr>
                 <th>Codigo de barra</th><th>Nombre</th><th>Precio</th><th>Cantidad</th><th>Quitar</th>
             </tr>
         </thead>
-        <tr>
-            <td>agua</td><td>Palta</td><td>$ 300</td><td>200</td><td><i class="fas fa-times-circle quitar"></i></td>
-        </tr>
-        <tr>
-            <td>luz</td><td>Papa</td><td>$695</td><td>100</td><td><i class="fas fa-times-circle quitar"></i></td>
-        </tr>
-        <tr>
-            <td>luz</td><td>Lechuga</td><td>$500</td><td>80</td><td><i class="fas fa-times-circle quitar"></i></td>
-        </tr>
-        <tr>
-            <td>luz</td><td>Fapa</td><td>$356</td><td>40</td><td><i class="fas fa-times-circle quitar"></i></td>
-        </tr>
+        
     </table>
     </main>
 </div>
