@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/static/css/inventario.css">
     <title>Registro de Ventas | MarketNow</title>
     <style type="text/css">
-        tr:hover {
+        #cuerpo tr:hover {
             background: #e9e9e9;
         }
     </style>
@@ -38,7 +38,13 @@
             <label class="tarjeta__titulo">Detalles</label>
         </div>
         <div class="tarjeta__contenido admin__contenido" id="detalles" style="margin: 0">
-            
+            <table class="table detallesVentas"id="tabla">
+                <thead>
+                    <tr><th>Producto</th><th>Cant.</th><th>Precio</th></tr>
+                </thead>
+                <tbody id="detalles_body">
+                </tbody>
+            </table> 
         </div>
     </div>
 </div>

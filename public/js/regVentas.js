@@ -1,5 +1,8 @@
 const cuerpo = document.getElementById('cuerpo');
-const contenedorDetalles = document.getElementById('detalles');
+const bodyDetalles = document.getElementById('detalles_body');
+
+const granCont = document.getElementsByTagName('main')
+granCont[0].addEventListener('click', () => {bodyDetalles.innerHTML = ''})
 
 let info;
 const pathname = window.location.pathname;
@@ -25,17 +28,18 @@ fetch(urlFetch)
     });
 
     function verDetalles(e){
+      e.stopPropagation();
       const idPedido = e.target.parentNode.id;
       if (idPedido == 'cuerpo') return 0;
       fetch('/comercio/ventas/' + idPedido + '/detalles')
       .then((resp) => resp.json())
       .then(function(data){
-      detalles.innerHTML = '';
+      bodyDetalles.innerHTML = '';
       info = data;
       for(let i = 0; i < info.length; i++){
-        const reg = document.createElement('div')
-        reg.innerHTML = `<label>nombre: ${info[i].nombre}</label><br><label>cantidad: ${info[i].cantidad}</label><br><label>precio: ${info[i].precio}</label><br><br>`
-        detalles.appendChild(reg);
+        const reg = document.createElement('tr')
+        reg.innerHTML = `<th>${info[i].nombre}</th><th>${info[i].cantidad}</th><th>$${info[i].precio}</th>`;
+        bodyDetalles.appendChild(reg);
       }
       
       })
